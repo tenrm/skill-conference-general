@@ -10,8 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f6f5f1; --surface:#ffffff; --ink:#1d2327; --muted:#5f6b72; --line:#e3e1da;
-  --accent:#0f6b5c; --accent-2:#e0efe9; --warn:#a4501b; --warn-bg:#fbefe4; --info-bg:#eaf1f8; --info:#24527a;
+  --bg:#fbf8f3; --surface:#ffffff; --ink:#34373d; --muted:#6c717a; --line:#ece5da;
+  --accent:#3f7a70; --accent-2:#dff2ec; --warn:#9a5a36; --warn-bg:#fdece2; --info-bg:#e9f1fc; --info:#3d6189;
+  --mint:#bfe5da; --mint-d:#9fd4c5; --lav:#e3dcf6; --lav-d:#6b5fa8; --pink:#fbe1e6; --sky:#dcecf8; --butter:#fdf3d0; --bar:#93cfbf;
   --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
 }
 *{box-sizing:border-box}
@@ -26,44 +27,46 @@ ul,ol{margin:.2em 0 .9em;padding-left:1.3em}
 li{margin:.2em 0}
 small,.muted{color:var(--muted)}
 /* header */
-.top{position:sticky;top:0;z-index:20;background:rgba(246,245,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:20;background:rgba(251,248,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top-in{max-width:1180px;margin:0 auto;padding:.6rem 1rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
 .brand{display:flex;flex-direction:column;line-height:1.2;margin-right:auto}
 .brand b{font-size:1.05rem}
 .brand span{font-size:.8rem;color:var(--muted)}
-.tabs{display:flex;gap:.3rem;background:#ebe9e2;padding:.25rem;border-radius:999px}
+.tabs{display:flex;gap:.3rem;background:#efe9f6;padding:.25rem;border-radius:999px}
 .tabs button{border:0;background:transparent;padding:.45rem 1rem;border-radius:999px;font:inherit;font-weight:600;color:var(--muted);cursor:pointer}
 .tabs button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .lang button{border:0;background:var(--surface);padding:.4rem .8rem;font:inherit;font-weight:600;cursor:pointer;color:var(--muted)}
-.lang button.on{background:var(--accent);color:#fff}
+.lang button.on{background:var(--lav);color:var(--lav-d)}
 /* layout */
 .wrap{max-width:1180px;margin:0 auto;padding:1.2rem 1rem 4rem;display:grid;grid-template-columns:240px 1fr;gap:1.5rem}
 .side{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 90px);overflow:auto}
 .side a{display:block;padding:.35rem .7rem;border-radius:8px;text-decoration:none;color:var(--muted);font-size:.92rem}
-.side a:hover{background:#ebe9e2;color:var(--ink)}
+.side a:hover{background:#f3eef9;color:var(--ink)}
 .side a.on{background:var(--accent-2);color:var(--accent);font-weight:600}
-.side .sgroup{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;padding:.8rem .7rem .2rem}
+.side .sgroup{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--lav-d);font-weight:700;padding:.8rem .7rem .2rem}
 .side .sgroup:first-child{padding-top:.2rem}
 input[type=date]{font:inherit;font-size:.95rem;padding:.45rem .6rem;border:1px solid #cfccc3;border-radius:8px;width:100%}
 .side .prog{margin:.8rem .7rem;font-size:.85rem}
 main{min-width:0}
 section.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-bottom:1.2rem;box-shadow:var(--shadow);scroll-margin-top:84px}
-section.card.hero{background:linear-gradient(135deg,#0f6b5c,#164d63);color:#fff;border:0}
+section.card.hero{background:linear-gradient(135deg,var(--accent-2) 0%,var(--lav) 55%,var(--pink) 100%);color:var(--ink);border:0}
 .hero h1{font-size:1.8rem;margin-bottom:.3em}
-.hero p{opacity:.92}
+.hero p{opacity:1}
 .hero .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.7rem;margin-top:1rem}
-.hero .fact{background:rgba(255,255,255,.12);border-radius:10px;padding:.6rem .8rem;font-size:.9rem}
-.hero .fact b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.8}
-.hero a{color:#fff}
+.hero .fact{background:rgba(255,255,255,.6);border-radius:10px;padding:.6rem .8rem;font-size:.9rem}
+.hero .fact b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--lav-d)}
+.hero a{color:var(--accent)}
+.hero .eyebrow{color:var(--lav-d)!important}
 .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:.2rem}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-.box{border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;background:#fcfbf8}
+.box{border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;background:#fffdf9}
 .box h4{margin-bottom:.3em}
-.note{background:var(--info-bg);color:var(--info);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
-.warn{background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
+.note{background:var(--info-bg);border-left:4px solid #bcd5f2;color:var(--info);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
+.warn{background:var(--warn-bg);border-left:4px solid #f6c9ad;color:var(--warn);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
 .pill{display:inline-block;font-size:.75rem;font-weight:600;padding:.1rem .55rem;border-radius:999px;background:var(--accent-2);color:var(--accent);margin-right:.3rem;white-space:nowrap}
-.pill.gray{background:#eceae4;color:var(--muted)}
+.pill.gray{background:#efebe4;color:var(--muted)}
+.pill.lav{background:var(--lav);color:var(--lav-d)}
 .pill.warn{background:var(--warn-bg);color:var(--warn)}
 /* checklist */
 .check{list-style:none;padding:0;margin:.4rem 0 1rem}
@@ -72,20 +75,21 @@ section.card.hero{background:linear-gradient(135deg,#0f6b5c,#164d63);color:#fff;
 .check input{margin-top:.35rem;width:18px;height:18px;accent-color:var(--accent);flex:none}
 .check li.done span{color:var(--muted);text-decoration:line-through}
 .bar{height:8px;background:#e8e6df;border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+.bar i{display:block;height:100%;background:var(--bar);border-radius:99px;transition:width .3s}
 /* table */
 table{width:100%;border-collapse:collapse;font-size:.9rem}
 th,td{border-bottom:1px solid var(--line);padding:.45rem .5rem;text-align:left;vertical-align:top}
-th{font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);background:#faf9f6}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--lav-d);background:#f7f3fc}
 .tblwrap{overflow-x:auto}
 /* forms */
 label.f{display:block;font-weight:600;font-size:.88rem;margin:.6rem 0 .2rem}
 input[type=text],input[type=email],input[type=number],select,textarea{width:100%;font:inherit;font-size:.95rem;padding:.5rem .65rem;border:1px solid #cfccc3;border-radius:8px;background:#fff;color:var(--ink)}
 textarea{min-height:76px;resize:vertical}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
-.btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--accent);background:var(--accent);color:#fff;font:inherit;font-weight:600;font-size:.9rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer}
-.btn.ghost{background:#fff;color:var(--accent)}
-.btn.danger{background:#fff;color:#a12a2a;border-color:#d9a3a3}
+.btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--mint-d);background:var(--mint);color:#24504a;font:inherit;font-weight:600;font-size:.9rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--accent);border-color:var(--mint-d)}
+.btn:hover{filter:brightness(.97)}
+.btn.danger{background:#fff;color:#a8484f;border-color:#f1c4ca}
 .btn.sm{font-size:.8rem;padding:.25rem .6rem}
 .row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 .9rem}
@@ -95,7 +99,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-
 .out{white-space:pre-wrap;background:#f3f2ed;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;font-size:.92rem;margin:.6rem 0}
 .score{display:flex;gap:.25rem}
 .score button{width:32px;height:32px;border-radius:8px;border:1px solid #cfccc3;background:#fff;font:inherit;font-weight:600;cursor:pointer}
-.score button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.score button.on{background:var(--mint);color:#24504a;border-color:var(--mint-d)}
 .crit{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:center;padding:.35rem 0;border-bottom:1px dashed var(--line)}
 .crit small{display:block}
 /* planner */
@@ -111,7 +115,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-
 .blk.fixed{background:#f1efe9;cursor:default}
 .blk.clash{outline:2px solid #d0782f}
 /* assignments */
-.asg{border-left:5px solid var(--accent)}
+.asg{border-left:6px solid var(--mint)}
+section.asg:nth-of-type(4n+3){border-left-color:var(--lav)}
+section.asg:nth-of-type(4n){border-left-color:var(--pink)}
+section.asg:nth-of-type(4n+1){border-left-color:var(--sky)}
 .asg-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-start}
 .asg-meta{display:flex;gap:.4rem;flex-wrap:wrap;margin:.3rem 0 .6rem}
 details.more{margin:.6rem 0}
@@ -119,7 +126,7 @@ details.more summary{cursor:pointer;font-weight:600;color:var(--accent)}
 .statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin:.8rem 0}
 .stat{background:#fcfbf8;border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem}
 .stat b{font-size:1.4rem;display:block;color:var(--accent)}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1d2327;color:#fff;padding:.55rem 1rem;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--lav);color:var(--lav-d);padding:.55rem 1rem;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50}
 .toast.show{opacity:1}
 .refs li{font-size:.88rem}
 .hide{display:none!important}
@@ -210,14 +217,14 @@ const CHECK = {
     {th:"เขียนใน template ทางการของงานตั้งแต่เริ่ม",en:"Write inside the official template from the start"},
     {th:"ความยาวไม่เกินกำหนด (คำ/หน้า) และตรวจว่านับรวมชื่อเรื่อง/ผู้แต่ง/รูปหรือไม่",en:"Within the word/page limit — and checked what counts toward it"},
     {th:"มีครบทุกหัวข้อที่กำหนด เรียงตาม template",en:"All required sections present, in the template's order"},
-    {th:"ชื่อผู้แต่ง สังกัด และอีเมลผู้ประสานงานถูกต้องและตรงกันทุกไฟล์",en:"Author names, affiliations and corresponding email correct and consistent"},
+    {th:"รายชื่อผู้แต่งครบ ไม่ตกหล่นใคร (โดยเฉพาะอาจารย์ที่ปรึกษา) ตัวยกสังกัดและอีเมล corresponding author ถูกต้องและตรงกันทุกไฟล์",en:"Author list complete — no one missing (especially the advisor); superscript affiliations and corresponding email correct and consistent"},
     {th:"ผู้ร่วมวิจัยทุกคนและอาจารย์ที่ปรึกษาอนุมัติฉบับสุดท้ายแล้ว",en:"All co-authors and the advisor approved the final version"},
     {th:"รูป/ตารางมีหมายเลข คำบรรยาย หน่วย อ่านออก และถูกอ้างถึงในเนื้อหา",en:"Figures/tables numbered, captioned, with units, legible and cited in the text"},
     {th:"เอกสารอ้างอิงครบและใช้รูปแบบเดียวตามที่กำหนด",en:"References complete, in the single required style"},
     {th:"ตรวจภาษา (เครื่องมือ + คนอ่านทาน)",en:"Language checked (tool + human proofreader)"},
     {th:"ตรวจความซ้ำ/คัดลอก และไม่ใช้เนื้อหาที่ตีพิมพ์แล้ว",en:"Similarity check done; no previously published content"},
     {th:"ถ้าใช้ AI ช่วย ทำตามนโยบายของงานและตรวจทุกข้อความด้วยตัวเอง",en:"If AI helped, follow the conference policy and verify every statement"},
-    {th:"ไฟล์ครบตามรูปแบบที่กำหนด (เช่น .docx + .pdf) และตั้งชื่อตามคำแนะนำ",en:"Files in the required formats (e.g. .docx + .pdf), named as instructed"},
+    {th:"ไฟล์ครบตามรูปแบบที่กำหนด (เช่น .docx + .pdf) ตั้งชื่อตามที่งานกำหนด หรือ YYYYMMDD_ชื่อสื่อความหมาย_a (ไม่ใช้ \"final\")",en:"Files in the required formats (e.g. .docx + .pdf), named as the conference requires or YYYYMMDD_DescriptiveName_a (never \"final\")"},
     {th:"เลือกหัวข้อ/session และรูปแบบการนำเสนอถูกต้อง",en:"Correct topic/session and presentation preference selected"},
     {th:"ส่งก่อนกำหนด 2–3 วัน และเก็บหลักฐานการส่ง",en:"Submitted 2–3 days early; proof of submission saved"},
     {th:"ลงปฏิทิน: วันแจ้งผล วันส่งแก้ไข วันลงทะเบียน early-bird",en:"Calendar: decision, correction and early-bird dates"}
@@ -271,7 +278,7 @@ const GUIDE = [];
 const S_ = (id,group,nav,th,en,extra={}) => GUIDE.push(Object.assign({id,group,nav,th,en},extra));
 
 S_("overview","start",{th:"ภาพรวมคู่มือ",en:"About this guide"},
-`<div class="eyebrow" style="color:#bfe6dc">คู่มือนิสิต · ใช้ได้กับทุกงานประชุม</div>
+`<div class="eyebrow">คู่มือนิสิต · ใช้ได้กับทุกงานประชุม</div>
 <h1>ไปประชุมวิชาการให้ได้มากกว่าการ "ไปนั่งฟัง"</h1>
 <p>คู่มือนี้เรียงตามวงจรของการไปประชุมวิชาการหนึ่งครั้ง ตั้งแต่ <b>เลือกงาน → เขียนและส่งผลงาน → เตรียมตัว → ระหว่างงาน → หลังงาน</b> สังเคราะห์จากแหล่งที่น่าเชื่อถือ เช่น ชุดบทความ "Ten Simple Rules" ใน PLOS Computational Biology และคู่มือของบัณฑิตวิทยาลัยหลายแห่ง ส่วนที่ 2 คืองานมอบหมายที่ทำและส่งออกเป็นรายงานได้</p>
 <div class="facts">
@@ -281,7 +288,7 @@ S_("overview","start",{th:"ภาพรวมคู่มือ",en:"About this 
  <div class="fact"><b>ขั้นที่ 4</b>ฟัง ดูโปสเตอร์ นำเสนอ สร้างเครือข่าย</div>
  <div class="fact"><b>ขั้นที่ 5</b>follow-up สะท้อนคิด แบ่งปัน</div>
 </div>`,
-`<div class="eyebrow" style="color:#bfe6dc">Student field guide · for any conference</div>
+`<div class="eyebrow">Student field guide · for any conference</div>
 <h1>Go to a conference for more than just "sitting and listening"</h1>
 <p>This guide follows the life cycle of one conference: <b>choose → write & submit → get ready → attend → follow up</b>. It synthesises reputable advice, including the "Ten Simple Rules" series in PLOS Computational Biology and graduate-school guides. Part 2 holds assignments you can complete and export as a report.</p>
 <div class="facts">
@@ -492,6 +499,25 @@ S_("cfp","submit",{th:"อ่านข้อกำหนดการส่งผ
 S_("abstract","submit",{th:"เขียนบทคัดย่อ",en:"Writing the abstract"},
 `<div class="eyebrow">ขั้นที่ 2 · บทคัดย่อ</div><h2>เขียนบทคัดย่อ (Abstract)</h2>
 <p>บทคัดย่อคือ "โฆษณา" ของงาน กรรมการใช้ตัดสินว่ารับหรือไม่ และผู้ฟังใช้เลือกว่าจะเข้าห้องเราหรือไม่ ต้องเข้าใจได้โดยไม่ต้องอ่านอย่างอื่นประกอบ (${cite("canterbury","Univ. of Canterbury")}; ${cite("temple","Temple Univ. Libraries")})</p>
+<h3>ส่วนหัว: ผู้แต่ง สังกัด และคำสำคัญ</h3>
+<div class="grid2">
+<div class="box"><h4>👥 Authors / Affiliation</h4><ul>
+<li>ทำตาม template ของงาน: <b>ลำดับชื่อ</b> รูปแบบชื่อ–นามสกุล <b>ตัวยก (superscript) เลขสังกัด</b> ต่อท้ายชื่อ และเครื่องหมาย * ที่ <b>corresponding author</b> พร้อมอีเมล</li>
+<li>สังกัดเขียนเต็มและสอดคล้องกันทุกผลงาน: ภาควิชา คณะ มหาวิทยาลัย เมือง ประเทศ</li>
+<li>ระบุผู้นำเสนอ (presenting author) ตามที่งานกำหนด เช่น ขีดเส้นใต้</li>
+<li>ตกลงลำดับชื่อและผู้ประสานงาน (มักเป็นอาจารย์ที่ปรึกษา) กันตั้งแต่เริ่มเขียน</li></ul>
+<div class="warn" style="margin-bottom:0">⚠️ <b>ห้ามตกหล่นชื่อใคร โดยเฉพาะอาจารย์ที่ปรึกษา</b> ผู้ร่วมวิจัยทุกคนที่มีส่วนสำคัญต้องอยู่ในรายชื่อ สะกดชื่อและสังกัดถูกต้อง และทุกคนเห็นชอบฉบับสุดท้ายก่อนส่ง — แก้ไขรายชื่อหลังส่งมักทำได้ยากหรือทำไม่ได้</div></div>
+<div class="box"><h4>🔑 Keywords</h4><ul>
+<li>จำนวนตามที่งานกำหนด (มัก 3–6 คำ/วลี)</li>
+<li><b>ไม่ซ้ำกับคำในชื่อเรื่อง</b> — ชื่อเรื่องถูกใช้ค้นหาอยู่แล้ว keywords ที่ต่างออกไปจึงเพิ่มคำค้นใหม่ ช่วยให้ผลงานถูกค้นพบมากขึ้น (visibility)</li>
+<li>ใช้คำที่คนในสาขาใช้ค้นจริง: ชื่อเทคนิค สิ่งมีชีวิต พื้นที่ศึกษา คำพ้องความหมาย</li>
+<li>ตัวอย่าง ชื่อเรื่อง "Soil eDNA reveals higher arthropod diversity…"<br>✗ <i>soil eDNA; arthropod diversity</i> (ซ้ำชื่อเรื่อง)<br>✓ <i>metabarcoding; mitochondrial COI; land-use change; Hill numbers</i></li></ul></div>
+</div>
+<p class="muted">ตัวอย่างรูปแบบส่วนหัว (สมมติ):</p><pre class="out" style="font-size:.85rem">Soil eDNA reveals higher arthropod diversity in community forests …
+A. Student¹, B. Colleague², <u>C. Advisor</u>¹*
+¹Department of Biology, Faculty of Science, University X, City, Country
+²Department of Soil Science, University Y, City, Country
+*Corresponding author: c.advisor@univx.ac.th</pre>
 <h3>โครงสร้าง 5 ส่วน (ตัวอย่างสัดส่วนสำหรับ ~200–250 คำ)</h3>
 <div class="tblwrap"><table><thead><tr><th>ส่วน</th><th>ประมาณ</th><th>เขียนอะไร</th></tr></thead><tbody>
 <tr><td>1. Background</td><td>1–2 ประโยค · ~15%</td><td>บริบท ปัญหา ช่องว่างความรู้</td></tr>
@@ -517,6 +543,25 @@ S_("abstract","submit",{th:"เขียนบทคัดย่อ",en:"Writing
 <h3>✏️ เครื่องมือเขียนและนับคำบทคัดย่อ</h3>{{w:abstract}}`,
 `<div class="eyebrow">Stage 2 · Abstract</div><h2>Writing the abstract</h2>
 <p>The abstract is the "advertisement" for your work: reviewers use it to accept or reject, and attendees to choose your room. It must stand on its own (${cite("canterbury","Univ. of Canterbury")}; ${cite("temple","Temple Univ. Libraries")}).</p>
+<h3>Header: authors, affiliations and keywords</h3>
+<div class="grid2">
+<div class="box"><h4>👥 Authors / Affiliation</h4><ul>
+<li>Follow the template: <b>author order</b>, name format, <b>superscript affiliation numbers</b> after names, and an * marking the <b>corresponding author</b> with email</li>
+<li>Write affiliations in full and consistently across outputs: department, faculty, university, city, country</li>
+<li>Mark the presenting author if required (e.g. underline)</li>
+<li>Agree on author order and the corresponding author (often the advisor) before writing</li></ul>
+<div class="warn" style="margin-bottom:0">⚠️ <b>Never leave anyone out — especially your advisor.</b> Every co-author who contributed substantially must be listed, with correct spelling and affiliation, and everyone must approve the final version. Author lists are often hard or impossible to change after submission.</div></div>
+<div class="box"><h4>🔑 Keywords</h4><ul>
+<li>As many as the conference asks (often 3–6 words/phrases)</li>
+<li><b>Don't repeat words from the title</b> — the title is already searchable, so different keywords add new search terms and increase your work's visibility</li>
+<li>Use terms people in your field actually search: techniques, organisms, study areas, synonyms</li>
+<li>Example title "Soil eDNA reveals higher arthropod diversity…"<br>✗ <i>soil eDNA; arthropod diversity</i> (repeats the title)<br>✓ <i>metabarcoding; mitochondrial COI; land-use change; Hill numbers</i></li></ul></div>
+</div>
+<p class="muted">Example header layout (fictional):</p><pre class="out" style="font-size:.85rem">Soil eDNA reveals higher arthropod diversity in community forests …
+A. Student¹, B. Colleague², <u>C. Advisor</u>¹*
+¹Department of Biology, Faculty of Science, University X, City, Country
+²Department of Soil Science, University Y, City, Country
+*Corresponding author: c.advisor@univx.ac.th</pre>
 <h3>Five-part structure (example shares for ~200–250 words)</h3>
 <div class="tblwrap"><table><thead><tr><th>Part</th><th>Approx.</th><th>What to write</th></tr></thead><tbody>
 <tr><td>1. Background</td><td>1–2 sentences · ~15%</td><td>Context, problem, knowledge gap</td></tr>
@@ -567,7 +612,7 @@ S_("fullpaper","submit",{th:"เขียนบทความฉบับเต
 <li><b>AI:</b> ทำตามนโยบายของงาน ผู้เขียนรับผิดชอบทุกประโยคและทุกการอ้างอิง</li></ul></div>
 </div>
 <h3>ลำดับการเขียนที่แนะนำ</h3>
-<ol><li>ทำรูปและตารางหลักก่อน</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>ส่งอาจารย์ตรวจอย่างน้อย 2 รอบ (เผื่อรอบละ ~1 สัปดาห์)</li><li>ตรวจภาษา ความซ้ำ และการอ้างอิง</li><li>แปลงเป็น PDF แล้วตรวจอีกครั้ง (ฟอนต์ สมการ รูป จำนวนหน้า)</li></ol>`,
+<ol><li>ทำรูปและตารางหลักก่อน</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>ส่งอาจารย์ตรวจอย่างน้อย 2 รอบ (เผื่อรอบละ ~1 สัปดาห์) ตั้งชื่อไฟล์แต่ละรอบด้วยวันที่ (ดูหัวข้อ "ส่งผลงาน")</li><li>ตรวจภาษา ความซ้ำ และการอ้างอิง</li><li>แปลงเป็น PDF แล้วตรวจอีกครั้ง (ฟอนต์ สมการ รูป จำนวนหน้า)</li></ol>`,
 `<div class="eyebrow">Stage 2 · Full paper</div><h2>Writing the full paper (proceedings)</h2>
 <p>A proceedings paper is a short research article. Use IMRaD and <b>write inside the official template from the start</b> so you always see the real page count.</p>
 <div class="tblwrap"><table><thead><tr><th>Section</th><th>Principles</th></tr></thead><tbody>
@@ -593,10 +638,22 @@ S_("fullpaper","submit",{th:"เขียนบทความฉบับเต
 <li><b>AI:</b> follow the conference policy; authors own every sentence and citation</li></ul></div>
 </div>
 <h3>Recommended order</h3>
-<ol><li>Make the key figures and tables first</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>At least two advisor review rounds (~1 week each)</li><li>Check language, similarity and references</li><li>Export to PDF and check again (fonts, equations, figures, page count)</li></ol>`);
+<ol><li>Make the key figures and tables first</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>At least two advisor review rounds (~1 week each), naming each round's file with a date (see "Submitting")</li><li>Check language, similarity and references</li><li>Export to PDF and check again (fonts, equations, figures, page count)</li></ol>`);
 
 S_("submit","submit",{th:"ส่งผลงาน & หลังพิจารณา",en:"Submitting & after review"},
 `<div class="eyebrow">ขั้นที่ 2 · ส่งผลงาน</div><h2>ตรวจก่อนกดส่ง และจัดการหลังผลพิจารณา</h2>
+<h3>🗂️ การตั้งชื่อไฟล์</h3>
+<div class="grid2">
+<div class="box"><h4>หลักการ</h4><ol>
+<li><b>ถ้างานกำหนดรูปแบบชื่อไฟล์ ให้ทำตามนั้นทุกตัวอักษร</b> (เช่น รหัสผลงาน_นามสกุล)</li>
+<li>ถ้าไม่กำหนด ใช้ <b>ชื่อที่สื่อความหมาย + วันที่แบบ ปีเดือนวัน (YYYYMMDD) + ลำดับ _a _b _c</b> (หรือ v1 v2) — ไฟล์เรียงตามเวลาเอง รู้ทันทีว่าฉบับไหนล่าสุด และผู้รับรู้ว่าเป็นไฟล์อะไรของใคร</li>
+<li>ไม่เว้นวรรค ใช้ _ หรือ - คั่น หลีกเลี่ยงอักขระพิเศษ / \ : * ? " &lt; &gt; | และภาษาไทยในไฟล์ที่ส่งเข้าระบบออนไลน์ (บางระบบแสดงผิด)</li>
+<li>ไฟล์ที่ผู้อื่นคอมเมนต์ ต่อท้ายชื่อย่อผู้ตรวจ เช่น <code>_PDcmt</code> แล้วฉบับแก้ไขใช้วันที่ใหม่</li></ol></div>
+<div class="box"><h4>ตัวอย่าง</h4>
+<p>❌ <code>abstract final.docx</code> · <code>final1.docx</code> · <code>final2_new.docx</code> · <code>บทคัดย่อ finalสุดๆ.docx</code><br><small class="muted">"final" มักไม่ใช่ฉบับสุดท้ายจริง และไม่บอกลำดับหรือวันที่</small></p>
+<p>✅ <code>20270115_Abstract_SoilEDNA_Jaidee_a.docx</code><br>✅ <code>20270115_Abstract_SoilEDNA_Jaidee_b.docx</code> (แก้วันเดียวกัน)<br>✅ <code>20270118_Abstract_SoilEDNA_Jaidee_a_PDcmt.docx</code><br>✅ <code>ICB2027_P012_Jaidee.pdf</code> (ตามที่งานกำหนด)</p></div>
+</div>
+<h4>เครื่องมือสร้างชื่อไฟล์</h4>{{w:fname}}
 <h3>Checklist ก่อนกดส่ง</h3>{{w:check:submit}}
 <div class="grid2">
 <div class="box"><h4>📨 เมื่อได้รับผลพิจารณา</h4><ul>
@@ -612,6 +669,18 @@ S_("submit","submit",{th:"ส่งผลงาน & หลังพิจาร
 <li>ไปต่อที่ขั้นที่ 3 "เตรียมตัวก่อนไป"</li></ul></div>
 </div>`,
 `<div class="eyebrow">Stage 2 · Submit</div><h2>Check before you submit, then handle the review</h2>
+<h3>🗂️ File naming</h3>
+<div class="grid2">
+<div class="box"><h4>Principles</h4><ol>
+<li><b>If the conference specifies a file-name format, follow it exactly</b> (e.g. paperID_surname)</li>
+<li>If not, use a <b>descriptive name + date as YYYYMMDD + sequence _a _b _c</b> (or v1 v2) — files sort by time, the latest is obvious, and recipients know what and whose it is</li>
+<li>No spaces (use _ or -); avoid special characters / \ : * ? " &lt; &gt; | and non-Latin characters in files for online systems (some display them wrongly)</li>
+<li>For files someone commented on, add the reviewer's initials, e.g. <code>_PDcmt</code>; the revision gets a new date</li></ol></div>
+<div class="box"><h4>Examples</h4>
+<p>❌ <code>abstract final.docx</code> · <code>final1.docx</code> · <code>final2_new.docx</code> · <code>abstract REALLY final.docx</code><br><small class="muted">"final" is rarely final and says nothing about order or date</small></p>
+<p>✅ <code>20270115_Abstract_SoilEDNA_Jaidee_a.docx</code><br>✅ <code>20270115_Abstract_SoilEDNA_Jaidee_b.docx</code> (same-day revision)<br>✅ <code>20270118_Abstract_SoilEDNA_Jaidee_a_PDcmt.docx</code><br>✅ <code>ICB2027_P012_Jaidee.pdf</code> (as required by the conference)</p></div>
+</div>
+<h4>File-name builder</h4>{{w:fname}}
 <h3>Pre-submission checklist</h3>{{w:check:submit}}
 <div class="grid2">
 <div class="box"><h4>📨 When the decision arrives</h4><ul>
@@ -876,7 +945,10 @@ const EX_ABS = {
   methods:"We collected 60 topsoil samples from six paired sites during the rainy season. DNA was extracted, the mitochondrial cytochrome c oxidase subunit I (COI) region was amplified and sequenced, and diversity was compared using Hill numbers and permutational multivariate analysis of variance (PERMANOVA).",
   results:"In total, 412 arthropod operational taxonomic units (OTUs) were detected. Community forests contained 1.8 times more OTUs than cassava fields (mean 96 vs 53 per site; p < 0.01), and community composition differed significantly between land uses (PERMANOVA R² = 0.31, p = 0.001). Springtails and mites dominated forest samples, whereas ants dominated cassava fields.",
   concl:"Soil eDNA provides a rapid, standardised tool for monitoring biodiversity in community forests and could support evidence-based local conservation planning.",
-  kw:"eDNA metabarcoding; soil arthropods; land use; community forest; biodiversity monitoring"
+  kw:"metabarcoding; mitochondrial COI; land-use change; Hill numbers; biodiversity monitoring",
+  authors:"A. Student¹, B. Colleague², C. Advisor¹*",
+  affil:"¹Department of Biology, Faculty of Science, University X, City, Country\n²Department of Soil Science, University Y, City, Country",
+  email:"c.advisor@univx.ac.th", advisorOk:true
 };
 
 /* ===== Assignments ===== */
@@ -1332,15 +1404,28 @@ function absChecks(){
   ok(!/will be (discussed|presented|shown)|จะ(นำเสนอ|อภิปราย)/i.test(body), "ไม่มีผลลัพธ์แบบคลุมเครือ (\"will be discussed\")", "No vague results (\"will be discussed\")");
   ok(!/\(([A-Z][a-z]+(\s+et al\.)?,?\s*\d{4})\)|\[\d+(,\s*\d+)*\]/.test(body), "ไม่มีการอ้างอิงเอกสารในบทคัดย่อ", "No citations in the abstract");
   ok(undefinedAcr.length===0, undefinedAcr.length?`ตัวย่อที่อาจยังไม่นิยาม: ${undefinedAcr.join(", ")}`:"ตัวย่อถูกนิยามแล้ว", undefinedAcr.length?`Possibly undefined acronyms: ${undefinedAcr.join(", ")}`:"Acronyms defined");
-  ok(wc(a.kw)>0, "มี keywords", "Keywords provided");
+  const kws=(a.kw||"").split(/[;,\n]/).map(s=>s.trim()).filter(Boolean);
+  const tl=(a.title||"").toLowerCase(); const stem=w=>w.toLowerCase().replace(/(ies|es|s)$/,"");
+  const tWords=new Set(tl.split(/[^\p{L}\p{N}-]+/u).filter(w=>w.length>2).map(stem));
+  const dup=kws.filter(k=>{ const kl=k.toLowerCase(); if(tl && tl.includes(kl)) return true; const ws=kl.split(/[^\p{L}\p{N}-]+/u).filter(w=>w.length>2); return ws.length>0 && ws.every(w=>tWords.has(stem(w))); });
+  ok(kws.length>=3 && kws.length<=6, `keywords ${kws.length} คำ/วลี (มัก 3–6)`, `${kws.length} keywords (usually 3–6)`);
+  ok(kws.length>0 && dup.length===0, dup.length?`keywords ซ้ำกับชื่อเรื่อง: ${dup.join(", ")} — เปลี่ยนเป็นคำใหม่เพื่อเพิ่ม visibility`:"keywords ไม่ซ้ำกับชื่อเรื่อง", dup.length?`Keywords repeating the title: ${dup.join(", ")} — use new terms for visibility`:"Keywords don't repeat the title");
+  ok(filled(a.authors) && filled(a.affil), "มีรายชื่อผู้แต่งและสังกัด", "Authors and affiliations entered");
+  ok(/\*/.test(a.authors||"") && /@/.test(a.email||""), "ระบุ corresponding author (*) และอีเมล", "Corresponding author (*) and email given");
+  ok(!!a.advisorOk, "ยืนยันแล้วว่าไม่ตกหล่นชื่อใคร (รวมอาจารย์ที่ปรึกษา)", "Confirmed no one is missing (incl. advisor)");
   return {n,lim,out};
 }
-function absPreview(){ const a=absState(); return `${(a.title||"").trim()||"[Title]"}\n\n${absBody()||"[Abstract]"}\n\nKeywords: ${(a.kw||"").trim()||"[3–5 keywords]"}`; }
+function absPreview(){ const a=absState(); return `${(a.title||"").trim()||"[Title]"}\n${(a.authors||"").trim()||"[Authors¹, Advisor¹*]"}\n${(a.affil||"").trim()||"[¹Affiliation]"}\n*Corresponding author: ${(a.email||"").trim()||"[email]"}\n\n${absBody()||"[Abstract]"}\n\nKeywords: ${(a.kw||"").trim()||"[3–6 keywords]"}`; }
 function wAbstract(){
   const a=absState(); const ck=absChecks();
   return `<div class="box">
   <div class="fgrid"><div>${inp("abs.limit",T("จำนวนคำสูงสุดที่งานกำหนด","Word limit set by the conference"),"text")}</div></div>
   ${inp("abs.title","Title")}<small class="muted" id="absTw"></small>
+  ${inp("abs.authors",T("ผู้แต่ง (ใส่ตัวยก ¹ ² และ * ที่ corresponding author)","Authors (superscripts ¹ ² and * for the corresponding author)"),"text",null,"A. Student¹, B. Colleague², C. Advisor¹*")}
+  <div class="row" style="margin-top:.3rem">${["¹","²","³","⁴","*"].map(s=>`<button class="btn sm ghost" data-act="absSup" data-s="${s}">${s}</button>`).join("")}<small class="muted">${T("กดเพื่อเติมท้ายช่องผู้แต่ง","click to append to Authors")}</small></div>
+  ${inp("abs.affil",T("สังกัด (บรรทัดละหนึ่งแห่ง)","Affiliations (one per line)"),"textarea",null,"¹Department of …, Faculty of …, University …, City, Country")}
+  ${inp("abs.email",T("อีเมล corresponding author","Corresponding author email"))}
+  ${inp("abs.advisorOk",T("ตรวจแล้ว: ผู้ร่วมวิจัยทุกคน รวมอาจารย์ที่ปรึกษา อยู่ในรายชื่อและเห็นชอบแล้ว","Checked: all co-authors, including my advisor, are listed and have approved"),"check")}
   ${ABS_PARTS.map(([k,l,t])=>`${inp("abs."+k,L(l),"textarea")}<small class="muted" data-wc="${k}" data-target="${t}"></small>`).join("")}
   ${inp("abs.kw","Keywords (3–5, ; separated)")}
   <div style="margin:.8rem 0 .3rem"><small>${T("จำนวนคำรวม","Total words")}: <b id="absN">${ck.n}</b> / ${ck.lim}</small><div class="bar"><i id="absBar" style="width:${Math.min(100,ck.n/ck.lim*100)}%;${ck.n>ck.lim?"background:#c0392b":""}"></i></div></div>
@@ -1358,9 +1443,33 @@ function refreshAbs(){
   document.querySelectorAll("[data-wc]").forEach(e=>{ const n=wc(a[e.dataset.wc]); e.textContent=`${n} ${T("คำ","words")} · ${T("แนะนำ","target")} ~${e.dataset.target}`; });
   const tw=$("#absTw"); if(tw) tw.textContent=`${wc(a.title)} ${T("คำ","words")}`;
 }
+/* --- file-name builder --- */
+const FN_TYPES=["Abstract","FullPaper","Poster","Slides","ResponseToReviewers","CoverLetter","Manuscript"];
+function ymd(d){ return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}`; }
+const camel = s => (s||"").trim().replace(/[\/\\:*?"<>|]+/g,"").split(/[\s_]+/).filter(Boolean).map(w=>w[0].toUpperCase()+w.slice(1)).join("");
+function fnResult(){
+  const f=S.fn||{}; const parts=[f.date||ymd(new Date()), f.type||"Abstract", camel(f.title)||"ShortTitle", camel(f.name)||"Surname", f.ver||"a"];
+  if(f.cmt) parts.push(camel(f.cmt)+"cmt");
+  return parts.join("_")+(f.ext||".docx");
+}
+function wFname(){
+  const f=S.fn=S.fn||{}; const bad=/final|สุดท้าย|ล่าสุด|new\b/i.test((f.title||"")+(f.cmt||"")); const thai=/[\u0E00-\u0E7F]/.test((f.title||"")+(f.name||""));
+  return `<div class="box"><div class="fgrid">
+   <div>${inp("fn.date",T("วันที่ (YYYYMMDD)","Date (YYYYMMDD)"),"text",null,ymd(new Date()))}</div>
+   <div>${inp("fn.type",T("ประเภทไฟล์","Document type"),"select",FN_TYPES.map(t=>({v:t,th:t,en:t})))}</div>
+   <div>${inp("fn.title",T("ชื่อเรื่องแบบสั้น (อังกฤษ)","Short title (English)"),"text",null,"Soil eDNA")}</div>
+   <div>${inp("fn.name",T("นามสกุลผู้เขียน (อังกฤษ)","Author surname"),"text",null,"Jaidee")}</div>
+   <div>${inp("fn.ver",T("ลำดับในวันเดียวกัน","Same-day sequence"),"select","abcdefgh".split("").map(x=>({v:x,th:x,en:x})))}</div>
+   <div>${inp("fn.cmt",T("อักษรย่อผู้คอมเมนต์ (ถ้ามี)","Commenter initials (optional)"),"text",null,"PD")}</div>
+   <div>${inp("fn.ext",T("นามสกุลไฟล์","Extension"),"select",[".docx",".pdf",".pptx",".xlsx"].map(x=>({v:x,th:x,en:x})))}</div>
+  </div>
+  <div class="out" id="fnOut" style="font-family:ui-monospace,Consolas,monospace">${esc(fnResult())}</div>
+  <div class="row"><button class="btn sm" data-copy="fnOut">${UI.copy[S.lang]}</button><small class="muted" id="fnWarn">${bad?T("⚠️ หลีกเลี่ยงคำว่า final / new ในชื่อไฟล์","⚠️ Avoid \"final\" / \"new\" in file names"):""}${thai?T(" ⚠️ แนะนำใช้อักษรอังกฤษในชื่อไฟล์"," ⚠️ Prefer Latin characters"):""}</small></div>
+  <p class="muted" style="margin-top:.5rem">${T("ถ้างานประชุมกำหนดรูปแบบชื่อไฟล์ ให้ใช้รูปแบบของงานแทน","If the conference specifies a format, use that instead")}</p></div>`;
+}
 function widget(name){
   if(name.startsWith("check:")) return wCheck(name.slice(6));
-  return ({planner:wPlanner,rubric:wRubric,pitch:wPitch,followup:wFollowup,timeline:wTimeline,confcheck:wConfcheck,cfp:wCfp,abstract:wAbstract,myconf:wMyconf,budget:wBudget}[name]||(()=>""))();
+  return ({planner:wPlanner,rubric:wRubric,pitch:wPitch,followup:wFollowup,timeline:wTimeline,confcheck:wConfcheck,cfp:wCfp,abstract:wAbstract,myconf:wMyconf,budget:wBudget,fname:wFname}[name]||(()=>""))();
 }
 
 /* ---------- Render Guide ---------- */
@@ -1521,6 +1630,7 @@ function refreshLive(){
   const po=$("#pitchOut"); if(po){ po.textContent=pitchText(); const w=pitchText().split(/\s+/).length; const pl=$("#pitchLen"); if(pl) pl.textContent = S.lang==="en" ? `${w} words ≈ ${Math.round(w/2.3)} s` : `${pitchText().length} ${T("ตัวอักษร","chars")}`; }
   const fo=$("#fuOut"); if(fo) fo.textContent=fuText();
   refreshAbs();
+  const fo2=$("#fnOut"); if(fo2){ fo2.textContent=fnResult(); const f=S.fn||{}; const bad=/final|สุดท้าย|ล่าสุด|new\b/i.test((f.title||"")+(f.cmt||"")); const thai=/[\u0E00-\u0E7F]/.test((f.title||"")+(f.name||"")); $("#fnWarn").textContent=(bad?T("⚠️ หลีกเลี่ยงคำว่า final / new ในชื่อไฟล์","⚠️ Avoid \"final\" / \"new\" in file names"):"")+(thai?T(" ⚠️ แนะนำใช้อักษรอังกฤษในชื่อไฟล์"," ⚠️ Prefer Latin characters"):""); }
   const bt=$("#budTot"); if(bt) bt.textContent=budTotal().toLocaleString();
   const tl=$("#tLink"); if(tl) tl.textContent=teacherLink();
   if(S.tab==="asg"){
@@ -1559,7 +1669,8 @@ document.addEventListener("click",e=>{
   if(act==="ccClear"){ S.cc={}; save(); render(true); return; }
   if(act==="cfpClear"){ S.cfp={}; save(); render(true); return; }
   if(act==="cfpCopy"){ const t=CFP_ROWS.map(([k,l])=>`${L(l)}: ${(S.cfp&&S.cfp[k])||"-"}`).join("\n"); (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(UI.copied[S.lang])).catch(()=>{}); return; }
-  if(act==="absEx"){ S.abs=Object.assign({limit:250},EX_ABS); save(); render(true); return; }
+  if(act==="absSup"){ const s=absState(); s.authors=(s.authors||"")+b.dataset.s; save(); render(true); return; }
+  if(act==="absEx"){ S.abs=Object.assign({limit:200},EX_ABS); save(); render(true); return; }
   if(act==="absClear"){ S.abs={limit:250}; save(); render(true); return; }
   if(act==="clearRub"){ S.rub={}; save(); render(true); return; }
   if(act==="addItem"){ A(b.dataset.id).r.push({}); save(); render(true); return; }
