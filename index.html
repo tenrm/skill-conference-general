@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conference Skills · Student Field Guide</title>
+<meta name="description" content="คู่มือและงานมอบหมายสำหรับนิสิตที่ไปร่วมประชุมวิชาการ (ใช้ได้กับทุกงานประชุม) / Student guide & assignments for any academic conference.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --ink:#1d2327; --muted:#5f6b72; --line:#e3e1da;
+  --accent:#0f6b5c; --accent-2:#e0efe9; --warn:#a4501b; --warn-bg:#fbefe4; --info-bg:#eaf1f8; --info:#24527a;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter","IBM Plex Sans Thai",system-ui,sans-serif;line-height:1.65;font-size:16px}
+body.lang-th{font-family:"IBM Plex Sans Thai","Inter",system-ui,sans-serif}
+a{color:var(--accent)}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+h2{font-size:1.45rem} h3{font-size:1.1rem} h4{font-size:1rem}
+p{margin:.3em 0 .8em}
+ul,ol{margin:.2em 0 .9em;padding-left:1.3em}
+li{margin:.2em 0}
+small,.muted{color:var(--muted)}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(246,245,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;padding:.6rem 1rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;line-height:1.2;margin-right:auto}
+.brand b{font-size:1.05rem}
+.brand span{font-size:.8rem;color:var(--muted)}
+.tabs{display:flex;gap:.3rem;background:#ebe9e2;padding:.25rem;border-radius:999px}
+.tabs button{border:0;background:transparent;padding:.45rem 1rem;border-radius:999px;font:inherit;font-weight:600;color:var(--muted);cursor:pointer}
+.tabs button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:var(--surface);padding:.4rem .8rem;font:inherit;font-weight:600;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--accent);color:#fff}
+/* layout */
+.wrap{max-width:1180px;margin:0 auto;padding:1.2rem 1rem 4rem;display:grid;grid-template-columns:240px 1fr;gap:1.5rem}
+.side{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 90px);overflow:auto}
+.side a{display:block;padding:.35rem .7rem;border-radius:8px;text-decoration:none;color:var(--muted);font-size:.92rem}
+.side a:hover{background:#ebe9e2;color:var(--ink)}
+.side a.on{background:var(--accent-2);color:var(--accent);font-weight:600}
+.side .sgroup{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;padding:.8rem .7rem .2rem}
+.side .sgroup:first-child{padding-top:.2rem}
+input[type=date]{font:inherit;font-size:.95rem;padding:.45rem .6rem;border:1px solid #cfccc3;border-radius:8px;width:100%}
+.side .prog{margin:.8rem .7rem;font-size:.85rem}
+main{min-width:0}
+section.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-bottom:1.2rem;box-shadow:var(--shadow);scroll-margin-top:84px}
+section.card.hero{background:linear-gradient(135deg,#0f6b5c,#164d63);color:#fff;border:0}
+.hero h1{font-size:1.8rem;margin-bottom:.3em}
+.hero p{opacity:.92}
+.hero .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.7rem;margin-top:1rem}
+.hero .fact{background:rgba(255,255,255,.12);border-radius:10px;padding:.6rem .8rem;font-size:.9rem}
+.hero .fact b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.8}
+.hero a{color:#fff}
+.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:.2rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.box{border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;background:#fcfbf8}
+.box h4{margin-bottom:.3em}
+.note{background:var(--info-bg);color:var(--info);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
+.warn{background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:.7rem 1rem;font-size:.93rem;margin:.6rem 0}
+.pill{display:inline-block;font-size:.75rem;font-weight:600;padding:.1rem .55rem;border-radius:999px;background:var(--accent-2);color:var(--accent);margin-right:.3rem;white-space:nowrap}
+.pill.gray{background:#eceae4;color:var(--muted)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+/* checklist */
+.check{list-style:none;padding:0;margin:.4rem 0 1rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.4rem .5rem;border-radius:8px}
+.check li:hover{background:#f6f5f1}
+.check input{margin-top:.35rem;width:18px;height:18px;accent-color:var(--accent);flex:none}
+.check li.done span{color:var(--muted);text-decoration:line-through}
+.bar{height:8px;background:#e8e6df;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{border-bottom:1px solid var(--line);padding:.45rem .5rem;text-align:left;vertical-align:top}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);background:#faf9f6}
+.tblwrap{overflow-x:auto}
+/* forms */
+label.f{display:block;font-weight:600;font-size:.88rem;margin:.6rem 0 .2rem}
+input[type=text],input[type=email],input[type=number],select,textarea{width:100%;font:inherit;font-size:.95rem;padding:.5rem .65rem;border:1px solid #cfccc3;border-radius:8px;background:#fff;color:var(--ink)}
+textarea{min-height:76px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+.btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--accent);background:var(--accent);color:#fff;font:inherit;font-weight:600;font-size:.9rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--accent)}
+.btn.danger{background:#fff;color:#a12a2a;border-color:#d9a3a3}
+.btn.sm{font-size:.8rem;padding:.25rem .6rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 .9rem}
+.item{border:1px solid var(--line);border-radius:12px;padding:.6rem 1rem 1rem;margin:.8rem 0;background:#fcfbf8;position:relative}
+.item .del{position:absolute;top:.6rem;right:.6rem}
+.item h4{margin:.3rem 0 .2rem;font-size:.95rem;color:var(--accent)}
+.out{white-space:pre-wrap;background:#f3f2ed;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;font-size:.92rem;margin:.6rem 0}
+.score{display:flex;gap:.25rem}
+.score button{width:32px;height:32px;border-radius:8px;border:1px solid #cfccc3;background:#fff;font:inherit;font-weight:600;cursor:pointer}
+.score button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.crit{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:center;padding:.35rem 0;border-bottom:1px dashed var(--line)}
+.crit small{display:block}
+/* planner */
+.day{margin:1rem 0}
+.day h3{display:flex;gap:.5rem;align-items:center}
+.slot{display:grid;grid-template-columns:120px 1fr;gap:.6rem;margin:.4rem 0;align-items:start}
+.slot .t{font-size:.82rem;color:var(--muted);font-weight:600;padding-top:.35rem}
+.blocks{display:flex;flex-wrap:wrap;gap:.4rem}
+.blk{border:1px solid var(--line);background:#fff;border-radius:10px;padding:.35rem .6rem;font-size:.82rem;cursor:pointer;text-align:left;font:inherit;font-size:.82rem;line-height:1.35;max-width:260px}
+.blk b{display:block;font-size:.72rem;color:var(--muted)}
+.blk.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.blk.on b{color:#d6efe8}
+.blk.fixed{background:#f1efe9;cursor:default}
+.blk.clash{outline:2px solid #d0782f}
+/* assignments */
+.asg{border-left:5px solid var(--accent)}
+.asg-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-start}
+.asg-meta{display:flex;gap:.4rem;flex-wrap:wrap;margin:.3rem 0 .6rem}
+details.more{margin:.6rem 0}
+details.more summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin:.8rem 0}
+.stat{background:#fcfbf8;border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem}
+.stat b{font-size:1.4rem;display:block;color:var(--accent)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1d2327;color:#fff;padding:.55rem 1rem;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.refs li{font-size:.88rem}
+.hide{display:none!important}
+@media (max-width:860px){
+  .top{position:static}
+  .tabs button{padding:.4rem .7rem;font-size:.85rem}
+  .wrap{grid-template-columns:1fr}
+  .side{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.5rem}
+  .side .prog{width:100%}
+  .side .sgroup{width:100%;padding:.4rem .3rem 0}
+  .slot{grid-template-columns:1fr}
+  .hero h1{font-size:1.4rem}
+  section.card{padding:1.1rem}
+}
+@media print{
+  .top,.side,.btn,.noprint{display:none!important}
+  .wrap{display:block;padding:0}
+  section.card{box-shadow:none;break-inside:avoid-page;border:0;padding:.5rem 0}
+  body{background:#fff}
+  body.pr #printReport{display:block!important}
+  body.pr #app{display:none!important}
+}
+#printReport{display:none;white-space:pre-wrap;font-size:11pt}
+</style>
+</head>
+<body class="lang-th">
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><b id="brandTitle">Conference Skills</b><span id="brandSub"></span></div>
+    <nav class="tabs" role="tablist">
+      <button id="tabGuide" class="on" data-tab="guide"></button>
+      <button id="tabAsg" data-tab="asg"></button>
+    </nav>
+    <div class="lang" aria-label="Language">
+      <button data-lang="th" class="on">ไทย</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+<div id="app" class="wrap">
+  <aside class="side" id="side"></aside>
+  <main id="main"></main>
+</div>
+<div id="printReport"></div>
+<div class="toast" id="toast"></div>
+<script>
+/* ===== General conference guide — data & sections (part 1) ===== */
+const SRC = {
+  leininger:"https://doi.org/10.1371/journal.pcbi.1009133",
+  erren:"https://pmc.ncbi.nlm.nih.gov/articles/PMC1876493/",
+  bourne:"https://doi.org/10.1371/journal.pcbi.0030077",
+  bautista:"https://pmc.ncbi.nlm.nih.gov/articles/PMC9223317/",
+  tca:"https://thinkcheckattend.org/check/",
+  canterbury:"https://www.canterbury.ac.nz/content/dam/uoc-main-site/documents/faculties/science/biological-sciences/abc/How%20to%20write%20a%20conference%20abstract.pdf",
+  temple:"https://guides.temple.edu/c.php?g=1320941&p=9717586",
+  iu:"https://blogs.iu.edu/grademissaries/2023/09/28/conference-101-how-to-maximize-your-conference-attendance-as-a-graduate-or-professional-student/",
+  cub:"https://www.colorado.edu/graduateschool/services-resources/career-resources/guide-academic-networking",
+  unimelb:"https://students.unimelb.edu.au/academic-skills/graduate-research-services/developing-your-networking-and-presentation-skills/networking-at-academic-events",
+  compass:"https://www.compassscicomm.org/navigating-conferences-as-early-career-scientists/"
+};
+const cite = (k,label) => `<a href="${SRC[k]}" target="_blank" class="cite">${label}</a>`;
+
+const UI = {
+  tabGuide:{th:"ส่วนที่ 1 · คู่มือแนะนำ",en:"Part 1 · Guide"},
+  tabAsg:{th:"ส่วนที่ 2 · งานมอบหมาย",en:"Part 2 · Assignments"},
+  brandTitle:{th:"ทักษะการไปประชุมวิชาการ",en:"Conference Skills"},
+  brandSub:{th:"คู่มือนิสิต · ใช้ได้กับทุกงานประชุม",en:"Student field guide · for any conference"},
+  progress:{th:"ความคืบหน้า checklist",en:"Checklist progress"},
+  asgProgress:{th:"ความคืบหน้างาน",en:"Assignment progress"},
+  copy:{th:"คัดลอก",en:"Copy"}, copied:{th:"คัดลอกแล้ว",en:"Copied"},
+  add:{th:"+ เพิ่มรายการ",en:"+ Add entry"}, del:{th:"ลบ",en:"Remove"},
+  total:{th:"รวม",en:"Total"}
+};
+
+const GROUPS = {
+  start:{th:"เริ่มต้น",en:"Start here"},
+  plan:{th:"1 · วางแผนและเลือกงาน",en:"1 · Plan & choose"},
+  submit:{th:"2 · เตรียมและส่งผลงาน",en:"2 · Prepare & submit"},
+  pre:{th:"3 · เตรียมตัวก่อนไป",en:"3 · Get ready"},
+  at:{th:"4 · ระหว่างงาน",en:"4 · At the conference"},
+  post:{th:"5 · หลังงาน",en:"5 · Afterwards"}
+};
+
+/* ---------- Checklists ---------- */
+const CHECK = {
+  submit:[
+    {th:"อ่าน Call for Papers และคำแนะนำผู้เขียนทั้งหมดจนจบ",en:"Read the entire Call for Papers and author guidelines"},
+    {th:"เขียนใน template ทางการของงานตั้งแต่เริ่ม",en:"Write inside the official template from the start"},
+    {th:"ความยาวไม่เกินกำหนด (คำ/หน้า) และตรวจว่านับรวมชื่อเรื่อง/ผู้แต่ง/รูปหรือไม่",en:"Within the word/page limit — and checked what counts toward it"},
+    {th:"มีครบทุกหัวข้อที่กำหนด เรียงตาม template",en:"All required sections present, in the template's order"},
+    {th:"ชื่อผู้แต่ง สังกัด และอีเมลผู้ประสานงานถูกต้องและตรงกันทุกไฟล์",en:"Author names, affiliations and corresponding email correct and consistent"},
+    {th:"ผู้ร่วมวิจัยทุกคนและอาจารย์ที่ปรึกษาอนุมัติฉบับสุดท้ายแล้ว",en:"All co-authors and the advisor approved the final version"},
+    {th:"รูป/ตารางมีหมายเลข คำบรรยาย หน่วย อ่านออก และถูกอ้างถึงในเนื้อหา",en:"Figures/tables numbered, captioned, with units, legible and cited in the text"},
+    {th:"เอกสารอ้างอิงครบและใช้รูปแบบเดียวตามที่กำหนด",en:"References complete, in the single required style"},
+    {th:"ตรวจภาษา (เครื่องมือ + คนอ่านทาน)",en:"Language checked (tool + human proofreader)"},
+    {th:"ตรวจความซ้ำ/คัดลอก และไม่ใช้เนื้อหาที่ตีพิมพ์แล้ว",en:"Similarity check done; no previously published content"},
+    {th:"ถ้าใช้ AI ช่วย ทำตามนโยบายของงานและตรวจทุกข้อความด้วยตัวเอง",en:"If AI helped, follow the conference policy and verify every statement"},
+    {th:"ไฟล์ครบตามรูปแบบที่กำหนด (เช่น .docx + .pdf) และตั้งชื่อตามคำแนะนำ",en:"Files in the required formats (e.g. .docx + .pdf), named as instructed"},
+    {th:"เลือกหัวข้อ/session และรูปแบบการนำเสนอถูกต้อง",en:"Correct topic/session and presentation preference selected"},
+    {th:"ส่งก่อนกำหนด 2–3 วัน และเก็บหลักฐานการส่ง",en:"Submitted 2–3 days early; proof of submission saved"},
+    {th:"ลงปฏิทิน: วันแจ้งผล วันส่งแก้ไข วันลงทะเบียน early-bird",en:"Calendar: decision, correction and early-bird dates"}
+  ],
+  before:[
+    {th:"ยืนยันการลงทะเบียนและรหัสผลงาน/เวลานำเสนอของตัวเอง",en:"Confirm registration and your presentation code/slot"},
+    {th:"ดาวน์โหลดโปรแกรม/abstract book หรือแอปของงาน ใช้แบบออฟไลน์ได้",en:"Download the program/abstract book or conference app for offline use"},
+    {th:"เขียนเป้าหมาย 3 ข้อ: เรียนรู้อะไร ขอ feedback อะไร อยากรู้จักใคร",en:"Write 3 goals: what to learn, what feedback to seek, whom to meet"},
+    {th:"อ่าน abstract ที่เกี่ยวข้องอย่างน้อย 5 เรื่อง",en:"Read at least 5 relevant abstracts"},
+    {th:"วางตารางส่วนตัวด้วย Planner พร้อมแผนสำรอง",en:"Build your schedule in the Planner, with backups"},
+    {th:"ระบุคนที่อยากคุยด้วย 5–8 คน และอ่านงานของเขา",en:"List 5–8 people to meet and read their work"},
+    {th:"เตรียมคำถามล่วงหน้าอย่างน้อย 3 ข้อ",en:"Prepare at least 3 questions"},
+    {th:"ฝึก elevator pitch 30 วินาที และ 90 วินาที (ไทย/อังกฤษ)",en:"Practise 30 s and 90 s elevator pitches (Thai/English)"},
+    {th:"อัปเดต LinkedIn / ResearchGate / ORCID และทำ QR code โปรไฟล์",en:"Update LinkedIn / ResearchGate / ORCID; make a profile QR code"},
+    {th:"อ่าน code of conduct ของงาน และรู้ช่องทางแจ้งเหตุ",en:"Read the code of conduct and know how to report problems"},
+    {th:"ตรวจการเดินทาง ที่พัก และแผนผังสถานที่",en:"Check travel, accommodation and the venue map"},
+    {th:"แจ้งแผนและเบอร์ติดต่อฉุกเฉินให้อาจารย์ที่ปรึกษา",en:"Share your plan and emergency contact with your advisor"}
+  ],
+  packing:[
+    {th:"บัตรนักศึกษา/บัตรประชาชน หลักฐานลงทะเบียน",en:"Student/ID card and registration proof"},
+    {th:"สมุดโน้ต ปากกา (หรือแท็บเล็ต)",en:"Notebook and pens (or tablet)"},
+    {th:"พาวเวอร์แบงก์ สายชาร์จ หัวแปลงปลั๊ก (ถ้าไปต่างประเทศ)",en:"Power bank, cables, plug adapter (if abroad)"},
+    {th:"ไฟล์นำเสนอสำรอง 3 ที่: USB, cloud, อีเมล (PPTX + PDF ฝังฟอนต์)",en:"Talk backups in 3 places: USB, cloud, email (PPTX + PDF, fonts embedded)"},
+    {th:"โปสเตอร์ในกระบอกกันน้ำ + สำเนา A4/QR code",en:"Poster in a waterproof tube + A4 handouts / QR code"},
+    {th:"นามบัตรหรือ QR code โปรไฟล์",en:"Business cards or profile QR code"},
+    {th:"ชุดสุภาพ รองเท้าที่เดินได้ทั้งวัน เสื้อคลุมกันแอร์",en:"Smart clothes, walking shoes, a light jacket"},
+    {th:"ขวดน้ำ ของว่าง ยาประจำตัว",en:"Water bottle, snacks, personal medication"}
+  ],
+  daily:[
+    {th:"ทบทวนตารางวันนี้และแผนสำรองก่อนออกจากที่พัก",en:"Review today's plan and backups before leaving"},
+    {th:"ไปถึงห้องก่อนเวลา 5–10 นาที",en:"Arrive 5–10 minutes early"},
+    {th:"จดโน้ตทุก talk ตามโครง 4 ช่อง",en:"Take four-box notes for every talk"},
+    {th:"ใช้ช่วงพัก/coffee break คุยกับคนใหม่อย่างน้อย 1 คน",en:"Use breaks to talk to at least one new person"},
+    {th:"บันทึกผู้ติดต่อทันทีหลังคุยเสร็จ",en:"Log each contact right after talking"},
+    {th:"พักให้พอ ดื่มน้ำ ไม่ต้องเข้าทุก session",en:"Rest, hydrate — you don't need to attend every session"},
+    {th:"ก่อนนอน: สรุป 3 สิ่งที่ได้เรียนรู้ และอัปเดตงานมอบหมาย",en:"Before bed: 3 takeaways and update your assignments"}
+  ],
+  after:[
+    {th:"ภายใน 48 ชม.: ส่ง follow-up ถึงผู้ติดต่อใหม่ทุกคน",en:"Within 48 h: follow up with every new contact"},
+    {th:"เรียบเรียงโน้ตและ feedback ขณะยังจำได้",en:"Clean up notes and feedback while fresh"},
+    {th:"อัปเดต CV (การนำเสนอ รางวัล ทุนเดินทาง)",en:"Update your CV (presentations, awards, travel grants)"},
+    {th:"ส่งเอกสารเบิกจ่ายพร้อมใบเสร็จตามกำหนด",en:"Submit reimbursement paperwork with receipts on time"},
+    {th:"ส่งคำขอบคุณผู้สนับสนุน อาจารย์ และผู้จัด",en:"Thank sponsors, advisors and organisers"},
+    {th:"นำ feedback ไปปรับงานวิจัย/ต้นฉบับบทความ",en:"Apply feedback to your research/manuscript"},
+    {th:"แบ่งปันสิ่งที่ได้กับแล็บ (share-back 5 สไลด์)",en:"Share back with your lab (5 slides)"}
+  ]
+};
+
+/* ---------- Sections: Start ---------- */
+const GUIDE = [];
+const S_ = (id,group,nav,th,en,extra={}) => GUIDE.push(Object.assign({id,group,nav,th,en},extra));
+
+S_("overview","start",{th:"ภาพรวมคู่มือ",en:"About this guide"},
+`<div class="eyebrow" style="color:#bfe6dc">คู่มือนิสิต · ใช้ได้กับทุกงานประชุม</div>
+<h1>ไปประชุมวิชาการให้ได้มากกว่าการ "ไปนั่งฟัง"</h1>
+<p>คู่มือนี้เรียงตามวงจรของการไปประชุมวิชาการหนึ่งครั้ง ตั้งแต่ <b>เลือกงาน → เขียนและส่งผลงาน → เตรียมตัว → ระหว่างงาน → หลังงาน</b> สังเคราะห์จากแหล่งที่น่าเชื่อถือ เช่น ชุดบทความ "Ten Simple Rules" ใน PLOS Computational Biology และคู่มือของบัณฑิตวิทยาลัยหลายแห่ง ส่วนที่ 2 คืองานมอบหมายที่ทำและส่งออกเป็นรายงานได้</p>
+<div class="facts">
+ <div class="fact"><b>ขั้นที่ 1</b>วางแผน เลือกงานที่เหมาะสม หาทุน</div>
+ <div class="fact"><b>ขั้นที่ 2</b>อ่านข้อกำหนด เขียนบทคัดย่อ/บทความ ส่ง</div>
+ <div class="fact"><b>ขั้นที่ 3</b>เตรียมตัว วางตาราง เตรียมการนำเสนอ</div>
+ <div class="fact"><b>ขั้นที่ 4</b>ฟัง ดูโปสเตอร์ นำเสนอ สร้างเครือข่าย</div>
+ <div class="fact"><b>ขั้นที่ 5</b>follow-up สะท้อนคิด แบ่งปัน</div>
+</div>`,
+`<div class="eyebrow" style="color:#bfe6dc">Student field guide · for any conference</div>
+<h1>Go to a conference for more than just "sitting and listening"</h1>
+<p>This guide follows the life cycle of one conference: <b>choose → write & submit → get ready → attend → follow up</b>. It synthesises reputable advice, including the "Ten Simple Rules" series in PLOS Computational Biology and graduate-school guides. Part 2 holds assignments you can complete and export as a report.</p>
+<div class="facts">
+ <div class="fact"><b>Stage 1</b>Plan, choose the right meeting, find funding</div>
+ <div class="fact"><b>Stage 2</b>Read the rules, write the abstract/paper, submit</div>
+ <div class="fact"><b>Stage 3</b>Prepare, schedule, get your presentation ready</div>
+ <div class="fact"><b>Stage 4</b>Listen, review posters, present, network</div>
+ <div class="fact"><b>Stage 5</b>Follow up, reflect, share</div>
+</div>`,{hero:true, after:"myconf"});
+
+S_("skills","start",{th:"ทักษะที่ควรได้",en:"Skills to build"},
+`<div class="eyebrow">ทำไมต้องไป</div><h2>7 ทักษะที่นิสิตควรสร้างจากการไปประชุมวิชาการ</h2>
+<div class="grid2">
+<div class="box"><h4>1. ฟังเชิงวิทยาศาสตร์และจดโน้ต</h4>จับข้อความหลัก วิธีการ หลักฐาน และข้อจำกัดของงานในเวลาสั้น ๆ</div>
+<div class="box"><h4>2. ตั้งคำถามเชิงวิพากษ์</h4>ถามคำถามที่ชัด สุภาพ และต่อยอดงาน</div>
+<div class="box"><h4>3. สื่อสารงานวิจัย (ไทย/อังกฤษ)</h4>เล่างานตัวเองให้คนต่างสาขาเข้าใจใน 30 วินาที – 2 นาที</div>
+<div class="box"><h4>4. สร้างเครือข่าย</h4>เริ่มบทสนทนา แลกช่องทางติดต่อ และ follow-up อย่างมืออาชีพ</div>
+<div class="box"><h4>5. บริหารเวลาและจัดลำดับความสำคัญ</h4>วางแผนห้องคู่ขนาน และเผื่อเวลาพัก</div>
+<div class="box"><h4>6. วิจารณญาณด้านการออกแบบสื่อ</h4>วิเคราะห์ว่าโปสเตอร์/สไลด์ที่ดีต่างจากที่ไม่ดีอย่างไร</div>
+<div class="box"><h4>7. ความเป็นมืออาชีพและการสะท้อนคิด</h4>มารยาท จริยธรรม การถ่ายภาพ และการทบทวนสิ่งที่ได้เรียนรู้</div>
+</div>
+<div class="note">การเรียนรู้จากวิธีที่คนอื่นนำเสนอ การฝึกพูดบ่อย ๆ และการขอ feedback เป็นหัวใจของการพัฒนาการสื่อสารของนักวิทยาศาสตร์ (${cite("bautista","Bautista et al., 2022")})</div>`,
+`<div class="eyebrow">Why you are going</div><h2>7 skills to build at a scientific conference</h2>
+<div class="grid2">
+<div class="box"><h4>1. Scientific listening & note-taking</h4>Capture the message, method, evidence and limitations quickly.</div>
+<div class="box"><h4>2. Critical questioning</h4>Ask clear, polite, constructive questions.</div>
+<div class="box"><h4>3. Research communication</h4>Explain your work to non-specialists in 30 s – 2 min.</div>
+<div class="box"><h4>4. Networking</h4>Start conversations, exchange contacts, follow up professionally.</div>
+<div class="box"><h4>5. Time management & prioritising</h4>Plan across parallel rooms and schedule rest.</div>
+<div class="box"><h4>6. Visual design literacy</h4>See what separates effective posters and slides from weak ones.</div>
+<div class="box"><h4>7. Professionalism & reflection</h4>Etiquette, ethics, photography and reflecting on what you learned.</div>
+</div>
+<div class="note">Learning from how others present, practising often and asking for feedback are core to improving scientific communication (${cite("bautista","Bautista et al., 2022")}).</div>`);
+
+S_("anatomy","start",{th:"รู้จักองค์ประกอบของงานประชุม",en:"Anatomy of a conference"},
+`<div class="eyebrow">พื้นฐาน</div><h2>งานประชุมวิชาการมีอะไรบ้าง</h2>
+<div class="tblwrap"><table><thead><tr><th>กิจกรรม</th><th>ลักษณะที่พบบ่อย</th><th>นิสิตได้อะไร</th></tr></thead><tbody>
+<tr><td><b>Keynote / Plenary</b></td><td>วิทยากรรับเชิญระดับแนวหน้า 30–60 นาที ทุกคนอยู่ห้องใหญ่</td><td>ภาพใหญ่และทิศทางของสาขา</td></tr>
+<tr><td><b>Symposium / Invited session</b></td><td>หัวข้อเฉพาะที่มีประธานจัด วิทยากรรับเชิญหลายคน</td><td>ความรู้ลึกในหัวข้อเดียว</td></tr>
+<tr><td><b>Oral (contributed) session</b></td><td>หลายห้องคู่ขนาน มักคนละ 10–20 นาทีรวมถามตอบ (เช่น 12+3 หรือ 15+5)</td><td>ผลงานใหม่ ฝึกถามคำถาม</td></tr>
+<tr><td><b>Poster session</b></td><td>ผู้นำเสนอยืนประจำโปสเตอร์ตามเวลาที่กำหนด ขนาดต้องตามที่งานกำหนด (A0 แนวตั้งพบบ่อย)</td><td>คุยกับเจ้าของงานได้ลึกที่สุด</td></tr>
+<tr><td><b>Flash / lightning talk</b></td><td>1–5 นาที แนะนำโปสเตอร์</td><td>ฝึกเล่างานแบบกระชับ</td></tr>
+<tr><td><b>Workshop / short course / panel</b></td><td>ฝึกปฏิบัติ หรือเวทีอภิปราย</td><td>ทักษะเทคนิค มุมมองหลากหลาย</td></tr>
+<tr><td><b>Exhibition / booths</b></td><td>บริษัท สำนักพิมพ์ แหล่งทุน</td><td>เครื่องมือใหม่ ข้อมูลทุน/งาน</td></tr>
+<tr><td><b>Social / early-career events</b></td><td>welcome reception, banquet, mentoring, ทัศนศึกษา</td><td>เครือข่ายแบบไม่เป็นทางการ</td></tr>
+<tr><td><b>Awards</b></td><td>Best student poster/oral (เกณฑ์ต่างกันในแต่ละงาน)</td><td>ผลงานใน CV</td></tr>
+</tbody></table></div>
+<p class="muted">เอกสารสำคัญ: โปรแกรม (program book/แอป), abstract book, proceedings, แนวทางการนำเสนอ (presentation guidelines) และ code of conduct</p>`,
+`<div class="eyebrow">Basics</div><h2>What happens at a scientific conference</h2>
+<div class="tblwrap"><table><thead><tr><th>Activity</th><th>Typical format</th><th>What students gain</th></tr></thead><tbody>
+<tr><td><b>Keynote / Plenary</b></td><td>Leading invited speaker, 30–60 min, everyone in the main hall</td><td>The big picture and direction of the field</td></tr>
+<tr><td><b>Symposium / Invited session</b></td><td>Themed session run by chairs with several invited speakers</td><td>Depth on one topic</td></tr>
+<tr><td><b>Oral (contributed) session</b></td><td>Parallel rooms; often 10–20 min each incl. Q&A (e.g. 12+3 or 15+5)</td><td>New results; practice asking questions</td></tr>
+<tr><td><b>Poster session</b></td><td>Presenters stand by posters at set times; size per the rules (A0 portrait is common)</td><td>The deepest conversations with authors</td></tr>
+<tr><td><b>Flash / lightning talk</b></td><td>1–5 min teaser for a poster</td><td>Practice concise pitching</td></tr>
+<tr><td><b>Workshop / short course / panel</b></td><td>Hands-on training or discussion</td><td>Technical skills, multiple perspectives</td></tr>
+<tr><td><b>Exhibition / booths</b></td><td>Companies, publishers, funders</td><td>New tools, funding/job information</td></tr>
+<tr><td><b>Social / early-career events</b></td><td>Reception, banquet, mentoring, excursions</td><td>Informal networking</td></tr>
+<tr><td><b>Awards</b></td><td>Best student poster/oral (criteria vary)</td><td>A CV item</td></tr>
+</tbody></table></div>
+<p class="muted">Key documents: program (book/app), abstract book, proceedings, presentation guidelines and code of conduct.</p>`);
+
+/* ---------- Stage 1: Plan & choose ---------- */
+S_("roadmap","plan",{th:"แผนเวลาภาพรวม",en:"Overall roadmap"},
+`<div class="eyebrow">ขั้นที่ 1 · วางแผน</div><h2>หลักการ: เริ่มก่อนวันงานหลายเดือน</h2>
+<p>งานประชุมส่วนใหญ่ปิดรับผลงาน <b>3–6 เดือนก่อนวันงาน</b> (งานนานาชาติขนาดใหญ่อาจเร็วกว่านั้น) และทุนเดินทางบางแหล่งมีกำหนดยื่นล่วงหน้าหลายเดือน (${cite("leininger","Leininger et al., 2021")}) ไทม์ไลน์ทั่วไป:</p>
+<div class="tblwrap"><table><thead><tr><th>ก่อนวันงาน</th><th>สิ่งที่ควรทำ</th></tr></thead><tbody>
+<tr><td>9–6 เดือน</td><td>ตั้งเป้าหมาย เลือกงาน คุยกับอาจารย์ หาทุนและตรวจกำหนดยื่นทุน</td></tr>
+<tr><td>6–4 เดือน</td><td>อ่าน Call for Papers ดาวน์โหลด template สรุปผลและทำรูปหลัก</td></tr>
+<tr><td>4–3 เดือน</td><td>เขียน ส่งอาจารย์ตรวจ และส่งผลงานก่อนกำหนด</td></tr>
+<tr><td>3–2 เดือน</td><td>รอผลพิจารณา แก้ไขตามความเห็นผู้ประเมิน</td></tr>
+<tr><td>2–1 เดือน</td><td>ลงทะเบียน (early-bird) ขออนุมัติเดินทาง จองที่พัก</td></tr>
+<tr><td>1 เดือน – 1 สัปดาห์</td><td>ทำโปสเตอร์/สไลด์ ซ้อม วางตารางเข้าฟัง</td></tr>
+<tr><td>วันงาน</td><td>นำเสนอ ฟัง สร้างเครือข่าย</td></tr>
+<tr><td>หลังงาน 1–2 สัปดาห์</td><td>follow-up สรุปรายงาน เบิกจ่าย แบ่งปันกับแล็บ</td></tr>
+</tbody></table></div>
+<div class="warn">อย่าวางแผนโดยหวังว่าจะมีการขยายกำหนดส่ง — บางงานขยาย บางงานไม่ขยาย</div>
+<h3>🧮 วางแผนย้อนหลังจากกำหนดส่ง</h3>{{w:timeline}}`,
+`<div class="eyebrow">Stage 1 · Plan</div><h2>Principle: start months ahead</h2>
+<p>Most conferences close submissions <b>3–6 months before the event</b> (large international meetings may be earlier), and some travel grants have deadlines months ahead (${cite("leininger","Leininger et al., 2021")}). A typical timeline:</p>
+<div class="tblwrap"><table><thead><tr><th>Before the event</th><th>What to do</th></tr></thead><tbody>
+<tr><td>9–6 months</td><td>Set goals, choose the meeting, talk to your advisor, find funding and its deadlines</td></tr>
+<tr><td>6–4 months</td><td>Read the Call for Papers, download the template, finalise results and key figures</td></tr>
+<tr><td>4–3 months</td><td>Write, get advisor feedback, submit before the deadline</td></tr>
+<tr><td>3–2 months</td><td>Await review; revise per reviewer comments</td></tr>
+<tr><td>2–1 months</td><td>Register (early-bird), request travel approval, book accommodation</td></tr>
+<tr><td>1 month – 1 week</td><td>Make the poster/slides, rehearse, plan your schedule</td></tr>
+<tr><td>Conference</td><td>Present, listen, network</td></tr>
+<tr><td>1–2 weeks after</td><td>Follow up, write the report, claim expenses, share with your lab</td></tr>
+</tbody></table></div>
+<div class="warn">Never plan around a deadline extension — some meetings extend, many don't.</div>
+<h3>🧮 Plan backwards from the deadline</h3>{{w:timeline}}`);
+
+S_("find","plan",{th:"หางานประชุมที่เหมาะสม",en:"Finding the right conference"},
+`<div class="eyebrow">ขั้นที่ 1 · เลือกงาน</div><h2>หางานประชุมที่เหมาะสม</h2>
+<p>เริ่มจาก <b>เป้าหมาย</b> — อยากเรียนรู้ ได้ feedback สร้างเครือข่าย หรือพัฒนาวิชาชีพ — แล้วเลือกงานที่ตอบเป้าหมายนั้น งานขนาดเล็กเอื้อต่อการคุยแบบไม่เป็นทางการ งานขนาดใหญ่ให้ภาพรวมของสาขา งานออนไลน์มักถูกกว่าและเข้าถึงง่าย (${cite("leininger","Leininger et al., 2021")})</p>
+<div class="grid2">
+<div class="box"><h4>🔎 หางานจากที่ไหน</h4><ul>
+<li>อาจารย์ที่ปรึกษาและรุ่นพี่ในแล็บ</li>
+<li>สมาคมวิชาชีพ/สมาคมวิทยาศาสตร์ในสาขา (ประชุมประจำปี)</li>
+<li>ประกาศคณะ/มหาวิทยาลัย และ mailing list ของสาขา</li>
+<li>ดูว่านักวิจัยที่เราอ่านงานบ่อย ๆ ไปนำเสนอที่ไหน</li>
+<li>ระวังอีเมลเชิญชวนที่ส่งมาโดยไม่รู้จักกัน</li></ul></div>
+<div class="box"><h4>🧭 ประเภทงาน</h4><ul>
+<li><b>ประชุมระดับชาติ/สมาคม</b> — หลายสาขา เหมาะกับนำเสนอครั้งแรก</li>
+<li><b>ประชุมนานาชาติเฉพาะสาขา</b> — ผู้เชี่ยวชาญตรงสาย แข่งขันสูง ค่าใช้จ่ายสูง</li>
+<li><b>Student / young scientist symposium</b> — เป็นกันเอง ได้ feedback</li>
+<li><b>Workshop / training</b> — ทักษะเชิงปฏิบัติ</li>
+<li><b>Virtual / hybrid</b> — ประหยัด เข้าถึงง่าย แต่ต้องตั้งใจสร้างเครือข่ายมากขึ้น</li></ul></div>
+</div>
+<h3>เกณฑ์เลือกงาน</h3>
+<ul>
+<li><b>ขอบเขตตรงกับงาน</b> — มี session/symposium ตรงหัวข้อ</li>
+<li><b>ผู้ฟังและเครือข่าย</b> — คนที่อยากรู้จักไปหรือไม่ keynote เป็นใคร</li>
+<li><b>ผู้จัดน่าเชื่อถือ</b> — สมาคม/มหาวิทยาลัยที่รู้จัก จัดต่อเนื่อง</li>
+<li><b>ช่องทางตีพิมพ์</b> — abstract book, proceedings หรือวารสาร; ฐานข้อมูลที่ indexing; ผลต่อการตีพิมพ์วารสารภายหลัง</li>
+<li><b>ค่าใช้จ่ายและทุน</b> — ค่าลงทะเบียน (นิสิตมักมีอัตราพิเศษ) + เดินทาง + ที่พัก</li>
+<li><b>จังหวะเวลา</b> — ผลพร้อมทันกำหนดส่ง? ชนกับสอบ/ภาคสนาม?</li>
+<li><b>โอกาสสำหรับนิสิต</b> — รางวัล ทุนเดินทาง กิจกรรม mentoring</li>
+</ul>
+<div class="warn"><b>ระวังงานประชุมแสวงประโยชน์ (predatory conference):</b> ชื่อเลียนแบบงานดัง รับทุกหัวข้อ เชิญผ่านอีเมลสแปม ไม่มีรายชื่อกรรมการ รับผลงานเร็วผิดปกติ ไม่บอกว่าตีพิมพ์ที่ไหน ค่าธรรมเนียมไม่ชัดเจน — ตรวจด้วย ${cite("tca","Think. Check. Attend.")}</div>
+<h3>🧪 ประเมินงานประชุมที่สนใจ</h3>{{w:confcheck}}`,
+`<div class="eyebrow">Stage 1 · Choose</div><h2>Finding the right conference</h2>
+<p>Start from your <b>goal</b> — learning, feedback, networking or professional development — and pick a meeting that serves it. Small meetings favour informal networking, large ones give a field overview, and virtual events are often cheaper and easier to join (${cite("leininger","Leininger et al., 2021")}).</p>
+<div class="grid2">
+<div class="box"><h4>🔎 Where to look</h4><ul>
+<li>Your advisor and senior lab members</li>
+<li>Professional/scientific societies in your field (annual meetings)</li>
+<li>Faculty/university announcements and field mailing lists</li>
+<li>Where researchers you often read present their work</li>
+<li>Be wary of unsolicited email invitations</li></ul></div>
+<div class="box"><h4>🧭 Types of meeting</h4><ul>
+<li><b>National/society congress</b> — multidisciplinary, good for a first presentation</li>
+<li><b>Specialised international conference</b> — niche experts, competitive, costly</li>
+<li><b>Student / young-scientist symposium</b> — friendly, good feedback</li>
+<li><b>Workshop / training</b> — hands-on skills</li>
+<li><b>Virtual / hybrid</b> — affordable and accessible, but networking takes more effort</li></ul></div>
+</div>
+<h3>Selection criteria</h3>
+<ul>
+<li><b>Scope fit</b> — sessions/symposia that match your topic</li>
+<li><b>Audience & network</b> — will the people you want to meet attend? Who are the keynotes?</li>
+<li><b>Credible organiser</b> — a known society/university, a long-running series</li>
+<li><b>Publication outlet</b> — abstract book, proceedings or journal; indexing; effect on later journal publication</li>
+<li><b>Cost & funding</b> — registration (students often get reduced rates) + travel + accommodation</li>
+<li><b>Timing</b> — will results be ready? Clashes with exams/fieldwork?</li>
+<li><b>Student opportunities</b> — awards, travel grants, mentoring</li>
+</ul>
+<div class="warn"><b>Beware of predatory conferences:</b> names mimicking famous meetings, any topic accepted, spam invitations, no committee listed, suspiciously fast acceptance, no stated publication outlet, vague fees — check with ${cite("tca","Think. Check. Attend.")}</div>
+<h3>🧪 Evaluate a conference you are considering</h3>{{w:confcheck}}`);
+
+S_("funding","plan",{th:"งบประมาณ ทุน และการขออนุมัติ",en:"Budget, funding & approvals"},
+`<div class="eyebrow">ขั้นที่ 1 · งบประมาณ</div><h2>งบประมาณ ทุน และการขออนุมัติ</h2>
+<div class="grid2">
+<div class="box"><h4>💰 แหล่งทุนที่ควรตรวจ</h4><ul>
+<li>ส่วนลดนิสิต / early-bird / group rate ของงาน</li>
+<li>ทุนเดินทางของงานประชุมหรือสมาคม (บางแห่งเฉพาะผู้นำเสนอ)</li>
+<li>งบของภาควิชา คณะ บัณฑิตวิทยาลัย โครงการวิจัยของอาจารย์</li>
+<li>สมัครเป็นอาสาสมัครของงานเพื่อลดค่าลงทะเบียน (ถ้ามี)</li>
+<li>หลายทุนต้องสำรองจ่ายก่อนแล้วเบิกคืน — ถ้าเป็นภาระ ปรึกษาอาจารย์/ภาควิชา (${cite("leininger","Leininger et al., 2021")})</li></ul></div>
+<div class="box"><h4>📄 เอกสารที่มักต้องใช้</h4><ul>
+<li>หนังสือตอบรับผลงาน / หลักฐานลงทะเบียน</li>
+<li>หนังสือขออนุมัติเดินทางหรือขออนุญาตลา</li>
+<li>ประมาณการค่าใช้จ่าย (ใช้เครื่องมือด้านล่าง)</li>
+<li>ใบเสร็จทุกรายการ (เก็บฉบับจริงและถ่ายภาพไว้)</li>
+<li>งานต่างประเทศ: หนังสือเดินทาง วีซ่า ประกันเดินทาง (เผื่อเวลาขอวีซ่า)</li></ul></div>
+</div>
+<h3>🧾 ประมาณการค่าใช้จ่าย</h3>{{w:budget}}`,
+`<div class="eyebrow">Stage 1 · Budget</div><h2>Budget, funding & approvals</h2>
+<div class="grid2">
+<div class="box"><h4>💰 Funding to check</h4><ul>
+<li>Student / early-bird / group registration rates</li>
+<li>Conference or society travel grants (some only for presenters)</li>
+<li>Department, faculty, graduate school or advisor's project budgets</li>
+<li>Volunteering for the conference to reduce fees (where offered)</li>
+<li>Many grants reimburse after you pay — if that's a hardship, talk to your advisor/department (${cite("leininger","Leininger et al., 2021")})</li></ul></div>
+<div class="box"><h4>📄 Documents you'll usually need</h4><ul>
+<li>Acceptance letter / registration proof</li>
+<li>Travel approval or leave request</li>
+<li>A cost estimate (use the tool below)</li>
+<li>Every receipt (keep originals and photos)</li>
+<li>Abroad: passport, visa, travel insurance (allow time for visas)</li></ul></div>
+</div>
+<h3>🧾 Cost estimate</h3>{{w:budget}}`);
+
+/* ---------- Stage 2: Prepare & submit ---------- */
+S_("cfp","submit",{th:"อ่านข้อกำหนดการส่งผลงาน",en:"Reading the submission rules"},
+`<div class="eyebrow">ขั้นที่ 2 · ข้อกำหนด</div><h2>อ่าน Call for Papers ให้ครบก่อนเขียน</h2>
+<p>ผลงานจำนวนมากถูกส่งกลับหรือปฏิเสธเพราะ <b>ไม่ทำตามข้อกำหนด</b> ไม่ใช่เพราะคุณภาพวิทยาศาสตร์ ก่อนเริ่มเขียนให้สกัดข้อกำหนดลงตารางด้านล่างแล้วให้อาจารย์ตรวจ</p>
+<div class="grid2">
+<div class="box"><h4>📄 บทคัดย่อ (ที่พบบ่อย)</h4><ul><li>150–300 คำ (มักกำหนดเพดานไว้ เช่น 250 คำ) หรือ 1 หน้า</li><li>บางงานให้ใส่รูป/ตารางได้ 1 รายการ บางงานห้าม</li><li>บางงานบังคับหัวข้อย่อย (structured abstract)</li><li>มักไม่ให้ใส่เอกสารอ้างอิง</li></ul></div>
+<div class="box"><h4>📘 บทความฉบับเต็ม (ที่พบบ่อย)</h4><ul><li>ประมาณ 4–10 หน้า ตาม template</li><li>โครงสร้าง IMRaD + Acknowledgements + References</li><li>บางงานต้องส่งพร้อมบทคัดย่อ บางงานส่งภายหลัง</li><li>ตีพิมพ์ใน proceedings หรือ special issue ของวารสาร</li></ul></div>
+<div class="box"><h4>✍️ รูปแบบ</h4><ul><li>ภาษา (งานนานาชาติมักเป็นอังกฤษ)</li><li>template Word/LaTeX: ฟอนต์ ขนาด ระยะขอบ ระยะบรรทัด</li><li>รูปแบบชื่อผู้แต่ง สังกัด และการอ้างอิง</li><li>ชนิดไฟล์และการตั้งชื่อไฟล์</li></ul></div>
+<div class="box"><h4>⚖️ กติกาอื่น</h4><ul><li>ต้องเป็นงานต้นฉบับ ไม่ซ้ำกับที่ตีพิมพ์แล้ว</li><li>รูปแบบการพิจารณา (peer review, blind review)</li><li>มักต้องมีผู้แต่งอย่างน้อย 1 คนลงทะเบียนและนำเสนอ</li><li>บางงานห้ามเปลี่ยนเนื้อหา/ประเภทหลังตอบรับ</li></ul></div>
+</div>
+<h3>📋 ตารางสกัดข้อกำหนดของงานที่จะส่ง</h3>{{w:cfp}}`,
+`<div class="eyebrow">Stage 2 · Requirements</div><h2>Read the whole Call for Papers before writing</h2>
+<p>Many submissions are returned or rejected for <b>not following instructions</b>, not for weak science. Before writing, extract the requirements into the table below and have your advisor check it.</p>
+<div class="grid2">
+<div class="box"><h4>📄 Abstracts (typical)</h4><ul><li>150–300 words (often capped, e.g. 250) or one page</li><li>Some allow one figure/table, others none</li><li>Some require a structured abstract with headings</li><li>Usually no references</li></ul></div>
+<div class="box"><h4>📘 Full papers (typical)</h4><ul><li>About 4–10 pages in the template</li><li>IMRaD + Acknowledgements + References</li><li>Some require it with the abstract, others later</li><li>Published in proceedings or a journal special issue</li></ul></div>
+<div class="box"><h4>✍️ Format</h4><ul><li>Language (international meetings usually English)</li><li>Word/LaTeX template: font, size, margins, spacing</li><li>Author, affiliation and reference formats</li><li>File types and naming</li></ul></div>
+<div class="box"><h4>⚖️ Other rules</h4><ul><li>Original work, not previously published</li><li>Review type (peer review, blind review)</li><li>Usually at least one author must register and present</li><li>Some forbid changes of content/type after acceptance</li></ul></div>
+</div>
+<h3>📋 Requirement worksheet for your target conference</h3>{{w:cfp}}`);
+
+/* ===== General guide — sections (part 2) & data ===== */
+S_("abstract","submit",{th:"เขียนบทคัดย่อ",en:"Writing the abstract"},
+`<div class="eyebrow">ขั้นที่ 2 · บทคัดย่อ</div><h2>เขียนบทคัดย่อ (Abstract)</h2>
+<p>บทคัดย่อคือ "โฆษณา" ของงาน กรรมการใช้ตัดสินว่ารับหรือไม่ และผู้ฟังใช้เลือกว่าจะเข้าห้องเราหรือไม่ ต้องเข้าใจได้โดยไม่ต้องอ่านอย่างอื่นประกอบ (${cite("canterbury","Univ. of Canterbury")}; ${cite("temple","Temple Univ. Libraries")})</p>
+<h3>โครงสร้าง 5 ส่วน (ตัวอย่างสัดส่วนสำหรับ ~200–250 คำ)</h3>
+<div class="tblwrap"><table><thead><tr><th>ส่วน</th><th>ประมาณ</th><th>เขียนอะไร</th></tr></thead><tbody>
+<tr><td>1. Background</td><td>1–2 ประโยค · ~15%</td><td>บริบท ปัญหา ช่องว่างความรู้</td></tr>
+<tr><td>2. Aim / hypothesis</td><td>1 ประโยค · ~10%</td><td>วัตถุประสงค์หรือสมมติฐานที่ชัด</td></tr>
+<tr><td>3. Methods</td><td>2–3 ประโยค · ~25%</td><td>ตัวอย่าง/พื้นที่ จำนวน วิธีหลัก การวิเคราะห์ (เฉพาะที่จำเป็น)</td></tr>
+<tr><td>4. Results</td><td>2–3 ประโยค · ~35%</td><td>ผลสำคัญ <b>พร้อมตัวเลข</b> ห้ามเขียนว่า "จะนำเสนอผลในงาน"</td></tr>
+<tr><td>5. Conclusion</td><td>1–2 ประโยค · ~15%</td><td>ความหมาย การนำไปใช้ ก้าวต่อไป — ไม่สรุปเกินข้อมูล</td></tr>
+</tbody></table></div>
+<div class="grid2">
+<div class="box"><h4>✅ ควรทำ</h4><ul>
+<li>เขียนบทคัดย่อให้เสร็จก่อน แล้วค่อยตั้งชื่อเรื่อง ~10–15 คำ บอกว่าศึกษาอะไร</li>
+<li>Past tense สำหรับวิธีการและผล · Present tense สำหรับข้อเท็จจริงและข้อสรุป</li>
+<li>นิยามตัวย่อเมื่อใช้ครั้งแรก ชื่อวิทยาศาสตร์เป็นตัวเอียง</li>
+<li>ถ้าเป็น blind review ห้ามมีชื่อคน/สถาบันในเนื้อหา</li>
+<li>ให้อาจารย์และเพื่อนต่างสาขาอ่านก่อนส่ง</li></ul></div>
+<div class="box"><h4>⛔ ไม่ควรทำ</h4><ul>
+<li>เกินจำนวนคำ (อาจถูกปฏิเสธทันที)</li>
+<li>ใส่เอกสารอ้างอิง ศัพท์เฉพาะ หรือตัวย่อที่ไม่นิยาม</li>
+<li>วิธีการละเอียดเกินจนไม่มีที่ให้ผลลัพธ์ — หรือวิธีการบางเกินจนประเมินไม่ได้</li>
+<li>ผลลัพธ์คลุมเครือ เช่น "results will be discussed"</li>
+<li>ข้อสรุปที่ข้อมูลไม่รองรับ หรือชื่อเรื่องแบบ "Effect of…" ที่ไม่บอกอะไร</li></ul></div>
+</div>
+<h3>✏️ เครื่องมือเขียนและนับคำบทคัดย่อ</h3>{{w:abstract}}`,
+`<div class="eyebrow">Stage 2 · Abstract</div><h2>Writing the abstract</h2>
+<p>The abstract is the "advertisement" for your work: reviewers use it to accept or reject, and attendees to choose your room. It must stand on its own (${cite("canterbury","Univ. of Canterbury")}; ${cite("temple","Temple Univ. Libraries")}).</p>
+<h3>Five-part structure (example shares for ~200–250 words)</h3>
+<div class="tblwrap"><table><thead><tr><th>Part</th><th>Approx.</th><th>What to write</th></tr></thead><tbody>
+<tr><td>1. Background</td><td>1–2 sentences · ~15%</td><td>Context, problem, knowledge gap</td></tr>
+<tr><td>2. Aim / hypothesis</td><td>1 sentence · ~10%</td><td>A clear objective or hypothesis</td></tr>
+<tr><td>3. Methods</td><td>2–3 sentences · ~25%</td><td>Samples/site, numbers, key methods, analysis (essentials)</td></tr>
+<tr><td>4. Results</td><td>2–3 sentences · ~35%</td><td>Key findings <b>with numbers</b> — never "results will be presented"</td></tr>
+<tr><td>5. Conclusion</td><td>1–2 sentences · ~15%</td><td>Meaning, applications, next steps — don't overclaim</td></tr>
+</tbody></table></div>
+<div class="grid2">
+<div class="box"><h4>✅ Do</h4><ul>
+<li>Finish the abstract first, then write a ~10–15-word title saying what you studied</li>
+<li>Past tense for methods/results · present tense for facts and conclusions</li>
+<li>Define acronyms at first use; italicise scientific names</li>
+<li>For blind review, remove names of people/institutions</li>
+<li>Have your advisor and a friend from another field read it</li></ul></div>
+<div class="box"><h4>⛔ Don't</h4><ul>
+<li>Exceed the word limit (may mean instant rejection)</li>
+<li>Include references, jargon or undefined acronyms</li>
+<li>Over-detail methods so results get squeezed — or under-describe them so reviewers can't judge</li>
+<li>Write vague results such as "results will be discussed"</li>
+<li>Overclaim, or use empty titles like "Effect of…"</li></ul></div>
+</div>
+<h3>✏️ Abstract builder & word counter</h3>{{w:abstract}}`);
+
+S_("fullpaper","submit",{th:"เขียนบทความฉบับเต็ม",en:"Writing the full paper"},
+`<div class="eyebrow">ขั้นที่ 2 · บทความฉบับเต็ม</div><h2>เขียนบทความฉบับเต็ม (Full paper / Proceedings)</h2>
+<p>บทความฉบับเต็มสำหรับ proceedings คือบทความวิจัยขนาดสั้น ใช้โครงสร้าง IMRaD และ <b>เขียนใน template ทางการตั้งแต่เริ่ม</b> เพื่อเห็นจำนวนหน้าจริงตลอดเวลา</p>
+<div class="tblwrap"><table><thead><tr><th>หัวข้อ</th><th>หลักการ</th></tr></thead><tbody>
+<tr><td>Title / Authors / Affiliation</td><td>ตาม template: ลำดับชื่อ ตัวยกสังกัด อีเมล corresponding author</td></tr>
+<tr><td>Abstract + Keywords</td><td>ตามหลักในหัวข้อก่อนหน้า</td></tr>
+<tr><td>Introduction</td><td>จากกว้างไปแคบ: ความสำคัญ → สิ่งที่รู้แล้ว (อ้างอิง) → ช่องว่าง → วัตถุประสงค์</td></tr>
+<tr><td>Methods</td><td>ละเอียดพอให้ทำซ้ำได้: ตัวอย่าง พื้นที่ เครื่องมือ (รุ่น/ผู้ผลิต) สถิติ ใบอนุญาต/จริยธรรม</td></tr>
+<tr><td>Results and Discussion</td><td>เล่าตามรูป/ตาราง เปรียบเทียบกับงานอื่น อธิบายเหตุผล ระบุข้อจำกัด</td></tr>
+<tr><td>Conclusion</td><td>ตอบวัตถุประสงค์ทีละข้อ ไม่ใส่ข้อมูลใหม่</td></tr>
+<tr><td>Acknowledgements</td><td>แหล่งทุน (เลขที่สัญญา) ผู้ช่วยเหลือ หน่วยงานที่ให้ใช้เครื่องมือ/พื้นที่</td></tr>
+<tr><td>References</td><td>รูปแบบเดียวตาม template ทุกรายการที่อ้างต้องอยู่ในรายการและกลับกัน (ใช้ Zotero/EndNote/Mendeley)</td></tr>
+</tbody></table></div>
+<div class="grid2">
+<div class="box"><h4>📊 รูปและตาราง</h4><ul>
+<li>มีหมายเลขและคำบรรยายที่เข้าใจได้ด้วยตัวเอง</li>
+<li>≥300 dpi ตัวอักษรอ่านออกเมื่อพิมพ์ มีหน่วยและ error bar</li>
+<li>อ้างถึงในเนื้อหาก่อนรูปปรากฏ</li>
+<li>ไม่แสดงข้อมูลเดียวกันซ้ำทั้งรูปและตาราง</li></ul></div>
+<div class="box"><h4>⚠️ ข้อควรระวัง</h4><ul>
+<li><b>ต้นฉบับ:</b> ไม่ใช้เนื้อหาที่ตีพิมพ์แล้ว รวมถึงของตัวเอง</li>
+<li><b>ผลต่อการตีพิมพ์วารสาร:</b> บางวารสารถือว่า full paper ใน proceedings เป็นการตีพิมพ์แล้ว — ปรึกษาอาจารย์ว่าจะส่งแค่ abstract หรือไม่</li>
+<li><b>ผู้แต่ง:</b> ตกลงลำดับชื่อตั้งแต่ต้น ทุกคนอนุมัติก่อนส่ง</li>
+<li><b>AI:</b> ทำตามนโยบายของงาน ผู้เขียนรับผิดชอบทุกประโยคและทุกการอ้างอิง</li></ul></div>
+</div>
+<h3>ลำดับการเขียนที่แนะนำ</h3>
+<ol><li>ทำรูปและตารางหลักก่อน</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>ส่งอาจารย์ตรวจอย่างน้อย 2 รอบ (เผื่อรอบละ ~1 สัปดาห์)</li><li>ตรวจภาษา ความซ้ำ และการอ้างอิง</li><li>แปลงเป็น PDF แล้วตรวจอีกครั้ง (ฟอนต์ สมการ รูป จำนวนหน้า)</li></ol>`,
+`<div class="eyebrow">Stage 2 · Full paper</div><h2>Writing the full paper (proceedings)</h2>
+<p>A proceedings paper is a short research article. Use IMRaD and <b>write inside the official template from the start</b> so you always see the real page count.</p>
+<div class="tblwrap"><table><thead><tr><th>Section</th><th>Principles</th></tr></thead><tbody>
+<tr><td>Title / Authors / Affiliation</td><td>Per template: author order, superscript affiliations, corresponding email</td></tr>
+<tr><td>Abstract + Keywords</td><td>As in the previous section</td></tr>
+<tr><td>Introduction</td><td>Funnel: importance → what is known (cited) → gap → objectives</td></tr>
+<tr><td>Methods</td><td>Replicable detail: samples, site, instruments (model/maker), statistics, permits/ethics</td></tr>
+<tr><td>Results and Discussion</td><td>Lead with figures/tables, compare with others, explain, state limitations</td></tr>
+<tr><td>Conclusion</td><td>Answer each objective; no new data</td></tr>
+<tr><td>Acknowledgements</td><td>Funding (grant numbers), helpers, facilities and site access</td></tr>
+<tr><td>References</td><td>One style per template; every citation listed and vice versa (Zotero/EndNote/Mendeley)</td></tr>
+</tbody></table></div>
+<div class="grid2">
+<div class="box"><h4>📊 Figures & tables</h4><ul>
+<li>Numbered with self-explanatory captions</li>
+<li>≥300 dpi, legible when printed, units and error bars</li>
+<li>Cited in the text before they appear</li>
+<li>Don't duplicate data in a figure and a table</li></ul></div>
+<div class="box"><h4>⚠️ Watch out</h4><ul>
+<li><b>Originality:</b> no previously published content, including your own</li>
+<li><b>Later journal publication:</b> some journals treat a proceedings full paper as prior publication — ask your advisor whether to submit only an abstract</li>
+<li><b>Authorship:</b> agree on order early; everyone approves before submission</li>
+<li><b>AI:</b> follow the conference policy; authors own every sentence and citation</li></ul></div>
+</div>
+<h3>Recommended order</h3>
+<ol><li>Make the key figures and tables first</li><li>Methods → Results & Discussion → Conclusion → Introduction → Abstract → Title</li><li>At least two advisor review rounds (~1 week each)</li><li>Check language, similarity and references</li><li>Export to PDF and check again (fonts, equations, figures, page count)</li></ol>`);
+
+S_("submit","submit",{th:"ส่งผลงาน & หลังพิจารณา",en:"Submitting & after review"},
+`<div class="eyebrow">ขั้นที่ 2 · ส่งผลงาน</div><h2>ตรวจก่อนกดส่ง และจัดการหลังผลพิจารณา</h2>
+<h3>Checklist ก่อนกดส่ง</h3>{{w:check:submit}}
+<div class="grid2">
+<div class="box"><h4>📨 เมื่อได้รับผลพิจารณา</h4><ul>
+<li>อ่านความเห็นทุกข้อ อ่านรอบแรกแล้วพักก่อนค่อยแก้</li>
+<li>ทำตาราง "ความเห็น – การแก้ไข – ตำแหน่งที่แก้" ให้อาจารย์ตรวจ</li>
+<li>แก้ไขให้ครบและส่งภายในกำหนด</li>
+<li>ถ้าไม่เห็นด้วย ตอบอย่างสุภาพพร้อมเหตุผลและหลักฐาน</li>
+<li>ถ้าไม่ได้รับ: ขอ feedback ปรับปรุง แล้วมองหางานถัดไป</li></ul></div>
+<div class="box"><h4>🧾 หลังตอบรับ</h4><ul>
+<li>ลงทะเบียนและชำระเงินก่อนปิด early-bird</li>
+<li>ขออนุมัติเดินทาง/ทุน จองที่พักและการเดินทาง เก็บใบเสร็จ</li>
+<li>อ่าน presentation guidelines: เวลาพูด ขนาดโปสเตอร์ ภาษา เวลาติดโปสเตอร์</li>
+<li>ไปต่อที่ขั้นที่ 3 "เตรียมตัวก่อนไป"</li></ul></div>
+</div>`,
+`<div class="eyebrow">Stage 2 · Submit</div><h2>Check before you submit, then handle the review</h2>
+<h3>Pre-submission checklist</h3>{{w:check:submit}}
+<div class="grid2">
+<div class="box"><h4>📨 When the decision arrives</h4><ul>
+<li>Read every comment; read once, step away, then revise</li>
+<li>Make a "comment – change – location" table for your advisor</li>
+<li>Revise fully and resubmit on time</li>
+<li>If you disagree, reply politely with reasons and evidence</li>
+<li>If rejected: ask for feedback, improve, find the next meeting</li></ul></div>
+<div class="box"><h4>🧾 After acceptance</h4><ul>
+<li>Register and pay before early-bird closes</li>
+<li>Request travel approval/funding; book travel; keep receipts</li>
+<li>Read the presentation guidelines: talk length, poster size, language, mounting time</li>
+<li>Continue to Stage 3 "Get ready"</li></ul></div>
+</div>`);
+
+/* ---------- Stage 3: Get ready ---------- */
+S_("before","pre",{th:"เตรียมตัวก่อนไป",en:"Before you go"},
+`<div class="eyebrow">ขั้นที่ 3 · เตรียมตัว</div><h2>เตรียมตัวก่อนไป</h2>
+<p>นิสิตที่ได้ประโยชน์สูงสุดคือคนที่ <b>รู้ว่าตัวเองไปเพื่ออะไร</b> ตั้งเป้าหมายให้ชัด แล้วใช้เป้าหมายนั้นเลือกว่าจะฟังอะไรและคุยกับใคร (${cite("iu","IU Grademissaries, 2023")})</p>
+<h3>Checklist ก่อนไป</h3>{{w:check:before}}
+<h3>ของที่ต้องเตรียม</h3>{{w:check:packing}}`,
+`<div class="eyebrow">Stage 3 · Prepare</div><h2>Before you go</h2>
+<p>Students gain most when they <b>know why they are going</b>. Set clear goals and use them to decide what to attend and whom to meet (${cite("iu","IU Grademissaries, 2023")}).</p>
+<h3>Pre-conference checklist</h3>{{w:check:before}}
+<h3>What to pack</h3>{{w:check:packing}}`);
+
+S_("program","pre",{th:"อ่านโปรแกรม & วางตาราง",en:"Program & schedule"},
+`<div class="eyebrow">ขั้นที่ 3 · วางตาราง</div><h2>เลือกงานจากโปรแกรมและวางตารางส่วนตัว</h2>
+<ol>
+<li><b>สแกนกว้าง</b> — ไฮไลต์ทุก session/talk ที่เกี่ยวกับงานตัวเองในโปรแกรมหรือแอป</li>
+<li><b>ค้นด้วยคำสำคัญ</b> ใน abstract book: หัวข้อ เทคนิค ชื่อสิ่งมีชีวิต/วัสดุ</li>
+<li><b>จัดลำดับ 3 ระดับ</b>: <span class="pill">ต้องไป</span> <span class="pill gray">ควรไป</span> <span class="pill warn">เปิดโลก</span> (อย่างน้อย 1 ช่วงนอกสาขา) และมี <span class="pill gray">สำรอง</span> ทุกช่วง</li>
+<li><b>ดูผู้พูด ไม่ใช่แค่ชื่อเรื่อง</b> และอย่าลืม keynote, โปสเตอร์, บูธ, กิจกรรมสำหรับนักวิจัยรุ่นใหม่</li>
+<li><b>เผื่อเวลาพัก</b> — การพักอย่างมีกลยุทธ์สำคัญพอ ๆ กับการเข้าฟัง (${cite("leininger","Leininger et al., 2021")})</li>
+</ol>
+<div class="note">กติกาง่าย ๆ: ~60% ฟัง talk · ~25% โปสเตอร์และบูธ · ~15% คุยกับคนและพัก</div>
+<h3>🗓️ Planner ตารางส่วนตัว</h3>{{w:planner}}
+<h3>เคล็ดลับการย้ายห้อง</h3>
+<ul><li>ย้ายห้องระหว่างช่วงเปลี่ยนเรื่อง ไม่ลุกออกกลาง talk</li><li>ถ้าจะออกก่อน นั่งริมทางเดินหรือแถวหลัง</li><li>ห้องเล็กเต็มเร็ว — ไปก่อน 5–10 นาที</li><li>ตรวจประกาศเปลี่ยนแปลงตารางทุกเช้า</li></ul>`,
+`<div class="eyebrow">Stage 3 · Schedule</div><h2>Choose from the program and build your schedule</h2>
+<ol>
+<li><b>Scan broadly</b> — highlight every related session/talk in the program or app</li>
+<li><b>Search the abstract book</b> by topic, technique, organism or material</li>
+<li><b>Rank in three tiers</b>: <span class="pill">Must</span> <span class="pill gray">Should</span> <span class="pill warn">Explore</span> (at least one slot outside your field), plus a <span class="pill gray">Backup</span> for each slot</li>
+<li><b>Look at speakers, not just titles</b>; don't forget keynotes, posters, booths, early-career events</li>
+<li><b>Schedule breaks</b> — strategic downtime matters as much as attendance (${cite("leininger","Leininger et al., 2021")})</li>
+</ol>
+<div class="note">Rule of thumb: ~60% talks · ~25% posters & booths · ~15% conversations and rest.</div>
+<h3>🗓️ Personal schedule planner</h3>{{w:planner}}
+<h3>Room-hopping tips</h3>
+<ul><li>Change rooms between talks, never mid-talk</li><li>If leaving early, sit on the aisle or at the back</li><li>Small rooms fill fast — arrive 5–10 minutes early</li><li>Check schedule changes every morning</li></ul>`);
+
+S_("present","pre",{th:"เตรียมการนำเสนอ",en:"Preparing your presentation"},
+`<div class="eyebrow">ขั้นที่ 3 · การนำเสนอ</div><h2>เตรียมการนำเสนอ (บรรยาย / โปสเตอร์)</h2>
+<p>อ่าน presentation guidelines ของงานก่อนเสมอ: เวลาพูด ภาษา ขนาดและแนวโปสเตอร์ เวลาติด/เก็บโปสเตอร์ ชนิดไฟล์ และกำหนดส่งไฟล์</p>
+<div class="grid2">
+<div class="box"><h4>📽️ บรรยาย — 10 หลักของ ${cite("bourne","Bourne (2007)")}</h4><ol>
+<li>พูดให้เหมาะกับผู้ฟัง</li><li>น้อยแต่ชัด (less is more)</li><li>พูดเมื่อมีสิ่งที่ควรพูด</li><li>ข้อความหลักต้องจำได้แม้ผ่านไปหนึ่งสัปดาห์</li><li>เล่าอย่างมีตรรกะเหมือนเรื่องเล่า</li><li>ใช้เวทีอย่างเป็นธรรมชาติในสไตล์ตัวเอง</li><li>ซ้อมและจับเวลา</li><li>ใช้ภาพน้อยแต่ได้ผล อย่าอ่านสไลด์</li><li>อัดเสียง/วิดีโอตัวเองแล้วดูเพื่อแก้นิสัย</li><li>ให้เครดิตผู้ร่วมงานอย่างเหมาะสม</li></ol>
+<p class="muted">เคล็ดลับ: ~1 สไลด์/นาที ใส่ข้อสรุปเป็นหัวสไลด์ เตรียม backup slides ฝังฟอนต์หรือใช้ PDF</p></div>
+<div class="box"><h4>🖼️ โปสเตอร์ — จาก ${cite("erren","Erren & Bourne (2007)")}</h4><ul>
+<li>กำหนดจุดประสงค์ อยากให้ผู้อ่านทำอะไรต่อ</li><li>ขายงานให้ได้ใน 10 วินาที ชื่อเรื่องสั้นเหมือนพาดหัว</li><li>จัดวางให้มีเส้นทางการอ่านและพื้นที่ว่าง อ่านได้จากระยะ 1–2 เมตร</li><li>ข้อความกระชับ ภาพ/กราฟเป็นตัวเล่า ข้อสรุปเด่น</li><li>ใส่ความเป็นตัวเอง (รูปผู้เขียน) เพื่อชวนคุย</li><li>มี QR code/handout เพื่อติดต่อภายหลัง</li></ul>
+<p class="muted">เตรียมเล่า 3 ระดับ: 30 วินาที / 2 นาที / 5 นาที · ยืนประจำโปสเตอร์ตลอดเวลาที่กำหนด</p></div>
+</div>
+<h3>การตอบคำถาม</h3>
+<ul><li>ฟังจนจบ ทวนคำถามให้ผู้ฟังทั้งห้องได้ยิน</li><li>ตอบตรง สั้น อ้างข้อมูล ถ้าไม่รู้ให้บอกตรง ๆ และเสนอคุยต่อหลัง session</li><li>จดคำถามและ feedback ทุกข้อ — คือวัตถุดิบพัฒนางาน</li></ul>
+<div class="note">ซ้อมอย่างน้อย 2 รอบ (หนึ่งรอบต่อหน้าแล็บ) ก่อนวันงาน 1–2 สัปดาห์ และตรวจข้อกำหนดของงานอีกครั้งก่อนสั่งพิมพ์โปสเตอร์</div>`,
+`<div class="eyebrow">Stage 3 · Presentation</div><h2>Preparing your talk or poster</h2>
+<p>Always read the presentation guidelines first: talk length, language, poster size/orientation, mounting/removal times, file types and upload deadlines.</p>
+<div class="grid2">
+<div class="box"><h4>📽️ Talks — 10 rules from ${cite("bourne","Bourne (2007)")}</h4><ol>
+<li>Talk to the audience</li><li>Less is more</li><li>Only talk when you have something to say</li><li>Make the take-home message stick for a week</li><li>Be logical — tell a story</li><li>Treat the floor as a stage, in your own style</li><li>Practise and time it</li><li>Use visuals sparingly but effectively; don't read slides</li><li>Review recordings of yourself to fix habits</li><li>Give appropriate acknowledgements</li></ol>
+<p class="muted">Tips: ~1 slide per minute; conclusions as slide titles; backup slides; embed fonts or use PDF.</p></div>
+<div class="box"><h4>🖼️ Posters — from ${cite("erren","Erren & Bourne (2007)")}</h4><ul>
+<li>Define the purpose — what should viewers do next?</li><li>Sell the work in 10 seconds; headline-style title</li><li>Layout with a clear reading path and white space; legible at 1–2 m</li><li>Concise text, figures tell the story, prominent conclusions</li><li>Add personality (author photo) to invite conversation</li><li>QR code/handouts so people can follow up</li></ul>
+<p class="muted">Prepare 30 s / 2 min / 5 min versions · stay at your poster for the whole slot.</p></div>
+</div>
+<h3>Handling questions</h3>
+<ul><li>Listen fully; repeat the question for the room</li><li>Answer briefly and directly with evidence; if you don't know, say so and offer to talk afterwards</li><li>Write down every question and comment — they're material for improving your work</li></ul>
+<div class="note">Rehearse at least twice (once in front of your lab) 1–2 weeks before, and re-check the rules before printing your poster.</div>`);
+
+/* ---------- Stage 4: At the conference ---------- */
+S_("listen","at",{th:"ฟัง จดโน้ต และถาม",en:"Listen, note, ask"},
+`<div class="eyebrow">ขั้นที่ 4 · ฟัง</div><h2>ฟังให้ได้เนื้อ จดให้ได้ใช้ ถามให้ได้คุย</h2>
+<div class="grid2">
+<div class="box"><h4>📝 โครงโน้ต 4 ช่อง</h4><ol><li><b>Key message</b> — ประโยคเดียว</li><li><b>Method / evidence</b></li><li><b>Takeaway</b> — นำมาใช้กับงานเราได้อย่างไร</li><li><b>Question</b> — สิ่งที่ยังสงสัย</li></ol><p class="muted">จดทั้งไอเดียและชื่อคนที่ควรติดต่อ (${cite("leininger","Leininger et al., 2021")})</p></div>
+<div class="box"><h4>❓ ถามให้ดี</h4><ul><li>ขอบคุณ แนะนำตัวสั้น ๆ</li><li>ถามข้อเดียว ชัด ไม่เกิน 20 วินาที</li><li>ถามเพื่อเข้าใจ/ต่อยอด ไม่ใช่เพื่อโชว์</li><li>ไม่ทันเวลา → ไปคุยต่อหลัง session</li></ul></div>
+</div>
+<h3>ตัวอย่างประโยคถาม</h3>
+<ul><li>"Thank you for the talk. You mentioned ___ — could you say more about how you ___?"</li><li>"How sensitive are your results to ___? Did you try ___?"</li><li>"Your work reminds me of ___. Could the approach apply to ___?"</li><li>"What was the biggest practical challenge in ___?"</li></ul>
+<p class="muted">ประโยคเปิดคำถามดัดแปลงจาก ${cite("unimelb","Univ. of Melbourne Academic Skills")}</p>`,
+`<div class="eyebrow">Stage 4 · Listen</div><h2>Listen well, take usable notes, ask good questions</h2>
+<div class="grid2">
+<div class="box"><h4>📝 Four-box notes</h4><ol><li><b>Key message</b> — one sentence</li><li><b>Method / evidence</b></li><li><b>Takeaway</b> — use for my work</li><li><b>Question</b> — what's unclear</li></ol><p class="muted">Record ideas and people worth contacting (${cite("leininger","Leininger et al., 2021")}).</p></div>
+<div class="box"><h4>❓ Asking well</h4><ul><li>Thank the speaker; introduce yourself briefly</li><li>One clear question, under 20 seconds</li><li>Ask to understand or extend, not to show off</li><li>Out of time → talk after the session</li></ul></div>
+</div>
+<h3>Question starters</h3>
+<ul><li>"Thank you for the talk. You mentioned ___ — could you say more about how you ___?"</li><li>"How sensitive are your results to ___? Did you try ___?"</li><li>"Your work reminds me of ___. Could the approach apply to ___?"</li><li>"What was the biggest practical challenge in ___?"</li></ul>
+<p class="muted">Starters adapted from ${cite("unimelb","Univ. of Melbourne Academic Skills")}.</p>`);
+
+S_("posters","at",{th:"ดูโปสเตอร์ที่ดี",en:"Reviewing posters"},
+`<div class="eyebrow">ขั้นที่ 4 · โปสเตอร์</div><h2>ดูโปสเตอร์อย่างนักวิจัย</h2>
+<p>รอบแรกเดินเร็ว (10 วินาที/แผ่น — เข้าใจไหมว่าเกี่ยวกับอะไร) แล้วกลับไปคุยกับเจ้าของงานในแผ่นที่น่าสนใจ ("Could you walk me through your poster?") และเยี่ยมโปสเตอร์ของนิสิตรุ่นเดียวกันด้วย (${cite("compass","COMPASS, 2021")})</p>
+<h3>เกณฑ์โปสเตอร์ที่ดี (ลองให้คะแนน)</h3>{{w:rubric}}`,
+`<div class="eyebrow">Stage 4 · Posters</div><h2>Review posters like a researcher</h2>
+<p>Do a quick first pass (10 s per poster — can you tell what it's about?), then return to the best ones and ask for a walkthrough ("Could you walk me through your poster?"). Visit peers' posters too (${cite("compass","COMPASS, 2021")}).</p>
+<h3>What makes a good poster (try scoring one)</h3>{{w:rubric}}`);
+
+S_("network","at",{th:"สร้างเครือข่าย",en:"Networking"},
+`<div class="eyebrow">ขั้นที่ 4 · เครือข่าย</div><h2>สร้างเครือข่าย: เป้าหมาย 5 คนใหม่</h2>
+<p>เป้าหมายคือ <b>บทสนทนาที่มีความหมาย 5 ครั้ง</b> ที่หลากหลาย ไม่ใช่การเก็บนามบัตร อ่านงานของคนที่อยากคุยล่วงหน้า ตกลงกับเพื่อน/อาจารย์ให้ช่วยแนะนำกัน และอย่าจับกลุ่มอยู่แต่กับคนที่รู้จัก (${cite("leininger","Leininger et al., 2021")}; ${cite("compass","COMPASS, 2021")})</p>
+<div class="grid2">
+<div class="box"><h4>💬 ประโยคเปิด</h4><ul><li>"Hi, I'm ___ from ___. How is the conference going for you?" (${cite("cub","CU Boulder")} เรียกประโยคนี้ว่า "Old Faithful")</li><li>"I really enjoyed your talk on ___. May I ask about ___?"</li><li>"Which talk has been most interesting for you so far?"</li><li>"I noticed your poster uses ___. How did you ___?"</li></ul></div>
+<div class="box"><h4>🤝 ระหว่างคุย</h4><ul><li>ถามเรื่องงานเขามากกว่าเล่าเรื่องตัวเอง</li><li>คุย 3–7 นาทีแล้วปิดอย่างสุภาพ</li><li>"May I have your email / connect on LinkedIn?"</li><li>จดชื่อ เรื่องที่คุย และสิ่งที่สัญญาไว้ทันที</li><li>ขออนุญาตก่อนถ่ายรูปหรือบันทึกข้อมูลติดต่อ</li><li>งานสังคม (banquet) ยังเป็นพื้นที่วิชาชีพ</li></ul></div>
+</div>
+<h3>เครื่องมือสร้าง Elevator Pitch</h3>{{w:pitch}}
+<h3>เครื่องมือร่างอีเมล Follow-up</h3>{{w:followup}}`,
+`<div class="eyebrow">Stage 4 · Network</div><h2>Networking: target 5 new contacts</h2>
+<p>Aim for <b>five meaningful, varied conversations</b>, not a pile of cards. Read the work of people you want to meet, agree with friends/advisors to introduce each other, and don't just huddle with people you know (${cite("leininger","Leininger et al., 2021")}; ${cite("compass","COMPASS, 2021")}).</p>
+<div class="grid2">
+<div class="box"><h4>💬 Openers</h4><ul><li>"Hi, I'm ___ from ___. How is the conference going for you?" (${cite("cub","CU Boulder")} calls it the "Old Faithful")</li><li>"I really enjoyed your talk on ___. May I ask about ___?"</li><li>"Which talk has been most interesting for you so far?"</li><li>"I noticed your poster uses ___. How did you ___?"</li></ul></div>
+<div class="box"><h4>🤝 In conversation</h4><ul><li>Ask about their work more than you talk about yours</li><li>Keep it to 3–7 minutes, close politely</li><li>"May I have your email / connect on LinkedIn?"</li><li>Note name, topic and promises right away</li><li>Ask before taking photos or recording contact details</li><li>Social events (banquets) are still professional spaces</li></ul></div>
+</div>
+<h3>Elevator pitch builder</h3>{{w:pitch}}
+<h3>Follow-up email builder</h3>{{w:followup}}`);
+
+S_("photo","at",{th:"ถ่ายภาพ โซเชียล & มารยาท",en:"Photos, social media & etiquette"},
+`<div class="eyebrow">ขั้นที่ 4 · มารยาท</div><h2>ถ่ายภาพ โซเชียลมีเดีย และมารยาท</h2>
+<div class="grid2">
+<div class="box"><h4>✅ ควรทำ</h4><ul><li>ตรวจนโยบายการถ่ายภาพ/บันทึกของงานก่อนเสมอ (${cite("leininger","Leininger et al., 2021")})</li><li>ขออนุญาตเจ้าของโปสเตอร์ก่อนถ่าย ใช้เพื่อการเรียนรู้</li><li>ให้เพื่อนถ่ายภาพขณะเรานำเสนอ ใช้ใน CV/โปรไฟล์ (${cite("compass","COMPASS, 2021")})</li><li>ตั้งชื่อไฟล์ทันที เช่น <code>D1_RoomA_Talk3.jpg</code></li><li>โพสต์ด้วย hashtag ของงาน ให้เครดิตชื่อผู้พูดและชื่อเรื่อง</li></ul></div>
+<div class="box"><h4>⛔ ไม่ควรทำ</h4><ul><li>ถ่าย/โพสต์สไลด์ที่ระบุว่า unpublished หรือ "no photos / no posting"</li><li>ใช้แฟลช ยืนบัง หรืออัดวิดีโอทั้ง talk</li><li>เผยแพร่ข้อมูลที่ยังไม่ตีพิมพ์ของผู้อื่น</li><li>ถ่ายภาพบุคคลระยะใกล้โดยไม่ขออนุญาต</li><li>ปล่อยโทรศัพท์ดังหรือคุยในห้อง</li></ul></div>
+</div>
+<h3>ช็อตที่ควรมีในรายงาน</h3>
+<ul><li>ตัวเองที่ป้ายงาน · ขณะนำเสนอ · โปสเตอร์ดี 2 แผ่น (ได้รับอนุญาต) · บรรยากาศ keynote · บูธ · ภาพกับผู้ติดต่อใหม่ (ได้รับอนุญาต)</li></ul>`,
+`<div class="eyebrow">Stage 4 · Etiquette</div><h2>Photos, social media & etiquette</h2>
+<div class="grid2">
+<div class="box"><h4>✅ Do</h4><ul><li>Check the conference's photo/recording policy first (${cite("leininger","Leininger et al., 2021")})</li><li>Ask poster authors before photographing; use for learning</li><li>Have a friend photograph you presenting, for your CV/profile (${cite("compass","COMPASS, 2021")})</li><li>Rename files right away, e.g. <code>D1_RoomA_Talk3.jpg</code></li><li>Post with the conference hashtag, crediting speaker and title</li></ul></div>
+<div class="box"><h4>⛔ Don't</h4><ul><li>Photograph/post slides marked unpublished or "no photos / no posting"</li><li>Use flash, block views, or record whole talks</li><li>Share others' unpublished data</li><li>Take close-up photos of people without permission</li><li>Let your phone ring or chat during talks</li></ul></div>
+</div>
+<h3>Shots your report should include</h3>
+<ul><li>You at the signage · presenting · two good posters (with permission) · keynote atmosphere · booths · you with new contacts (with permission)</li></ul>`);
+
+S_("daily","at",{th:"ทุกวันระหว่างงาน & ดูแลตัวเอง",en:"Daily routine & wellbeing"},
+`<div class="eyebrow">ขั้นที่ 4 · ทุกวัน</div><h2>สิ่งที่ทำทุกวัน และการดูแลตัวเอง</h2>{{w:check:daily}}
+<div class="note">ความรู้สึก "ไม่เข้าพวก" เป็นเรื่องปกติของการไปงานครั้งแรกและจะง่ายขึ้นเรื่อย ๆ อ่าน code of conduct รู้ช่องทางแจ้งเหตุ งานสังคมยังเป็นพื้นที่วิชาชีพ ไม่ต้องรู้สึกถูกบังคับให้เข้าร่วม และออกจากสถานการณ์ที่ไม่ปลอดภัยทันที (${cite("leininger","Leininger et al., 2021")})</div>`,
+`<div class="eyebrow">Stage 4 · Every day</div><h2>Daily routine and looking after yourself</h2>{{w:check:daily}}
+<div class="note">Feeling out of place at a first conference is normal and gets easier. Read the code of conduct and know how to report problems; social events remain professional; never feel pressured to join, and leave any unsafe situation (${cite("leininger","Leininger et al., 2021")}).</div>`);
+
+/* ---------- Stage 5: Afterwards ---------- */
+S_("after","post",{th:"หลังกลับจากงาน",en:"After the conference"},
+`<div class="eyebrow">ขั้นที่ 5 · ปิดงาน</div><h2>หลังกลับจากงาน: ปิดงานให้ครบ</h2>
+<p>บันทึกโน้ตและ feedback ทันทีที่กลับ อัปเดต CV ติดต่อผู้ติดต่อใหม่โดยอ้างถึงบทสนทนาจริง และจัดการเอกสารเบิกจ่ายตามกำหนด (${cite("leininger","Leininger et al., 2021")}; ${cite("iu","IU Grademissaries, 2023")}) ก่อนงานครั้งถัดไป 1–2 เดือน ลองทักผู้ติดต่อเดิมเพื่อนัดพบอีกครั้ง (${cite("cub","CU Boulder")})</p>{{w:check:after}}`,
+`<div class="eyebrow">Stage 5 · Close the loop</div><h2>After the conference: close the loop</h2>
+<p>Record notes and feedback as soon as you return, update your CV, follow up with contacts referencing your actual conversation, and file reimbursements on time (${cite("leininger","Leininger et al., 2021")}; ${cite("iu","IU Grademissaries, 2023")}). A month or two before the next meeting, reach out again to arrange to meet (${cite("cub","CU Boulder")}).</p>{{w:check:after}}`);
+
+S_("mentor","post",{th:"สำหรับอาจารย์ที่ปรึกษา",en:"For advisors"},
+`<div class="eyebrow">ภาคผนวก</div><h2>สำหรับอาจารย์ที่ปรึกษา</h2>
+<p>ข้อแนะนำสำหรับผู้ดูแล สรุปจาก ${cite("leininger","Leininger et al. (2021)")}:</p>
+<ul>
+<li>แนะนำงานที่ตรงกับความต้องการของนิสิตแต่ละคน และระวังไม่ให้โอกาสตกอยู่กับเฉพาะคนที่กล้าขอ</li>
+<li>ช่วยติดตามกำหนดยื่นทุน และสำรองจ่ายให้ถ้าทำได้</li>
+<li>ตรวจแผนการเข้าฟังของนิสิตก่อนไป อธิบายว่าการพักสำคัญ</li>
+<li>แนะนำนิสิตให้รู้จักเครือข่ายของอาจารย์ และชี้โปสเตอร์/talk ที่เกี่ยวข้อง</li>
+<li>บอกว่าความประหม่าเป็นเรื่องปกติ ให้ช่องทางติดต่อฉุกเฉิน และทบทวน code of conduct</li>
+<li>หลังงาน: นัดคุยสรุป (debrief) และช่วยเรื่องเอกสารเบิกจ่าย</li>
+</ul>
+<h3>ใช้เว็บแอปนี้กับนิสิต</h3>
+<ol><li>ไปที่ <b>ส่วนที่ 2 · งานมอบหมาย</b> → กล่อง "สำหรับอาจารย์" กรอกชื่องาน วันที่ สถานที่ เว็บไซต์</li><li>กด "สร้างลิงก์" แล้วส่งลิงก์ให้นิสิต — ข้อมูลงานและกำหนดส่งจะตั้งให้อัตโนมัติ</li><li>นิสิตทำงานในหน้าเว็บ แล้วส่งออกรายงาน (.md หรือ PDF) พร้อมไฟล์ภาพ</li></ol>
+<p class="muted">ข้อมูลที่นิสิตกรอกเก็บในเบราว์เซอร์ของนิสิตเท่านั้น ไม่มีการส่งขึ้นเซิร์ฟเวอร์</p>`,
+`<div class="eyebrow">Appendix</div><h2>For advisors</h2>
+<p>Mentor advice summarised from ${cite("leininger","Leininger et al. (2021)")}:</p>
+<ul>
+<li>Recommend meetings matched to each student's needs, and make sure opportunities don't go only to those who ask</li>
+<li>Help track funding deadlines; cover costs upfront when you can</li>
+<li>Review students' plans before the meeting; explain the value of breaks</li>
+<li>Introduce students to your network and point out relevant posters/talks</li>
+<li>Normalise nervousness, share emergency contacts, review the code of conduct</li>
+<li>Afterwards: hold a debrief and help with reimbursement paperwork</li>
+</ul>
+<h3>Using this web app with students</h3>
+<ol><li>Go to <b>Part 2 · Assignments</b> → the "For advisors" box; enter the conference name, dates, venue, website</li><li>Press "Create link" and send it to students — conference details and due dates are set automatically</li><li>Students work on the page and export a report (.md or PDF) with their photos</li></ol>
+<p class="muted">Student entries stay in their own browser; nothing is uploaded.</p>`);
+
+S_("refs","post",{th:"แหล่งอ้างอิง",en:"References"},
+`<h2>แหล่งอ้างอิง</h2>{{refs}}`,`<h2>References</h2>{{refs}}`);
+
+const REFS = `<ul class="refs">
+<li>Leininger E, Shaw K, Moshiri N, Neiles K, Onsongo G, Ritz A (2021). Ten simple rules for attending your first conference. <i>PLOS Comput Biol</i> 17(7): e1009133. <a href="${SRC.leininger}" target="_blank">doi</a></li>
+<li>Bourne PE (2007). Ten simple rules for making good oral presentations. <i>PLOS Comput Biol</i> 3(4): e77. <a href="${SRC.bourne}" target="_blank">doi</a></li>
+<li>Erren TC, Bourne PE (2007). Ten simple rules for a good poster presentation. <i>PLOS Comput Biol</i> 3(5): e102. <a href="${SRC.erren}" target="_blank">PMC</a></li>
+<li>Bautista et al. (2022). Ten simple rules for improving communication among scientists. <i>PLOS Comput Biol</i>. <a href="${SRC.bautista}" target="_blank">PMC</a></li>
+<li>Think. Check. Attend. — Conference checklist. <a href="${SRC.tca}" target="_blank">link</a></li>
+<li>University of Canterbury, School of Biological Sciences. How to write a conference abstract. <a href="${SRC.canterbury}" target="_blank">PDF</a></li>
+<li>Temple University Libraries. How to write a scientific or research abstract. <a href="${SRC.temple}" target="_blank">link</a></li>
+<li>Indiana University Grademissaries (2023). Conference 101. <a href="${SRC.iu}" target="_blank">link</a></li>
+<li>University of Colorado Boulder Graduate School. Guide to academic networking. <a href="${SRC.cub}" target="_blank">link</a></li>
+<li>University of Melbourne Academic Skills. Networking at academic events. <a href="${SRC.unimelb}" target="_blank">link</a></li>
+<li>Sajdah-Bey N (2021). Navigating conferences as early career scientists. COMPASS. <a href="${SRC.compass}" target="_blank">link</a></li>
+</ul>`;
+
+/* ---------- Data for widgets ---------- */
+const RUBRIC = [
+  {k:"title",th:"หัวข้อและข้อความหลักใน 10 วินาที",en:"Title & 10-second message",dth:"หัวข้อสั้น ชัด บอกคำถาม/ข้อค้นพบหลัก",den:"Short, clear title stating the question or finding"},
+  {k:"flow",th:"ลำดับและการจัดวาง",en:"Flow & layout",dth:"เส้นทางการอ่านชัด มีพื้นที่ว่าง",den:"Clear reading path, white space"},
+  {k:"visual",th:"รูป กราฟ และภาพ",en:"Figures & visuals",dth:"อ่านได้จาก 1–2 ม. มีหน่วย สื่อผลได้ทันที",den:"Readable at 1–2 m, units, results at a glance"},
+  {k:"text",th:"ความกระชับของข้อความ",en:"Text economy",dth:"ข้อความน้อย ตรงประเด็น ฟอนต์ใหญ่พอ",den:"Concise text, large font"},
+  {k:"science",th:"ความสมบูรณ์ทางวิทยาศาสตร์",en:"Scientific completeness",dth:"วัตถุประสงค์–วิธีการ–ผล–สรุป สอดคล้องกัน",den:"Objectives–methods–results–conclusions coherent"},
+  {k:"talk",th:"การสื่อสารของผู้นำเสนอ",en:"Presenter communication",dth:"เล่า 2 นาทีได้ชัด ตอบคำถามดี",den:"Clear 2-minute walkthrough, good answers"}
+];
+const SKILLS = [
+  {k:"listen",th:"การฟังเชิงวิทยาศาสตร์และจดโน้ต",en:"Scientific listening & notes"},
+  {k:"ask",th:"การตั้งคำถามเชิงวิพากษ์",en:"Critical questioning"},
+  {k:"comm",th:"การสื่อสารงานวิจัย",en:"Research communication"},
+  {k:"net",th:"การสร้างเครือข่าย",en:"Networking"},
+  {k:"time",th:"การบริหารเวลา",en:"Time management"},
+  {k:"design",th:"วิจารณญาณด้านการออกแบบสื่อ",en:"Visual design literacy"},
+  {k:"pro",th:"ความเป็นมืออาชีพ",en:"Professionalism"}
+];
+const CFP_ROWS = [
+  ["conf",{th:"ชื่องานประชุม",en:"Conference"},"e.g. International Conference on …"],
+  ["type",{th:"ประเภทผลงานที่รับ",en:"Submission types"},"e.g. abstract only / abstract + full paper"],
+  ["lang",{th:"ภาษา",en:"Language"},"e.g. English"],
+  ["length",{th:"จำนวนคำ / หน้า",en:"Word / page limit"},"e.g. abstract ≤250 words; full paper 6–8 pages"],
+  ["figs",{th:"รูป / ตาราง",en:"Figures / tables"},"e.g. abstract: none; full paper: allowed"],
+  ["template",{th:"Template และการจัดรูปแบบ",en:"Template & formatting"},"e.g. Word template, Times New Roman 12 pt, single spacing"],
+  ["struct",{th:"หัวข้อที่ต้องมี",en:"Required sections"},"e.g. Background, Methods, Results, Conclusion"],
+  ["refs",{th:"รูปแบบการอ้างอิง",en:"Reference style"},"e.g. APA 7th / numbered"],
+  ["authors",{th:"ผู้แต่ง / สังกัด",en:"Authors / affiliation"},"e.g. max 6 authors; presenting author underlined"],
+  ["files",{th:"ไฟล์ที่ต้องส่ง",en:"Files to submit"},"e.g. .docx + .pdf"],
+  ["system",{th:"ระบบ/ช่องทางส่ง",en:"Submission system"},"e.g. online portal URL"],
+  ["deadline",{th:"กำหนดส่ง (เขตเวลา)",en:"Deadline (time zone)"},"e.g. 15 Jun, 23:59 UTC"],
+  ["review",{th:"การพิจารณา / วันแจ้งผล",en:"Review / decision dates"},"e.g. double-blind; decision 15 Jul"],
+  ["pres",{th:"รูปแบบการนำเสนอ",en:"Presentation format"},"e.g. oral 12+3 min; poster A0 portrait"],
+  ["pub",{th:"การตีพิมพ์ / indexing",en:"Publication / indexing"},"e.g. abstract book; proceedings with ISBN"],
+  ["reg",{th:"การลงทะเบียน / ค่าใช้จ่าย",en:"Registration / fees"},"e.g. student early-bird …; ≥1 author must register"],
+  ["rules",{th:"กติกาอื่น",en:"Other rules"},"e.g. original work; no changes after acceptance; AI policy"]
+];
+const FIT = [
+  {k:"scope",th:"ขอบเขตตรงกับหัวข้อวิจัย",en:"Scope matches my research"},
+  {k:"aud",th:"ผู้ฟัง/เครือข่ายที่อยากพบ",en:"Audience / people I want to meet"},
+  {k:"org",th:"ผู้จัดน่าเชื่อถือ จัดต่อเนื่อง",en:"Credible, long-running organiser"},
+  {k:"pub",th:"ช่องทางตีพิมพ์เหมาะสม",en:"Suitable publication outlet"},
+  {k:"cost",th:"ค่าใช้จ่ายและทุนเป็นไปได้",en:"Cost & funding feasible"},
+  {k:"time",th:"ผลงานพร้อมทันกำหนด",en:"Results ready in time"},
+  {k:"stu",th:"โอกาสสำหรับนิสิต",en:"Student opportunities"}
+];
+const LEGIT = [
+  {k:"l1",th:"รู้ว่าสมาคม/หน่วยงานใดเป็นผู้จัด",en:"I know which society/institution organises it"},
+  {k:"l2",th:"สถานที่จัดงานชัดเจนและตรวจสอบได้",en:"The venue is clear and verifiable"},
+  {k:"l3",th:"อาจารย์หรือคนรู้จักเคยไป/รู้จักงานนี้",en:"My advisor or colleagues know this meeting"},
+  {k:"l4",th:"เว็บไซต์ครบ: ค่าธรรมเนียม กำหนดการ กรรมการ โปรแกรม",en:"Website complete: fees, dates, committees, program"},
+  {k:"l5",th:"รู้จัก keynote หรือกรรมการบางท่าน",en:"I recognise some keynotes/committee members"},
+  {k:"l6",th:"ระบุกระบวนการพิจารณาชัดเจน",en:"The review process is clearly described"},
+  {k:"l7",th:"ระบุชัดว่าตีพิมพ์ที่ไหน/ฐานข้อมูลใด",en:"Publication venue/indexing clearly stated"},
+  {k:"l8",th:"ขอบเขตชัด ไม่รับ \"ทุกสาขา\" แบบไม่มีกรรมการรองรับ",en:"Focused scope — not \"any topic\""},
+  {k:"l9",th:"ไม่ได้ถูกเชิญผ่านอีเมลสแปม/เร่งให้จ่ายเงิน",en:"Not spam-invited or pressured to pay"},
+  {k:"l10",th:"เคยอ่านผลงานจาก proceedings ของงานนี้",en:"I've read papers from its proceedings"}
+];
+const EX_ABS = {
+  title:"Soil eDNA reveals higher arthropod diversity in community forests than in nearby cassava fields",
+  bg:"Community forests are thought to support local biodiversity, yet rapid and comparable evidence across land uses remains scarce.",
+  aim:"This study aimed to compare soil arthropod diversity between community forests and adjacent cassava fields using environmental DNA (eDNA) metabarcoding.",
+  methods:"We collected 60 topsoil samples from six paired sites during the rainy season. DNA was extracted, the mitochondrial cytochrome c oxidase subunit I (COI) region was amplified and sequenced, and diversity was compared using Hill numbers and permutational multivariate analysis of variance (PERMANOVA).",
+  results:"In total, 412 arthropod operational taxonomic units (OTUs) were detected. Community forests contained 1.8 times more OTUs than cassava fields (mean 96 vs 53 per site; p < 0.01), and community composition differed significantly between land uses (PERMANOVA R² = 0.31, p = 0.001). Springtails and mites dominated forest samples, whereas ants dominated cassava fields.",
+  concl:"Soil eDNA provides a rapid, standardised tool for monitoring biodiversity in community forests and could support evidence-based local conservation planning.",
+  kw:"eDNA metabarcoding; soil arthropods; land use; community forest; biodiversity monitoring"
+};
+
+/* ===== Assignments ===== */
+const F = (k,th,en,type="text",opts) => ({k,th,en,type,opts});
+const CONTACT_TYPES = [
+  {v:"faculty",th:"อาจารย์/นักวิจัยอาวุโส",en:"Faculty / senior researcher"},
+  {v:"speaker",th:"วิทยากร",en:"Speaker"},
+  {v:"student",th:"นิสิตต่างสถาบัน",en:"Student (other institution)"},
+  {v:"industry",th:"ภาคอุตสาหกรรม/บูธ",en:"Industry / booth"},
+  {v:"other",th:"อื่น ๆ",en:"Other"}
+];
+const PHOTO_CATS = [
+  {v:"me",th:"ตัวเองที่งาน/ขณะนำเสนอ",en:"Me at the congress / presenting"},
+  {v:"poster",th:"โปสเตอร์ที่ดี (ได้รับอนุญาต)",en:"Good poster (with permission)"},
+  {v:"slide",th:"สไลด์ออกแบบดี (ถ้าอนุญาต)",en:"Well-designed slide (if allowed)"},
+  {v:"keynote",th:"Keynote / บรรยากาศห้อง",en:"Keynote / room atmosphere"},
+  {v:"booth",th:"บูธ/นิทรรศการ",en:"Booth / exhibition"},
+  {v:"network",th:"กับผู้ติดต่อใหม่ (ได้รับอนุญาต)",en:"With a new contact (with permission)"},
+  {v:"team",th:"ภาพทีม/แล็บ",en:"Team / lab photo"},
+  {v:"venue",th:"สถานที่/ป้ายงาน",en:"Venue / signage"}
+];
+
+const ASSIGN = [
+{ id:"A1", pts:10, icon:"🗺️",
+  title:{th:"แผนก่อนไปประชุม",en:"Pre-conference plan"},
+  due:{base:"start",off:-2,th:"2 วันก่อนวันแรกของงาน",en:"2 days before the conference starts"},
+  skill:{th:"บริหารเวลา · เตรียมความรู้",en:"Time management · background reading"},
+  goal:{th:"รู้ว่าจะไปเพื่ออะไร จะฟังอะไร และจะคุยกับใคร ก่อนถึงวันงาน",en:"Know why you're going, what you'll attend and whom you'll talk to — before day one."},
+  tasks:[
+    {th:"ดาวน์โหลดโปรแกรม/abstract book และสำรวจ sessions",en:"Download the program/abstract book and explore the sessions"},
+    {th:"วางตารางใน Planner (ส่วนที่ 1): ≥1 keynote, ≥3 sessions ต่างกัน, ≥1 ช่วงนอกสาขา, poster session ทุกรอบ",en:"Build your schedule in the Planner (Part 1): ≥1 keynote, ≥3 different sessions, ≥1 outside your field, every poster session"},
+    {th:"อ่าน abstract ที่เกี่ยวข้อง ≥5 เรื่อง",en:"Read ≥5 relevant abstracts"},
+    {th:"เตรียมคำถาม 3 ข้อ และ elevator pitch ไทย/อังกฤษ",en:"Prepare 3 questions and a Thai/English elevator pitch"},
+    {th:"ส่งแผนให้อาจารย์ที่ปรึกษาดู",en:"Share the plan with your advisor"}
+  ],
+  fields:[
+    F("goals","เป้าหมาย 3 ข้อ (เรียนรู้ / feedback / คนที่อยากรู้จัก)","3 goals (learn / feedback / people to meet)","textarea"),
+    F("people","รายชื่อคนที่อยากคุยด้วย 5–8 คน + เหตุผล","5–8 people you want to meet + why","textarea"),
+    F("questions","คำถามที่เตรียมไว้ 3 ข้อ (ระบุ talk/โปสเตอร์)","3 prepared questions (name the talk/poster)","textarea"),
+    F("pitch","Elevator pitch (วางจากเครื่องมือในส่วนที่ 1)","Elevator pitch (paste from the builder in Part 1)","textarea")
+  ],
+  repeat:{key:"abstracts",min:5,label:{th:"Abstract ที่อ่าน",en:"Abstract read"},
+    fields:[F("ref","รหัส/ชื่อเรื่อง","Ref. no. / title"),F("session","Session","Session"),F("why","เกี่ยวกับงานเราอย่างไร","Relevance to my work","textarea")]},
+  includePlan:true
+},
+{ id:"A2", pts:20, icon:"📝",
+  title:{th:"บันทึกการฟังบรรยาย",en:"Talk notes"},
+  due:{base:"end",off:0,th:"อัปเดตทุกวันก่อน 21:00 ระหว่างงาน",en:"Update daily by 21:00 during the conference"},
+  skill:{th:"ฟังเชิงวิทยาศาสตร์ · ตั้งคำถาม",en:"Scientific listening · questioning"},
+  goal:{th:"ฟัง talk อย่างน้อย 6 เรื่องใน ≥3 ห้อง (รวม keynote ≥1) และถามคำถามในห้องอย่างน้อย 1 ครั้ง",en:"Attend ≥6 talks in ≥3 rooms (incl. ≥1 keynote) and ask at least one question in Q&A."},
+  tasks:[
+    {th:"ฟัง ≥6 talks ใน ≥3 ห้อง",en:"Attend ≥6 talks in ≥3 rooms"},
+    {th:"ฟัง keynote ≥1 เรื่อง",en:"Attend ≥1 keynote"},
+    {th:"ถามคำถามในช่วง Q&A ≥1 ครั้ง",en:"Ask ≥1 question during Q&A"}
+  ],
+  repeat:{key:"talks",min:6,label:{th:"Talk",en:"Talk"},
+    fields:[F("when","วัน/เวลา/ห้อง","Day / time / room"),F("session","Session","Session"),F("title","ชื่อเรื่อง","Title"),F("speaker","ผู้บรรยาย/สังกัด","Speaker / affiliation"),
+      F("msg","Key message (1 ประโยค)","Key message (1 sentence)","textarea"),F("method","วิธีการ/หลักฐาน","Method / evidence","textarea"),
+      F("take","สิ่งที่นำไปใช้กับงานเรา","Takeaway for my work","textarea"),F("q","คำถามของฉัน","My question","textarea"),
+      F("score","คะแนนการนำเสนอ (1–5)","Delivery score (1–5)","score5")]},
+  fields:[F("qa","บันทึกคำถามที่ถามในห้อง: ถามใคร ถามอะไร ได้คำตอบอย่างไร","Your Q&A record: whom, what you asked, the answer","textarea")]
+},
+{ id:"A3", pts:15, icon:"🖼️",
+  title:{th:"Poster gallery walk",en:"Poster gallery walk"},
+  due:{base:"end",off:0,th:"วันสุดท้ายของงาน 21:00 น.",en:"Last day of the conference, 21:00"},
+  skill:{th:"วิจารณญาณด้านการออกแบบ · สื่อสาร",en:"Design literacy · communication"},
+  goal:{th:"ประเมินโปสเตอร์ ≥5 แผ่นด้วยเกณฑ์ 6 ข้อ คุยกับเจ้าของงาน และสรุปสิ่งที่จะนำไปใช้กับโปสเตอร์ของตัวเอง",en:"Score ≥5 posters on the 6-criterion rubric, talk with the authors, and decide what you'll adopt in your own posters."},
+  tasks:[
+    {th:"เข้าร่วม poster session ทุกรอบ",en:"Attend every poster session"},
+    {th:"ขอให้เจ้าของงานเล่าโปสเตอร์อย่างน้อย 3 แผ่น",en:"Ask at least 3 authors for a walkthrough"},
+    {th:"ขออนุญาตก่อนถ่ายภาพโปสเตอร์ทุกครั้ง",en:"Ask permission before photographing any poster"}
+  ],
+  repeat:{key:"posters",min:5,label:{th:"โปสเตอร์",en:"Poster"},rubric:true,
+    fields:[F("code","รหัส/ชื่อเรื่อง","Code / title"),F("author","เจ้าของงาน/สังกัด","Author / affiliation"),F("photo","ชื่อไฟล์ภาพ (ถ้ามี)","Photo filename (if any)"),F("note","จุดเด่น/จุดที่ควรปรับ","Strengths / improvements","textarea")]},
+  fields:[F("top2","โปสเตอร์ดีที่สุด 2 แผ่น และเหตุผล","Your top 2 posters and why","textarea"),F("adopt","3 เทคนิคที่จะนำไปใช้กับโปสเตอร์ของฉัน","3 techniques I'll use in my own posters","textarea")]
+},
+{ id:"A4", pts:10, icon:"🎯",
+  title:{th:"วิเคราะห์การนำเสนอที่ดีที่สุด",en:"Best presentation analysis"},
+  due:{base:"end",off:7,th:"1 สัปดาห์หลังงาน",en:"1 week after the conference"},
+  skill:{th:"การสื่อสารงานวิจัย",en:"Research communication"},
+  goal:{th:"เลือก oral talk ที่ดีที่สุด 1 เรื่องที่ได้ฟัง แล้ววิเคราะห์ว่า \"ทำไมถึงดี\" เพื่อนำมาพัฒนาการนำเสนอของตัวเอง",en:"Pick the single best talk you attended and analyse why it worked, so you can improve your own presenting."},
+  tasks:[],
+  fields:[F("talk","Talk ที่เลือก (ชื่อเรื่อง ผู้บรรยาย ห้อง)","Chosen talk (title, speaker, room)"),
+    F("structure","โครงเรื่อง: เปิดเรื่อง เล่าปัญหา และสรุปอย่างไร","Structure: opening, problem framing, conclusion","textarea"),
+    F("slides","การออกแบบสไลด์: จำนวน ข้อความ ภาพ สี","Slide design: number, text, figures, colour","textarea"),
+    F("delivery","การพูด: น้ำเสียง จังหวะ ภาษากาย การคุมเวลา","Delivery: voice, pace, body language, timing","textarea"),
+    F("qa","การตอบคำถาม","Handling Q&A","textarea"),
+    F("adopt","3 เทคนิคที่ฉันจะนำไปใช้","3 techniques I will adopt","textarea")]
+},
+{ id:"A5", pts:10, icon:"🎤",
+  title:{th:"การนำเสนอของฉัน / สัมภาษณ์ผู้นำเสนอ",en:"My presentation / presenter interview"},
+  due:{base:"end",off:7,th:"1 สัปดาห์หลังงาน",en:"1 week after the conference"},
+  skill:{th:"สื่อสาร · รับ feedback",en:"Communication · receiving feedback"},
+  goal:{th:"ถ้านำเสนองาน: บันทึกการเตรียมตัว คำถาม และ feedback ที่ได้ · ถ้าไม่ได้นำเสนอ: สัมภาษณ์นิสิตที่นำเสนอ 1 คน",en:"If presenting: record your preparation, the questions and feedback you received. If not: interview one student presenter."},
+  mode:true,
+  tasks:[
+    {th:"(นำเสนอ) ซ้อมจับเวลา ≥2 รอบ หรือเตรียมเล่าโปสเตอร์ 30 วิ/2 นาที",en:"(Presenting) Rehearse with a timer ≥2 times, or prepare 30 s / 2 min poster walkthroughs"},
+    {th:"(นำเสนอ) ตรวจข้อกำหนดของงาน: เวลา ภาษา ขนาดโปสเตอร์ ไฟล์ฝังฟอนต์/PDF",en:"(Presenting) Check the rules: time, language, poster size, fonts embedded / PDF"},
+    {th:"(นำเสนอ) โหลดไฟล์/ติดโปสเตอร์ตามเวลา และอยู่ประจำจุด",en:"(Presenting) Load the file / mount the poster on time and stay at your spot"}
+  ],
+  fields:[F("mode","รูปแบบ","Mode","select",[{v:"",th:"— เลือก —",en:"— select —"},{v:"oral",th:"นำเสนอแบบบรรยาย",en:"Oral presenter"},{v:"poster",th:"นำเสนอโปสเตอร์",en:"Poster presenter"},{v:"none",th:"ไม่ได้นำเสนอ (สัมภาษณ์)",en:"Not presenting (interview)"}]),
+    F("prep","การเตรียมตัว / (หรือ) ผู้ที่สัมภาษณ์และหัวข้อของเขา","Preparation / (or) interviewee and their topic","textarea"),
+    F("qs","คำถามที่ได้รับและคำตอบ / (หรือ) เขาเตรียมตัวอย่างไร เจออุปสรรคอะไร","Questions received & answers / (or) how they prepared and challenges","textarea"),
+    F("fb","Feedback ที่ได้ / (หรือ) คำแนะนำจากผู้ถูกสัมภาษณ์","Feedback received / (or) advice from interviewee","textarea"),
+    F("improve","สิ่งที่จะปรับปรุงครั้งต่อไป","What I'll improve next time","textarea")]
+},
+{ id:"A6", pts:15, icon:"🤝",
+  title:{th:"สร้างเครือข่าย 5 คน",en:"Network: 5 new contacts"},
+  due:{base:"end",off:2,th:"follow-up ภายใน 48 ชม. หลังงาน",en:"Follow-up within 48 h after the conference"},
+  skill:{th:"สร้างเครือข่าย · สื่อสารอังกฤษ",en:"Networking · English communication"},
+  goal:{th:"มีบทสนทนาที่มีความหมายกับคนใหม่ ≥5 คน ที่หลากหลาย (อาจารย์/วิทยากร ≥1, นิสิตต่างสถาบัน ≥1, อุตสาหกรรม/บูธ ≥1) และส่ง follow-up ภายใน 48 ชม.",en:"Have meaningful conversations with ≥5 new people of varied types (faculty/speaker ≥1, student from another institution ≥1, industry/booth ≥1) and follow up within 48 h."},
+  tasks:[
+    {th:"ใช้ elevator pitch แนะนำตัวอย่างน้อย 3 ครั้ง",en:"Use your elevator pitch at least 3 times"},
+    {th:"ขออนุญาตก่อนบันทึกข้อมูลติดต่อ/ถ่ายรูปคู่",en:"Ask permission before recording contact details or taking photos"},
+    {th:"ส่งอีเมล follow-up ครบทุกคน (ใช้เครื่องมือในส่วนที่ 1)",en:"Send a follow-up email to everyone (use the builder in Part 1)"}
+  ],
+  repeat:{key:"contacts",min:5,label:{th:"ผู้ติดต่อ",en:"Contact"},
+    fields:[F("name","ชื่อ","Name"),F("aff","ตำแหน่ง/สังกัด","Position / affiliation"),F("type","ประเภท","Type","select",CONTACT_TYPES),
+      F("where","พบที่ไหน (talk/โปสเตอร์/บูธ/coffee break)","Where you met (talk/poster/booth/break)"),F("topic","คุยเรื่องอะไร","What you discussed","textarea"),
+      F("channel","ช่องทางติดต่อที่เขายินดีให้","Contact channel they shared"),F("next","ขั้นต่อไปที่ตกลงกัน","Agreed next step"),F("sent","ส่ง follow-up แล้ว","Follow-up sent","check")]},
+  fields:[]
+},
+{ id:"A7", pts:10, icon:"📸",
+  title:{th:"บันทึกภาพ",en:"Photo documentation"},
+  due:{base:"end",off:7,th:"1 สัปดาห์หลังงาน (แนบไฟล์ภาพ)",en:"1 week after the conference (attach images)"},
+  skill:{th:"ความเป็นมืออาชีพ · จริยธรรม",en:"Professionalism · ethics"},
+  goal:{th:"ภาพคุณภาพดี ≥8 ภาพ ครอบคลุม ≥5 หมวด พร้อมคำบรรยาย และได้รับอนุญาตเมื่อเกี่ยวกับงาน/บุคคลอื่น",en:"≥8 good photos covering ≥5 categories, with captions and permission whenever other people or their work appear."},
+  tasks:[
+    {th:"ตั้งชื่อไฟล์ตามรูปแบบ วัน_ห้อง_หัวข้อ",en:"Name files as Day_Room_Topic"},
+    {th:"ไม่ถ่ายสไลด์ unpublished / ไม่ใช้แฟลช",en:"No unpublished slides / no flash"}
+  ],
+  repeat:{key:"photos",min:8,label:{th:"ภาพ",en:"Photo"},
+    fields:[F("file","ชื่อไฟล์","Filename"),F("cat","หมวด","Category","select",PHOTO_CATS),F("cap","คำบรรยายภาพ (1–2 ประโยค)","Caption (1–2 sentences)","textarea"),F("perm","ได้รับอนุญาตแล้ว / ไม่เกี่ยวกับผู้อื่น","Permission obtained / no one else involved","check")]},
+  fields:[]
+},
+{ id:"A8", pts:10, icon:"🔁",
+  title:{th:"สะท้อนคิดและแบ่งปันกับแล็บ",en:"Reflection & lab share-back"},
+  due:{base:"end",off:7,th:"1 สัปดาห์หลังงาน + share-back ตามนัด",en:"1 week after + lab share-back as scheduled"},
+  skill:{th:"สะท้อนคิด · ทุกทักษะ",en:"Reflection · all skills"},
+  goal:{th:"สรุปสิ่งที่ได้เรียนรู้ ประเมินทักษะตนเองก่อน–หลัง และเตรียม share-back 5 สไลด์ (5 นาที) ให้เพื่อนในแล็บ",en:"Summarise what you learned, self-assess your skills before/after, and prepare a 5-slide (5-minute) share-back for your lab."},
+  tasks:[
+    {th:"ทำแบบประเมินทักษะก่อนไปและหลังกลับ",en:"Complete the skills self-assessment before and after"},
+    {th:"เตรียมสไลด์ share-back 5 สไลด์: ภาพรวม · 3 ไอเดียเด่น · สิ่งที่นำมาใช้ · คนที่ได้รู้จัก · บทเรียน",en:"Prepare 5 share-back slides: overview · 3 key ideas · what we can use · people met · lessons"},
+    {th:"อัปเดต CV และส่งเอกสารเบิกจ่าย",en:"Update your CV and submit reimbursement documents"}
+  ],
+  skills:true,
+  fields:[F("learn","3 สิ่งสำคัญที่สุดที่ได้เรียนรู้","The 3 most important things I learned","textarea"),
+    F("research","สิ่งนี้เปลี่ยนแผนงานวิจัยของฉันอย่างไร","How this changes my research plan","textarea"),
+    F("diff","ถ้าไปอีกครั้ง จะทำอะไรต่างไป","What I'd do differently next time","textarea"),
+    F("thanks","ส่งคำขอบคุณถึงใครแล้วบ้าง","Who I've thanked","textarea")]
+}
+];
+
+/* ===== App ===== */
+const KEY = "skill-conference-general-v1";
+let S = {lang:"th",tab:"guide",ck:{},myTalks:[],rub:{},pitch:{th:{},en:{}},fu:{},student:{},a:{},conf:{}};
+try{ const raw = localStorage.getItem(KEY); if(raw) S = Object.assign(S, JSON.parse(raw)); }catch(e){}
+try{ const h = location.hash.replace("#",""); if(h==="assignments") S.tab="asg"; else if(h==="guide") S.tab="guide"; }catch(e){}
+S.conf=S.conf||{}; S.myTalks=(S.myTalks||[]).filter(t=>t&&t.start!==undefined);
+try{ const q=new URLSearchParams(location.search); const map={conf:"name",start:"start",end:"end",venue:"venue",web:"web",dl:"deadline"}; let any=false;
+  Object.entries(map).forEach(([p,k])=>{ if(q.has(p)){ S.conf[k]=q.get(p); any=true; } }); if(q.get("lang")==="en"||q.get("lang")==="th") S.lang=q.get("lang"); if(any && q.get("tab")==="asg") S.tab="asg"; }catch(e){}
+
+const $ = s => document.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const L = o => (o && typeof o==="object") ? (o[S.lang] ?? o.en ?? "") : (o ?? "");
+const T = (th,en) => S.lang==="th" ? th : en;
+let saveTimer;
+function save(){ clearTimeout(saveTimer); saveTimer=setTimeout(()=>{ try{localStorage.setItem(KEY, JSON.stringify(S));}catch(e){} },250); }
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1600); }
+function getPath(path){ return path.split(".").reduce((o,k)=> o==null?undefined:o[k], S); }
+function setPath(path,val){
+  const ks=path.split("."); let o=S;
+  for(let i=0;i<ks.length-1;i++){ const k=ks[i]; if(o[k]==null) o[k] = /^\d+$/.test(ks[i+1]) ? [] : {}; o=o[k]; }
+  o[ks[ks.length-1]]=val;
+}
+function filled(v){ return v!==undefined && v!==null && String(v).trim()!=="" && v!==false; }
+
+/* ---------- Assignment state helpers ---------- */
+function A(id){
+  const def = ASSIGN.find(x=>x.id===id);
+  S.a[id] = S.a[id] || {f:{},t:{},r:[]};
+  const a=S.a[id]; a.f=a.f||{}; a.t=a.t||{}; a.r=a.r||[];
+  if(def.repeat) while(a.r.length<def.repeat.min) a.r.push({});
+  if(def.skills){ a.sk=a.sk||{pre:{},post:{}}; }
+  return a;
+}
+function itemDone(def,it){
+  if(!it) return false;
+  const n = def.repeat.fields.filter(f=>f.type!=="check" && f.type!=="score5" && filled(it[f.k])).length;
+  return n >= Math.min(3, def.repeat.fields.filter(f=>f.type!=="check"&&f.type!=="score5").length);
+}
+function asgStats(def){
+  const a=A(def.id); let done=0,total=0;
+  def.tasks.forEach((_,i)=>{ total++; if(a.t[i]) done++; });
+  def.fields.forEach(f=>{ total++; if(filled(a.f[f.k])) done++; });
+  if(def.repeat){ total+=def.repeat.min; done+=Math.min(def.repeat.min, a.r.filter(it=>itemDone(def,it)).length); }
+  if(def.skills){ total+=2; if(Object.keys(a.sk.pre).length>=SKILLS.length) done++; if(Object.keys(a.sk.post).length>=SKILLS.length) done++; }
+  if(def.includePlan){ total++; if(planCount()>=4) done++; }
+  return {done,total,pct: total? Math.round(done/total*100):0};
+}
+function overall(){
+  let pts=0,earned=0; ASSIGN.forEach(d=>{ const s=asgStats(d); pts+=d.pts; earned+=d.pts*s.pct/100; });
+  return Math.round(earned/pts*100);
+}
+function planCount(){ return S.myTalks.length; }
+
+/* ---------- Widgets ---------- */
+function wCheck(list){
+  const items=CHECK[list]; const n=items.filter((_,i)=>S.ck[list+":"+i]).length;
+  return `<div class="row" style="justify-content:space-between"><small>${UI.progress[S.lang]}: <b id="cp-${list}">${n}/${items.length}</b></small></div>
+  <div class="bar" style="margin:.3rem 0 .4rem"><i style="width:${n/items.length*100}%"></i></div>
+  <ul class="check">${items.map((it,i)=>{const k=list+":"+i;const on=!!S.ck[k];
+    return `<li class="${on?"done":""}"><input type="checkbox" id="ck-${k}" data-ck="${k}" ${on?"checked":""}><label for="ck-${k}"><span>${L(it)}</span></label></li>`;}).join("")}</ul>`;
+}
+/* --- conference days & generic planner --- */
+function confDays(){
+  const c=S.conf||{}; const out=[];
+  const dflt=()=>[1,2,3,4,5].map(i=>({id:"d"+i,label:`${T("วันที่","Day")} ${i}`}));
+  if(!c.start) return dflt();
+  const s=new Date(c.start+"T00:00:00"); if(isNaN(s)) return dflt();
+  let e=c.end?new Date(c.end+"T00:00:00"):new Date(s); if(isNaN(e)||e<s) e=new Date(s);
+  for(let d=new Date(s),i=1; d<=e && i<=14; d.setDate(d.getDate()+1),i++){
+    const iso=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    out.push({id:iso,label:`${T("วันที่","Day")} ${i} · ${d.toLocaleDateString(S.lang==="th"?"th-TH":"en-GB",{weekday:"short",day:"numeric",month:"short"})}`}); }
+  return out;
+}
+const dayLabel = id => (confDays().find(d=>d.id===id)||{label:id}).label;
+const TYPES = {keynote:{th:"Keynote",en:"Keynote"},talk:{th:"Talk",en:"Talk"},session:{th:"Session",en:"Session"},poster:{th:"โปสเตอร์",en:"Poster"},workshop:{th:"Workshop",en:"Workshop"},booth:{th:"บูธ",en:"Booth"},social:{th:"กิจกรรมสังคม",en:"Social"},break:{th:"พัก",en:"Break"}};
+const PRI = {must:{th:"ต้องไป",en:"Must",c:""},should:{th:"ควรไป",en:"Should",c:"gray"},explore:{th:"เปิดโลก",en:"Explore",c:"warn"},backup:{th:"สำรอง",en:"Backup",c:"gray"}};
+const toMin = t => { const m=/^(\d{1,2})[:.](\d{2})$/.exec((t||"").trim()); return m? (+m[1])*60+(+m[2]) : null; };
+function clashes(){
+  const set=new Set(); const items=S.myTalks.map((t,i)=>({t,i,s:toMin(t.start),e:toMin(t.end)})).filter(x=>x.s!==null && x.t.pri!=="backup");
+  items.forEach(a=>items.forEach(b=>{ if(a.i<b.i && a.t.day===b.t.day){ const ae=a.e??a.s+15, be=b.e??b.s+15; if(a.s<be && b.s<ae){ set.add(a.i); set.add(b.i);} } }));
+  return set;
+}
+function wPlanner(){
+  const days=confDays();
+  return `<div class="note">${T("เพิ่ม session/talk/โปสเตอร์ที่จะเข้าร่วมจากโปรแกรมของงาน ระบบเรียงตามเวลาและเตือนเมื่อเวลาทับกัน (รายการ \"สำรอง\" ไม่นับว่าชน) · ตั้งวันที่ของงานได้ที่กล่อง \"งานประชุมของฉัน\" ด้านบนสุด","Add the sessions/talks/posters you plan to attend. Items are sorted by time and overlaps are flagged (\"Backup\" items don't count). Set the conference dates in \"My conference\" at the top.")}</div>
+  <div class="fgrid">
+   <div><label class="f">${T("วัน","Day")}</label><select id="mt-day">${days.map(d=>`<option value="${d.id}" ${S.lastDay===d.id?"selected":""}>${esc(d.label)}</option>`).join("")}</select></div>
+   <div><label class="f">${T("เริ่ม (HH:MM)","Start (HH:MM)")}</label><input type="text" id="mt-start" placeholder="09:15"></div>
+   <div><label class="f">${T("สิ้นสุด","End")}</label><input type="text" id="mt-end" placeholder="09:30"></div>
+   <div><label class="f">${T("ห้อง","Room")}</label><input type="text" id="mt-room" placeholder="Room A"></div>
+   <div><label class="f">${T("ประเภท","Type")}</label><select id="mt-type">${Object.entries(TYPES).map(([k,v])=>`<option value="${k}" ${k==="talk"?"selected":""}>${L(v)}</option>`).join("")}</select></div>
+   <div><label class="f">${T("ระดับ","Priority")}</label><select id="mt-pri">${Object.entries(PRI).map(([k,v])=>`<option value="${k}">${L(v)}</option>`).join("")}</select></div>
+  </div>
+  <label class="f">${T("ชื่อเรื่อง / ผู้บรรยาย","Title / speaker")}</label><input type="text" id="mt-title">
+  <div class="row" style="margin-top:.6rem"><button class="btn" data-act="addTalk">${T("เพิ่มในตาราง","Add to schedule")}</button></div>
+  <h3 style="margin-top:1.2rem">🗓️ ${T("ตารางของฉัน","My schedule")} <span class="pill">${planCount()}</span></h3>${mySchedule(true)}`;
+}
+function mySchedule(editable){
+  const cl=clashes();
+  const rows=S.myTalks.map((t,i)=>Object.assign({i},t)).sort((a,b)=> String(a.day).localeCompare(String(b.day)) || (toMin(a.start)??9999)-(toMin(b.start)??9999));
+  if(!rows.length) return editable?`<p class="muted">${T("ยังไม่มีรายการ","Nothing yet")}</p>`:"";
+  if(!editable) return rows.map(r=>`- ${dayLabel(r.day)} | ${r.start||""}${r.end?"–"+r.end:""} | ${r.room||""} | ${L(TYPES[r.type])||""}: ${r.title} (${L(PRI[r.pri])||""})`).join("\n");
+  let out="", last=null;
+  rows.forEach(r=>{
+    if(r.day!==last){ if(last!==null) out+=`</tbody></table></div>`; out+=`<h4 style="margin:.8rem 0 .3rem">📅 ${esc(dayLabel(r.day))}</h4><div class="tblwrap"><table><thead><tr><th>${T("เวลา","Time")}</th><th>${T("ห้อง","Room")}</th><th>${T("รายการ","Item")}</th><th></th></tr></thead><tbody>`; last=r.day; }
+    const p=PRI[r.pri]||PRI.must; const c=cl.has(r.i);
+    out+=`<tr style="${c?"background:#fbefe4":""}"><td style="white-space:nowrap">${esc(r.start)}${r.end?"–"+esc(r.end):""}${c?` <span class="pill warn">${T("ชน","clash")}</span>`:""}</td><td>${esc(r.room)}</td><td><span class="pill gray">${esc(L(TYPES[r.type]))}</span> ${esc(r.title)} <span class="pill ${p.c}">${L(p)}</span></td><td><button class="btn sm danger" data-act="delTalk" data-i="${r.i}">${UI.del[S.lang]}</button></td></tr>`;
+  });
+  return out+`</tbody></table></div>`;
+}
+/* --- my conference & budget --- */
+function wMyconf(){
+  const c=S.conf||{};
+  return `<div class="box" style="background:rgba(255,255,255,.97);color:var(--ink);margin-top:1rem"><h4>🏛️ ${T("งานประชุมของฉัน","My conference")} <small class="muted">${T("— ใช้ในตารางเวลา กำหนดส่งงาน และรายงาน","— used in the planner, due dates and report")}</small></h4>
+  <div class="fgrid">
+   <div>${inp("conf.name",T("ชื่องานประชุม","Conference name"),"text",null,"e.g. Annual Meeting of …")}</div>
+   <div>${inp("conf.venue",T("สถานที่/เมือง","Venue / city"))}</div>
+   <div><label class="f">${T("วันแรก","Start date")}</label><input type="date" data-bind="conf.start" data-rerender="1" value="${esc(c.start)}"></div>
+   <div><label class="f">${T("วันสุดท้าย","End date")}</label><input type="date" data-bind="conf.end" data-rerender="1" value="${esc(c.end)}"></div>
+   <div><label class="f">${T("กำหนดส่งผลงาน (ถ้ามี)","Submission deadline (if any)")}</label><input type="date" data-bind="conf.deadline" data-rerender="1" value="${esc(c.deadline)}"></div>
+   <div>${inp("conf.web",T("เว็บไซต์งาน","Conference website"),"text",null,"https://")}</div>
+  </div>${c.web&&/^https?:\/\//.test(c.web)?`<p style="margin:.5rem 0 0"><a href="${esc(c.web)}" target="_blank" rel="noopener" style="color:var(--accent)">🔗 ${T("เปิดเว็บไซต์งาน","Open conference website")}</a></p>`:""}</div>`;
+}
+const BUD = [["reg",{th:"ค่าลงทะเบียน",en:"Registration"}],["travel",{th:"ค่าเดินทางไป–กลับ",en:"Return travel"}],["local",{th:"ค่าเดินทางในพื้นที่",en:"Local transport"}],["print",{th:"พิมพ์โปสเตอร์/เอกสาร",en:"Poster / printing"}],["other",{th:"อื่น ๆ (วีซ่า ประกัน ฯลฯ)",en:"Other (visa, insurance…)"}]];
+function budTotal(){ const b=S.bud||{}; const n=k=>+(String(b[k]||0).replace(/,/g,""))||0; return BUD.reduce((s,[k])=>s+n(k),0) + n("nights")*n("rate") + n("days")*n("perdiem"); }
+function wBudget(){
+  return `<div class="box"><div class="fgrid">${BUD.map(([k,l])=>`<div>${inp("bud."+k,L(l),"text",null,"0")}</div>`).join("")}
+   <div>${inp("bud.nights",T("จำนวนคืนที่พัก","Nights"),"text",null,"0")}</div><div>${inp("bud.rate",T("ค่าที่พักต่อคืน","Rate per night"),"text",null,"0")}</div>
+   <div>${inp("bud.days",T("จำนวนวัน (อาหาร/เบี้ยเลี้ยง)","Days (meals / per diem)"),"text",null,"0")}</div><div>${inp("bud.perdiem",T("ต่อวัน","Per day"),"text",null,"0")}</div></div>
+   <p style="margin-top:.8rem;font-size:1.1rem"><b>${UI.total[S.lang]}: <span id="budTot">${budTotal().toLocaleString()}</span></b> <small class="muted">${T("(หน่วยเงินตามที่กรอก)","(in the currency you entered)")}</small></p>
+   <p class="muted">${T("ตรวจอัตราที่เบิกได้ตามระเบียบของหน่วยงาน/แหล่งทุน","Check allowable rates under your institution's or funder's rules")}</p></div>`;
+}
+function scoreBtns(path,max=5){
+  const v=getPath(path);
+  return `<div class="score">${Array.from({length:max},(_,i)=>i+1).map(n=>`<button data-set="${path}" data-val="${n}" class="${v===n?"on":""}">${n}</button>`).join("")}</div>`;
+}
+function rubricBlock(base){
+  const obj=getPath(base)||{}; const tot=RUBRIC.reduce((s,c)=>s+(obj[c.k]||0),0);
+  return RUBRIC.map(c=>`<div class="crit"><div><b>${L(c)}</b><small>${S.lang==="th"?c.dth:c.den}</small></div>${scoreBtns(base+"."+c.k)}</div>`).join("")
+   + `<p style="margin-top:.6rem"><b>${UI.total[S.lang]}: ${tot}/30</b> ${tot?`<span class="pill ${tot>=24?"":tot>=18?"gray":"warn"}">${tot>=24?T("ดีมาก","Excellent"):tot>=18?T("ดี","Good"):T("ควรปรับปรุง","Needs work")}</span>`:""}</p>`;
+}
+function wRubric(){ return `<div class="box">${rubricBlock("rub")}<button class="btn sm ghost" data-act="clearRub">${T("ล้างคะแนน","Clear scores")}</button></div>`; }
+function inp(path,label,type="text",opts,ph=""){
+  const v=getPath(path);
+  if(type==="textarea") return `<label class="f">${esc(label)}</label><textarea data-bind="${path}" placeholder="${esc(ph)}">${esc(v)}</textarea>`;
+  if(type==="select") return `<label class="f">${esc(label)}</label><select data-bind="${path}">${(opts||[]).map(o=>`<option value="${esc(o.v)}" ${v===o.v?"selected":""}>${esc(L(o))}</option>`).join("")}</select>`;
+  if(type==="check") return `<label class="f" style="display:flex;gap:.5rem;align-items:center"><input type="checkbox" data-bind="${path}" ${v?"checked":""} style="width:18px;height:18px;accent-color:var(--accent)"> ${esc(label)}</label>`;
+  if(type==="score5") return `<label class="f">${esc(label)}</label>${scoreBtns(path)}`;
+  return `<label class="f">${esc(label)}</label><input type="text" data-bind="${path}" value="${esc(v)}" placeholder="${esc(ph)}">`;
+}
+const PITCH_F = [
+  ["name",{th:"ชื่อ",en:"Name"},{th:"สมชาย ใจดี",en:"Somchai Jaidee"}],
+  ["program",{th:"ระดับ/หลักสูตร",en:"Level / program"},{th:"ปริญญาโท สาขาวิทยาศาสตร์สิ่งแวดล้อม",en:"master's in environmental science"}],
+  ["univ",{th:"มหาวิทยาลัย",en:"University"},{th:"จุฬาลงกรณ์มหาวิทยาลัย",en:"Chulalongkorn University"}],
+  ["lab",{th:"แล็บ/กลุ่มวิจัย (ถ้ามี)",en:"Lab / group (optional)"},{th:"",en:""}],
+  ["problem",{th:"ศึกษาเรื่องอะไร (ภาษาง่าย)",en:"What you study (plain words)"},{th:"การใช้ eDNA ในดินเพื่อติดตามความหลากหลายทางชีวภาพ",en:"using soil eDNA to monitor biodiversity"}],
+  ["why",{th:"ทำไมสำคัญ",en:"Why it matters"},{th:"ช่วยให้ชุมชนติดตามระบบนิเวศได้เร็วและถูกลง",en:"it lets communities track ecosystems faster and cheaper"}],
+  ["stage",{th:"ตอนนี้อยู่ขั้นไหน",en:"Current stage"},{th:"วิเคราะห์ข้อมูลชุดแรก",en:"analysing my first dataset"}],
+  ["ask",{th:"อยากได้อะไรจากผู้ฟัง",en:"What you're looking for"},{th:"แลกเปลี่ยนเรื่องวิธีเก็บตัวอย่าง",en:"exchange ideas on sampling design"}]
+];
+function pitchText(){
+  const p=S.pitch[S.lang]||{}; const g=k=>(p[k]||"").trim()||"___";
+  if(S.lang==="th") return `สวัสดีครับ/ค่ะ ผม/ดิฉันชื่อ${g("name")} เป็นนิสิต${g("program")} ${g("univ")}${p.lab?` อยู่${p.lab}`:""} กำลังศึกษาเรื่อง${g("problem")} ซึ่งสำคัญเพราะ${g("why")} ตอนนี้กำลัง${g("stage")} และอยาก${g("ask")}ครับ/ค่ะ`;
+  return `Hi, I'm ${g("name")}, a ${g("program")} student at ${g("univ")}${p.lab?`, working in ${p.lab}`:""}. I study ${g("problem")}. This matters because ${g("why")}. Right now I'm ${g("stage")}, and I'd love to ${g("ask")}.`;
+}
+function wPitch(){
+  return `<div class="box"><p class="muted">${T("กรอกช่องด้านล่าง (ช่องภาษาไทยและอังกฤษแยกกัน — สลับภาษาด้านบนเพื่อทำอีกฉบับ) แล้วฝึกพูดให้จบใน 30 วินาที","Fill in the fields (Thai and English versions are stored separately — switch language at the top to write the other) and practise saying it in 30 seconds.")}</p>
+  <div class="fgrid">${PITCH_F.map(([k,l,ph])=>`<div>${inp(`pitch.${S.lang}.${k}`,L(l),"text",null,L(ph))}</div>`).join("")}</div>
+  <div class="out" id="pitchOut">${esc(pitchText())}</div>
+  <div class="row"><button class="btn sm" data-copy="pitchOut">${UI.copy[S.lang]}</button><button class="btn sm ghost" data-act="pitchToA1">${T("ใส่ในงาน A1","Put into A1")}</button><small class="muted" id="pitchLen"></small></div>
+  <details class="more"><summary>${T("ต่อยอดเป็นเวอร์ชัน 90 วินาที","Extend to a 90-second version")}</summary><p>${T("เพิ่ม (1) ผลลัพธ์/ข้อค้นพบที่น่าสนใจ 1 ข้อ (2) วิธีการเด่นของงาน (3) คำถามกลับไปยังผู้ฟัง เช่น \"แล้วงานของคุณเกี่ยวกับ…อย่างไร?\"","Add (1) one interesting result, (2) your key method, (3) a question back, e.g. \"How does this relate to your work on…?\"")}</p></details></div>`;
+}
+function cn(en){ const n=(S.conf.name||"").trim(); return n ? (en?n:" "+n) : (en?"the conference":"ประชุมวิชาการ"); }
+function fuText(){
+  const f=S.fu; const g=(k,d="___")=>(f[k]||"").trim()||d;
+  const me = (f.myName||S.student.name||"").trim()||"___"; const aff=(f.myAff||S.student.program||"").trim();
+  if(S.lang==="th") return `เรื่อง: ขอบคุณสำหรับการพูดคุยที่งาน${cn()}
+
+เรียน ${g("to")}
+
+ผม/ดิฉัน ${me}${aff?` จาก${aff}`:""} ได้มีโอกาสพูดคุยกับท่าน${f.where?`ที่${f.where}`:""}ในงาน${cn()} ขอขอบพระคุณที่สละเวลาแลกเปลี่ยนเรื่อง${g("topic")}
+
+${f.next?`ตามที่ได้พูดคุยกันไว้ ${f.next}`:"หวังเป็นอย่างยิ่งว่าจะได้มีโอกาสติดต่อและเรียนรู้จากท่านต่อไป"}
+
+ขอแสดงความนับถือ
+${me}${aff?"\n"+aff:""}`;
+  return `Subject: Great meeting you at ${cn(true)}
+
+Dear ${g("to")},
+
+It was a pleasure meeting you at ${cn(true)}${f.where?` during ${f.where}`:""}. Thank you for taking the time to talk with me about ${g("topic")}.
+
+${f.next?`As we discussed, ${f.next}.`:"I would be glad to stay in touch and to learn more about your work."}
+
+Thank you again for your time and insights. I look forward to keeping in touch.
+
+Best regards,
+${me}${aff?"\n"+aff:""}`;
+}
+function wFollowup(){
+  const cs = A("A6").r.map((c,i)=>({c,i})).filter(x=>filled(x.c.name));
+  return `<div class="box">
+  ${cs.length?`<label class="f">${T("ดึงข้อมูลจากผู้ติดต่อในงาน A6","Fill from an A6 contact")}</label><select data-act="fillFu"><option value="">—</option>${cs.map(x=>`<option value="${x.i}">${esc(x.c.name)}</option>`).join("")}</select>`:""}
+  <div class="fgrid">
+   <div>${inp("fu.to",T("ถึง (เช่น Dr. Smith / อ.สมศรี)","To (e.g. Dr. Smith)"))}</div>
+   <div>${inp("fu.where",T("พบกันที่ไหน","Where you met"),"text",null,T("ช่วง poster session วันจันทร์","the Monday poster session"))}</div>
+   <div>${inp("fu.topic",T("คุยเรื่องอะไร","Topic discussed"),"text",null,T("การเตรียมตัวอย่าง eDNA","eDNA sample preparation"))}</div>
+   <div>${inp("fu.next",T("ขั้นต่อไป (ถ้ามี)","Next step (optional)"),"text",null,T("ผม/ดิฉันแนบไฟล์ abstract มาให้ท่านพิจารณา","I have attached my abstract for your reference"))}</div>
+   <div>${inp("fu.myName",T("ชื่อของฉัน","My name"))}</div>
+   <div>${inp("fu.myAff",T("สังกัดของฉัน","My affiliation"))}</div>
+  </div>
+  <div class="out" id="fuOut">${esc(fuText())}</div>
+  <div class="row"><button class="btn sm" data-copy="fuOut">${UI.copy[S.lang]}</button><small class="muted">${T("ส่งภายใน 48 ชม. · ปรับให้เป็นภาษาของตัวเอง · อ้างถึงเรื่องที่คุยจริง","Send within 48 h · personalise it · reference what you actually discussed")}</small></div></div>`;
+}
+/* --- timeline (backward planner) --- */
+const fmtDate = d => d.toLocaleDateString(S.lang==="th"?"th-TH":"en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"});
+const addDays = (iso,n) => { const d=new Date(iso+"T00:00:00"); d.setDate(d.getDate()+n); return d; };
+const TL_STEPS = [
+  ["dl",-90,{th:"เลือกงานประชุม อ่าน Call for Papers ดาวน์โหลด template คุยกับอาจารย์",en:"Choose the conference, read the CFP, download the template, talk to your advisor"}],
+  ["dl",-60,{th:"สรุปผลการทดลองและทำรูป/ตารางหลักให้เสร็จ",en:"Finalise results and the key figures/tables"}],
+  ["dl",-30,{th:"ร่างแรก (abstract/full paper) ส่งอาจารย์",en:"First draft (abstract/full paper) to your advisor"}],
+  ["dl",-21,{th:"แก้ไขรอบที่ 1 ส่งผู้ร่วมวิจัยทุกคน",en:"Revision 1 to all co-authors"}],
+  ["dl",-10,{th:"ตรวจภาษา ตรวจความซ้ำ ตรวจการอ้างอิง ตรวจ format",en:"Language, similarity, references and format checks"}],
+  ["dl",-3,{th:"กดส่ง (เผื่อระบบล่ม/อินเทอร์เน็ตมีปัญหา) และเก็บหลักฐานการส่ง",en:"Submit (buffer for system/internet failures) and keep proof"}],
+  ["dl",0,{th:"กำหนดส่งของงาน",en:"Conference submission deadline"},true],
+  ["cf",-60,{th:"ลงทะเบียน early-bird / ขออนุมัติเดินทางและทุน (ถ้ายังไม่ทราบวันปิด early-bird)",en:"Register early-bird / request travel approval & funding (if early-bird date unknown)"}],
+  ["cf",-30,{th:"เริ่มทำโปสเตอร์/สไลด์",en:"Start your poster/slides"}],
+  ["cf",-14,{th:"ซ้อมนำเสนอต่อหน้าแล็บครั้งที่ 1",en:"First rehearsal in front of your lab"}],
+  ["cf",-7,{th:"ไฟล์ฉบับสุดท้าย / สั่งพิมพ์โปสเตอร์",en:"Final file / print the poster"}],
+  ["cf",-2,{th:"เตรียมเดินทาง เช็กลิสต์ของที่ต้องนำไป",en:"Travel prep and packing checklist"}],
+  ["cf",0,{th:"วันแรกของงานประชุม",en:"First day of the conference"},true]
+];
+function wTimeline(){
+  const dl=S.tl?.dl||S.conf.deadline||"", cf=S.tl?.cf||S.conf.start||"";
+  const today=new Date(); today.setHours(0,0,0,0);
+  let rows=[];
+  TL_STEPS.forEach(([base,off,lab,key])=>{ const iso=base==="dl"?dl:cf; if(!iso) return; const d=addDays(iso,off); rows.push({d,lab,key}); });
+  rows.sort((a,b)=>a.d-b.d);
+  const next = rows.find(r=>r.d>=today);
+  return `<div class="box"><div class="fgrid">
+   <div><label class="f">${T("กำหนดส่งผลงาน","Submission deadline")}</label><input type="date" data-bind="tl.dl" data-rerender="1" value="${esc(dl)}"></div>
+   <div><label class="f">${T("วันแรกของงานประชุม","Conference start date")}</label><input type="date" data-bind="tl.cf" data-rerender="1" value="${esc(cf)}"></div>
+  </div>
+  <p class="muted" style="margin:.4rem 0">${T("ค่าเริ่มต้นดึงจากกล่อง \"งานประชุมของฉัน\" ด้านบนสุด","Defaults come from \"My conference\" at the top")}</p>
+  ${rows.length?`<div class="tblwrap"><table><thead><tr><th>${T("วันที่","Date")}</th><th>${T("สิ่งที่ต้องทำ","Milestone")}</th></tr></thead><tbody>${rows.map(r=>`<tr style="${r.key?"font-weight:600;background:#f3f8f6":""}${r.d<today&&!r.key?"color:#9aa0a3":""}"><td style="white-space:nowrap">${esc(fmtDate(r.d))}</td><td>${esc(L(r.lab))} ${r===next?`<span class="pill warn">${T("ถัดไป","next")}</span>`:""}${r.d<today?` <span class="pill gray">${T("ผ่านแล้ว","past")}</span>`:""}</td></tr>`).join("")}</tbody></table></div>`
+   :`<p class="muted">${T("ใส่วันที่อย่างน้อยหนึ่งช่องเพื่อสร้างแผน","Enter at least one date to build the plan")}</p>`}</div>`;
+}
+/* --- conference evaluation --- */
+function wConfcheck(){
+  const c=S.cc||{}; const fit=c.fit||{}, lg=c.legit||{};
+  const fitTot=FIT.reduce((s,f)=>s+(fit[f.k]||0),0), fitN=FIT.filter(f=>fit[f.k]).length;
+  const no=LEGIT.filter(l=>lg[l.k]==="no").length, uns=LEGIT.filter(l=>lg[l.k]==="unsure").length, yes=LEGIT.filter(l=>lg[l.k]==="yes").length;
+  const yn = l => ["yes","unsure","no"].map(v=>`<button data-set="cc.legit.${l.k}" data-sv="${v}" class="${lg[l.k]===v?"on":""}" style="width:auto;padding:0 .55rem">${{yes:T("ใช่","Yes"),unsure:T("ไม่แน่ใจ","Unsure"),no:T("ไม่","No")}[v]}</button>`).join("");
+  let verdict="";
+  if(fitN===FIT.length && yes+no+uns===LEGIT.length){
+    if(no>=3) verdict=`<div class="warn">⛔ ${T("มีสัญญาณเตือนหลายข้อ — อาจเป็นงานไม่น่าเชื่อถือ ปรึกษาอาจารย์ก่อนส่งผลงานหรือจ่ายเงิน","Several red flags — possibly unreliable. Consult your advisor before submitting or paying.")}</div>`;
+    else if(no>0||uns>2) verdict=`<div class="warn">⚠️ ${T("ยังมีข้อสงสัย — ตรวจสอบข้อที่ตอบ \"ไม่/ไม่แน่ใจ\" เพิ่มเติม","Some doubts — investigate the \"No/Unsure\" items further.")}</div>`;
+    else verdict = fitTot>=28 ? `<div class="note">✅ ${T("น่าเชื่อถือและเหมาะกับเป้าหมาย — เสนออาจารย์ได้เลย","Credible and a good fit — propose it to your advisor.")}</div>` : `<div class="note">🤔 ${T("น่าเชื่อถือ แต่ความเหมาะสมปานกลาง — ลองเทียบกับงานอื่น","Credible but only a moderate fit — compare with alternatives.")}</div>`;
+  }
+  return `<div class="box">${inp("cc.name",T("ชื่องานประชุมที่กำลังพิจารณา","Conference you are considering"),"text",null,"e.g. Annual Meeting of …")}
+  <h4 style="margin-top:1rem">A. ${T("ความเหมาะสมกับเป้าหมาย (1–5)","Fit with your goals (1–5)")}</h4>
+  ${FIT.map(f=>`<div class="crit"><div><b>${esc(L(f))}</b></div>${scoreBtns("cc.fit."+f.k)}</div>`).join("")}
+  <p><b>${UI.total[S.lang]}: ${fitTot}/35</b></p>
+  <h4 style="margin-top:1rem">B. ${T("ความน่าเชื่อถือ (ดัดแปลงจาก Think. Check. Attend.)","Credibility (adapted from Think. Check. Attend.)")}</h4>
+  ${LEGIT.map(l=>`<div class="crit"><div>${esc(L(l))}</div><div class="score">${yn(l)}</div></div>`).join("")}
+  <p><b>${T("ใช่","Yes")} ${yes} · ${T("ไม่แน่ใจ","Unsure")} ${uns} · ${T("ไม่","No")} ${no}</b></p>${verdict}
+  <button class="btn sm ghost" data-act="ccClear">${T("ล้าง","Clear")}</button></div>`;
+}
+/* --- CFP worksheet --- */
+function wCfp(){
+  return `<div class="box"><div class="tblwrap"><table><thead><tr><th style="width:28%">${T("ข้อกำหนด","Requirement")}</th><th>${T("งานที่จะส่ง","Your target conference")}</th></tr></thead><tbody>
+  ${CFP_ROWS.map(([k,l,ex])=>`<tr><td><b>${esc(L(l))}</b></td><td><textarea data-bind="cfp.${k}" style="min-height:42px" placeholder="${esc(ex)}">${esc(S.cfp?.[k])}</textarea></td></tr>`).join("")}
+  </tbody></table></div>
+  <div class="row" style="margin-top:.6rem"><button class="btn sm" data-act="cfpCopy">${UI.copy[S.lang]}</button><button class="btn sm danger" data-act="cfpClear">${T("ล้าง","Clear")}</button></div></div>`;
+}
+/* --- abstract builder --- */
+const ABS_PARTS = [
+  ["bg",{th:"1. Background (บริบท/ปัญหา/ช่องว่าง)",en:"1. Background (context/problem/gap)"},30],
+  ["aim",{th:"2. Aim / hypothesis",en:"2. Aim / hypothesis"},20],
+  ["methods",{th:"3. Methods",en:"3. Methods"},50],
+  ["results",{th:"4. Results (ใส่ตัวเลข)",en:"4. Results (with numbers)"},70],
+  ["concl",{th:"5. Conclusion / implication",en:"5. Conclusion / implication"},30]
+];
+let SEG=null; try{ SEG=new Intl.Segmenter(undefined,{granularity:"word"}); }catch(e){}
+function wc(t){ t=(t||"").trim(); if(!t) return 0;
+  if(/[฀-๿]/.test(t) && SEG){ let n=0; for(const s of SEG.segment(t)) if(s.isWordLike) n++; return n; }
+  return t.split(/\s+/).filter(w=>/[\p{L}\p{N}]/u.test(w)).length; }
+function absState(){ S.abs=S.abs||{limit:250}; if(!S.abs.limit) S.abs.limit=250; return S.abs; }
+function absBody(){ const a=absState(); return ABS_PARTS.map(([k])=>(a[k]||"").trim()).filter(Boolean).join(" "); }
+function absChecks(){
+  const a=absState(), body=absBody(), n=wc(body), lim=+a.limit||200, tw=wc(a.title);
+  const acr=[...new Set((body.match(/\b[A-Z][A-Z0-9]{1,}s?\b/g)||[]))].filter(x=>!/^(I|II|III|IV|DNA|RNA|PCR)$/.test(x));
+  const undefinedAcr=acr.filter(x=>!new RegExp("\\(\\s*"+x.replace(/s$/,"")+"s?\\s*\\)").test(body));
+  const out=[];
+  const ok=(c,th,en)=>out.push({c,txt:T(th,en)});
+  ok(n>0 && n<=lim, `ความยาว ${n}/${lim} คำ`, `Length ${n}/${lim} words`);
+  ok(n>=lim*0.7 || n===0 ? n>0 : false, "ใช้พื้นที่ได้คุ้ม (≥70% ของจำนวนคำที่กำหนด)", "Uses the space well (≥70% of the limit)");
+  ok(tw>=6 && tw<=18, `ชื่อเรื่อง ${tw} คำ (แนะนำ 10–15)`, `Title ${tw} words (aim for 10–15)`);
+  ok(/\d/.test(a.results||""), "ส่วนผลลัพธ์มีตัวเลข", "Results contain numbers");
+  ok(!/will be (discussed|presented|shown)|จะ(นำเสนอ|อภิปราย)/i.test(body), "ไม่มีผลลัพธ์แบบคลุมเครือ (\"will be discussed\")", "No vague results (\"will be discussed\")");
+  ok(!/\(([A-Z][a-z]+(\s+et al\.)?,?\s*\d{4})\)|\[\d+(,\s*\d+)*\]/.test(body), "ไม่มีการอ้างอิงเอกสารในบทคัดย่อ", "No citations in the abstract");
+  ok(undefinedAcr.length===0, undefinedAcr.length?`ตัวย่อที่อาจยังไม่นิยาม: ${undefinedAcr.join(", ")}`:"ตัวย่อถูกนิยามแล้ว", undefinedAcr.length?`Possibly undefined acronyms: ${undefinedAcr.join(", ")}`:"Acronyms defined");
+  ok(wc(a.kw)>0, "มี keywords", "Keywords provided");
+  return {n,lim,out};
+}
+function absPreview(){ const a=absState(); return `${(a.title||"").trim()||"[Title]"}\n\n${absBody()||"[Abstract]"}\n\nKeywords: ${(a.kw||"").trim()||"[3–5 keywords]"}`; }
+function wAbstract(){
+  const a=absState(); const ck=absChecks();
+  return `<div class="box">
+  <div class="fgrid"><div>${inp("abs.limit",T("จำนวนคำสูงสุดที่งานกำหนด","Word limit set by the conference"),"text")}</div></div>
+  ${inp("abs.title","Title")}<small class="muted" id="absTw"></small>
+  ${ABS_PARTS.map(([k,l,t])=>`${inp("abs."+k,L(l),"textarea")}<small class="muted" data-wc="${k}" data-target="${t}"></small>`).join("")}
+  ${inp("abs.kw","Keywords (3–5, ; separated)")}
+  <div style="margin:.8rem 0 .3rem"><small>${T("จำนวนคำรวม","Total words")}: <b id="absN">${ck.n}</b> / ${ck.lim}</small><div class="bar"><i id="absBar" style="width:${Math.min(100,ck.n/ck.lim*100)}%;${ck.n>ck.lim?"background:#c0392b":""}"></i></div></div>
+  <ul class="check" id="absChecks">${ck.out.map(c=>`<li>${c.c?"✅":"⚠️ "+T("ตรวจอีกครั้ง —","Check —")} <span>${esc(c.txt)}</span></li>`).join("")}</ul>
+  <div class="out" id="absOut">${esc(absPreview())}</div>
+  <div class="row"><button class="btn sm" data-copy="absOut">${UI.copy[S.lang]}</button><button class="btn sm ghost" data-act="absEx">${T("ดูตัวอย่าง (สมมติ)","Load example (fictional)")}</button><button class="btn sm danger" data-act="absClear">${T("ล้าง","Clear")}</button></div>
+  <p class="muted" style="margin-top:.6rem">${T("ตัวอย่างเป็นงานสมมติเพื่อสาธิตโครงสร้างเท่านั้น ตัวเลขไม่ใช่ข้อมูลจริง · การตรวจอัตโนมัติเป็นเพียงตัวช่วย ไม่แทนการอ่านทานโดยอาจารย์","The example is fictional, to demonstrate structure only — numbers are not real data · Automated checks are a helper, not a substitute for your advisor's review")}</p></div>`;
+}
+function refreshAbs(){
+  if(!$("#absOut")) return;
+  const a=absState(); const ck=absChecks();
+  $("#absOut").textContent=absPreview(); $("#absN").textContent=ck.n;
+  const bar=$("#absBar"); bar.style.width=Math.min(100,ck.n/ck.lim*100)+"%"; bar.style.background=ck.n>ck.lim?"#c0392b":"";
+  $("#absChecks").innerHTML=ck.out.map(c=>`<li>${c.c?"✅":"⚠️ "+T("ตรวจอีกครั้ง —","Check —")} <span>${esc(c.txt)}</span></li>`).join("");
+  document.querySelectorAll("[data-wc]").forEach(e=>{ const n=wc(a[e.dataset.wc]); e.textContent=`${n} ${T("คำ","words")} · ${T("แนะนำ","target")} ~${e.dataset.target}`; });
+  const tw=$("#absTw"); if(tw) tw.textContent=`${wc(a.title)} ${T("คำ","words")}`;
+}
+function widget(name){
+  if(name.startsWith("check:")) return wCheck(name.slice(6));
+  return ({planner:wPlanner,rubric:wRubric,pitch:wPitch,followup:wFollowup,timeline:wTimeline,confcheck:wConfcheck,cfp:wCfp,abstract:wAbstract,myconf:wMyconf,budget:wBudget}[name]||(()=>""))();
+}
+
+/* ---------- Render Guide ---------- */
+let spy;
+function renderGuide(){
+  const total = Object.values(CHECK).reduce((s,l)=>s+l.length,0);
+  const done = Object.keys(CHECK).reduce((s,k)=>s+CHECK[k].filter((_,i)=>S.ck[k+":"+i]).length,0);
+  let lastG="";
+  $("#side").innerHTML = GUIDE.map(g=>{ const gr=g.group; const head = gr&&gr!==lastG ? `<div class="sgroup">${L(GROUPS[gr])}</div>` : ""; lastG=gr; return head+`<a href="#${g.id}" data-nav="${g.id}">${L(g.nav)}</a>`; }).join("")
+    + `<div class="prog"><small>${UI.progress[S.lang]}: ${done}/${total}</small><div class="bar"><i style="width:${done/total*100}%"></i></div></div>`
+    + `<div class="prog"><button class="btn sm" data-tab="asg">${T("ไปที่งานมอบหมาย →","Go to assignments →")}</button></div>`;
+  $("#main").innerHTML = GUIDE.map(g=>`<section class="card ${g.hero?"hero":""}" id="${g.id}">${g[S.lang].replace("{{refs}}",REFS).replace(/\{\{w:([\w:]+)\}\}/g,(_,w)=>`<div data-w="${w}">${widget(w)}</div>`)}${g.after?widget(g.after):""}</section>`).join("");
+  setupSpy(); refreshAbs();
+}
+function setupSpy(){
+  if(spy) spy.disconnect();
+  spy = new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ document.querySelectorAll(".side a").forEach(a=>a.classList.toggle("on", a.dataset.nav===e.target.id)); } }); },{rootMargin:"-30% 0px -60% 0px"});
+  document.querySelectorAll("main section.card").forEach(s=>spy.observe(s));
+}
+
+/* ---------- Due dates & teacher link ---------- */
+function dueDate(d){ const c=S.conf||{}; const base=d.due.base==="start"?c.start:(c.end||c.start); if(!base) return null; const x=addDays(base,d.due.off); return isNaN(x)?null:x; }
+function dueHtml(d){ const x=dueDate(d); return esc(L(d.due)) + (x?` <b>(${esc(fmtDate(x))})</b>`:""); }
+function teacherLink(){
+  const c=S.conf||{}; const q=new URLSearchParams(); const m={name:"conf",start:"start",end:"end",venue:"venue",web:"web",deadline:"dl"};
+  Object.entries(m).forEach(([k,p])=>{ if(c[k]) q.set(p,c[k]); }); q.set("lang",S.lang); q.set("tab","asg");
+  return location.origin+location.pathname+"?"+q.toString()+"#assignments";
+}
+function teacherBox(){
+  return `<details class="more box" style="margin:.6rem 0 1rem"><summary>👩‍🏫 ${T("สำหรับอาจารย์: ตั้งค่างานประชุมและสร้างลิงก์ให้นิสิต","For advisors: set the conference and create a link for students")}</summary>
+  <p class="muted">${T("กรอกข้อมูลงานแล้วคัดลอกลิงก์ส่งนิสิต เมื่อนิสิตเปิดลิงก์ ข้อมูลงานจะถูกตั้งให้ และกำหนดส่งจะคำนวณจากวันที่ของงานอัตโนมัติ","Enter the conference details and copy the link for students. Opening it sets the conference for them, and due dates are calculated from the conference dates.")}</p>
+  <div class="fgrid">
+   <div>${inp("conf.name",T("ชื่องานประชุม","Conference name"))}</div>
+   <div>${inp("conf.venue",T("สถานที่/เมือง","Venue / city"))}</div>
+   <div><label class="f">${T("วันแรก","Start date")}</label><input type="date" data-bind="conf.start" data-rerender="1" value="${esc(S.conf.start)}"></div>
+   <div><label class="f">${T("วันสุดท้าย","End date")}</label><input type="date" data-bind="conf.end" data-rerender="1" value="${esc(S.conf.end)}"></div>
+   <div>${inp("conf.web",T("เว็บไซต์งาน","Website"))}</div>
+  </div>
+  <div class="out" id="tLink" style="word-break:break-all">${esc(teacherLink())}</div>
+  <button class="btn sm" data-copy="tLink">${T("คัดลอกลิงก์","Copy link")}</button></details>`;
+}
+
+/* ---------- Render Assignments ---------- */
+function renderAsg(){
+  const ov=overall();
+  $("#side").innerHTML = `<a href="#asg-top" data-nav="asg-top">${T("ภาพรวมและข้อมูลนิสิต","Overview & student info")}</a>`
+    + ASSIGN.map(d=>{const s=asgStats(d);return `<a href="#${d.id}" data-nav="${d.id}">${d.icon} ${d.id} · ${L(d.title)} <small id="sp-${d.id}">${s.pct}%</small></a>`;}).join("")
+    + `<a href="#asg-export" data-nav="asg-export">📤 ${T("ส่งงาน / ส่งออก","Submit / export")}</a>`
+    + `<div class="prog"><small>${UI.asgProgress[S.lang]}: <b id="ovTxt">${ov}%</b></small><div class="bar"><i id="ovBar" style="width:${ov}%"></i></div></div>`;
+  let h = `<section class="card" id="asg-top"><div class="eyebrow">${T("ส่วนที่ 2","Part 2")}</div>
+  <h2>${T("งานมอบหมาย: ทักษะการไปประชุมวิชาการ","Assignments: Conference Skills")}${S.conf.name?` — ${esc(S.conf.name)}`:""}</h2>
+  ${teacherBox()}
+  <p>${T("งาน 8 ชิ้น รวม 100 คะแนน ทำในหน้านี้ได้เลย ข้อมูลจะถูกบันทึกในเบราว์เซอร์ของเครื่องนี้อัตโนมัติ (แนะนำให้ใช้เครื่องเดิมตลอด และกด \"สำรองข้อมูล\" เป็นระยะ) เมื่อเสร็จให้ส่งออกรายงานแล้วส่งอาจารย์พร้อมไฟล์ภาพ","Eight assignments, 100 points in total. Work directly on this page — your entries are saved automatically in this browser (use the same device and press \"Back up\" regularly). When finished, export the report and send it to your advisor with your photos.")}</p>
+  <div class="fgrid">
+   <div>${inp("student.name",T("ชื่อ–นามสกุล","Full name"))}</div>
+   <div>${inp("student.id",T("รหัสนิสิต","Student ID"))}</div>
+   <div>${inp("student.program",T("หลักสูตร/สังกัด","Program / affiliation"))}</div>
+   <div>${inp("student.advisor",T("อาจารย์ที่ปรึกษา","Advisor"))}</div>
+   <div>${inp("student.role",T("บทบาทในงาน","Role at the conference"),"select",[{v:"",th:"— เลือก —",en:"— select —"},{v:"oral",th:"นำเสนอแบบบรรยาย",en:"Oral presenter"},{v:"poster",th:"นำเสนอโปสเตอร์",en:"Poster presenter"},{v:"attendee",th:"ผู้เข้าร่วม",en:"Attendee"}])}</div>
+   <div>${inp("student.code",T("รหัสผลงาน (ถ้ามี)","Presentation code (if any)"))}</div>
+  </div>
+  <div class="statgrid">
+   <div class="stat"><b id="ovStat">${ov}%</b><small>${UI.asgProgress[S.lang]}</small></div>
+   <div class="stat"><b>${A("A2").r.filter(it=>itemDone(ASSIGN[1],it)).length}/6+</b><small>${T("Talks ที่บันทึก","Talks logged")}</small></div>
+   <div class="stat"><b>${A("A3").r.filter(it=>itemDone(ASSIGN[2],it)).length}/5+</b><small>${T("โปสเตอร์ที่ประเมิน","Posters scored")}</small></div>
+   <div class="stat"><b>${A("A6").r.filter(it=>filled(it.name)).length}/5</b><small>${T("ผู้ติดต่อใหม่","New contacts")}</small></div>
+  </div>
+  <div class="tblwrap"><table><thead><tr><th>#</th><th>${T("งาน","Assignment")}</th><th>${T("คะแนน","Pts")}</th><th>${T("กำหนดส่ง","Due")}</th><th>${T("ความคืบหน้า","Progress")}</th></tr></thead><tbody>
+  ${ASSIGN.map(d=>{const s=asgStats(d);return `<tr><td>${d.id}</td><td><a href="#${d.id}">${d.icon} ${esc(L(d.title))}</a></td><td>${d.pts}</td><td>${dueHtml(d)}</td><td style="min-width:110px"><div class="bar"><i id="tb-${d.id}" style="width:${s.pct}%"></i></div></td></tr>`;}).join("")}
+  <tr><td></td><td><b>${UI.total[S.lang]}</b></td><td><b>100</b></td><td></td><td></td></tr></tbody></table></div>
+  <div class="note">${T("เกณฑ์การให้คะแนนแต่ละงาน: ความครบถ้วนตามจำนวนที่กำหนด (40%) · ความลึกของการวิเคราะห์/สะท้อนคิด (40%) · ความตรงต่อเวลาและจริยธรรม เช่น การขออนุญาตถ่ายภาพ (20%)","Grading for each assignment: completeness vs. required counts (40%) · depth of analysis/reflection (40%) · timeliness and ethics, e.g. photo permissions (20%)")}</div>
+  </section>`;
+  ASSIGN.forEach(d=>{ h+=renderOne(d); });
+  h += `<section class="card" id="asg-export"><h2>📤 ${T("ส่งงาน / ส่งออก","Submit / export")}</h2>
+  <p>${T("1) ดาวน์โหลดรายงาน (.md) หรือพิมพ์เป็น PDF · 2) รวมไฟล์ภาพตามชื่อไฟล์ใน A7 · 3) ส่งให้อาจารย์ตามช่องทางที่กำหนด ภายในกำหนดส่งของแต่ละงาน","1) Download the report (.md) or print to PDF · 2) collect the photo files named in A7 · 3) send them to your advisor via the agreed channel by each due date")}</p>
+  <div class="row">
+   <button class="btn" data-act="dlMd">⬇️ ${T("ดาวน์โหลดรายงาน (.md)","Download report (.md)")}</button>
+   <button class="btn" data-act="print">🖨️ ${T("พิมพ์ / บันทึกเป็น PDF","Print / save as PDF")}</button>
+   <button class="btn ghost" data-act="backup">💾 ${T("สำรองข้อมูล (.json)","Back up (.json)")}</button>
+   <label class="btn ghost" style="cursor:pointer">📂 ${T("กู้คืนข้อมูล","Restore")}<input type="file" accept=".json" id="restoreFile" hidden></label>
+   <button class="btn danger" data-act="reset">${T("ล้างข้อมูลทั้งหมด","Clear all data")}</button>
+  </div>
+  <p class="muted" style="margin-top:.6rem">${T("ข้อมูลอยู่ในเบราว์เซอร์นี้เท่านั้น ไม่ถูกส่งไปที่ใด — ถ้าล้างประวัติเบราว์เซอร์ข้อมูลจะหาย จึงควรสำรองไว้เสมอ","Data stays in this browser only and is never uploaded — clearing browser data erases it, so keep backups.")}</p></section>`;
+  $("#main").innerHTML = h;
+  setupSpy();
+}
+function renderOne(d){
+  const a=A(d.id); const s=asgStats(d); const p=`a.${d.id}`;
+  let h=`<section class="card asg" id="${d.id}"><div class="asg-head"><div><div class="eyebrow">${d.id}</div><h2>${d.icon} ${esc(L(d.title))}</h2></div>
+  <div style="min-width:140px;text-align:right"><small>${T("ความคืบหน้า","Progress")} <b id="pc-${d.id}">${s.pct}%</b></small><div class="bar"><i id="pb-${d.id}" style="width:${s.pct}%"></i></div></div></div>
+  <div class="asg-meta"><span class="pill">${d.pts} ${T("คะแนน","pts")}</span><span class="pill warn" style="white-space:normal">⏰ ${dueHtml(d)}</span><span class="pill gray">${esc(L(d.skill))}</span></div>
+  <p><b>${T("เป้าหมาย:","Goal:")}</b> ${esc(L(d.goal))}</p>`;
+  if(d.tasks.length) h+=`<ul class="check">${d.tasks.map((t,i)=>`<li class="${a.t[i]?"done":""}"><input type="checkbox" id="t-${d.id}-${i}" data-bind="${p}.t.${i}" ${a.t[i]?"checked":""}><label for="t-${d.id}-${i}"><span>${esc(L(t))}</span></label></li>`).join("")}</ul>`;
+  if(d.includePlan) h+=`<div class="box"><b>${T("ตารางจาก Planner","Schedule from the Planner")}</b> <span class="pill">${planCount()}</span><pre class="out" style="margin:.4rem 0">${esc(mySchedule(false)||T("ยังไม่มีรายการ — ไปที่ส่วนที่ 1 › อ่านโปรแกรม & วางตาราง","Nothing yet — go to Part 1 › Program & schedule"))}</pre><button class="btn sm ghost" data-act="goPlanner">${T("เปิด Planner","Open Planner")}</button></div>`;
+  if(d.fields.length && d.mode) h+=d.fields.map(f=>inp(`${p}.f.${f.k}`,L(f),f.type,f.opts)).join("");
+  if(d.repeat){
+    const r=d.repeat; const n=a.r.filter(it=>itemDone(d,it)).length;
+    h+=`<h3 style="margin-top:1rem">${esc(L(r.label))} <span class="pill ${n>=r.min?"":"warn"}">${n}/${r.min}${T(" (ขั้นต่ำ)"," (min)")}</span></h3>`;
+    a.r.forEach((it,i)=>{
+      h+=`<div class="item"><h4>${esc(L(r.label))} ${i+1}${it.name?` · ${esc(it.name)}`:it.title?` · ${esc(it.title)}`:it.code?` · ${esc(it.code)}`:""}</h4>${a.r.length>r.min?`<button class="btn sm danger del" data-act="delItem" data-id="${d.id}" data-i="${i}">${UI.del[S.lang]}</button>`:""}
+      <div class="fgrid">${r.fields.filter(f=>f.type!=="textarea").map(f=>`<div>${inp(`${p}.r.${i}.${f.k}`,L(f),f.type,f.opts)}</div>`).join("")}</div>
+      ${r.fields.filter(f=>f.type==="textarea").map(f=>inp(`${p}.r.${i}.${f.k}`,L(f),f.type)).join("")}
+      ${r.rubric?`<details class="more" ${it.rub?"open":""}><summary>${T("ให้คะแนนตามเกณฑ์ 6 ข้อ","Score with the 6-criterion rubric")}</summary>${rubricBlock(`${p}.r.${i}.rub`)}</details>`:""}</div>`;
+    });
+    h+=`<button class="btn ghost" data-act="addItem" data-id="${d.id}">${UI.add[S.lang]}</button>`;
+  }
+  if(d.skills){
+    h+=`<h3 style="margin-top:1rem">${T("ประเมินทักษะตนเอง (1 = เริ่มต้น, 5 = มั่นใจมาก)","Skills self-assessment (1 = beginner, 5 = very confident)")}</h3><div class="tblwrap"><table><thead><tr><th>${T("ทักษะ","Skill")}</th><th>${T("ก่อนไป","Before")}</th><th>${T("หลังกลับ","After")}</th></tr></thead><tbody>
+    ${SKILLS.map(k=>`<tr><td>${esc(L(k))}</td><td>${scoreBtns(`${p}.sk.pre.${k.k}`)}</td><td>${scoreBtns(`${p}.sk.post.${k.k}`)}</td></tr>`).join("")}</tbody></table></div>`;
+  }
+  if(d.fields.length && !d.mode) h+=d.fields.map(f=>inp(`${p}.f.${f.k}`,L(f),f.type,f.opts)).join("");
+  h+=`</section>`;
+  return h;
+}
+
+/* ---------- Report ---------- */
+function report(){
+  const st=S.student; const lines=[];
+  lines.push(`# ${T("รายงานการเข้าร่วมประชุมวิชาการ","Conference Report")}${S.conf.name?": "+S.conf.name:""}`);
+  if(S.conf.start) lines.push(`${T("วันที่จัด","Dates")}: ${fmtDate(new Date(S.conf.start+"T00:00:00"))}${S.conf.end?" – "+fmtDate(new Date(S.conf.end+"T00:00:00")):""}${S.conf.venue?" | "+S.conf.venue:""}`);
+  lines.push(`${T("ชื่อ","Name")}: ${st.name||""} | ${T("รหัส","ID")}: ${st.id||""} | ${T("หลักสูตร","Program")}: ${st.program||""}`);
+  lines.push(`${T("อาจารย์ที่ปรึกษา","Advisor")}: ${st.advisor||""} | ${T("บทบาท","Role")}: ${st.role||""} ${st.code?"("+st.code+")":""}`);
+  lines.push(`${T("ความคืบหน้ารวม","Overall progress")}: ${overall()}% | ${T("วันที่ส่งออก","Exported")}: ${new Date().toLocaleString(S.lang==="th"?"th-TH":"en-GB")}`,"");
+  ASSIGN.forEach(d=>{
+    const a=A(d.id); const s=asgStats(d);
+    lines.push(`## ${d.id} ${L(d.title)} (${d.pts} ${T("คะแนน","pts")}) — ${s.pct}%`); { const dd=dueDate(d); lines.push(`${T("กำหนดส่ง","Due")}: ${L(d.due)}${dd?" ("+fmtDate(dd)+")":""}`); }
+    d.tasks.forEach((t,i)=>lines.push(`- [${a.t[i]?"x":" "}] ${L(t)}`));
+    if(d.includePlan){ lines.push("",`### ${T("ตารางส่วนตัว","Personal schedule")}`, mySchedule(false)||"-"); }
+    d.fields.forEach(f=>{ let v=a.f[f.k]; if(f.type==="select") v=L((f.opts||[]).find(o=>o.v===v))||""; lines.push("",`**${L(f)}**`, filled(v)?String(v):"-"); });
+    if(d.repeat){
+      a.r.forEach((it,i)=>{
+        if(!Object.keys(it).some(k=>filled(it[k]))) return;
+        lines.push("",`### ${L(d.repeat.label)} ${i+1}`);
+        d.repeat.fields.forEach(f=>{ let v=it[f.k]; if(f.type==="select") v=L((f.opts||[]).find(o=>o.v===v)); if(f.type==="check") v=v?"✔":"✘"; if(filled(v)||f.type==="check") lines.push(`- ${L(f)}: ${v}`); });
+        if(it.rub){ const tot=RUBRIC.reduce((s,c)=>s+(it.rub[c.k]||0),0); lines.push(`- ${T("คะแนนเกณฑ์","Rubric")}: ${RUBRIC.map(c=>`${L(c)} ${it.rub[c.k]||"-"}`).join(" · ")} → **${tot}/30**`); }
+      });
+    }
+    if(d.skills){ lines.push("",`### ${T("ประเมินทักษะ (ก่อน → หลัง)","Skills (before → after)")}`); SKILLS.forEach(k=>lines.push(`- ${L(k)}: ${a.sk.pre[k.k]||"-"} → ${a.sk.post[k.k]||"-"}`)); }
+    lines.push("");
+  });
+  return lines.join("\n");
+}
+function download(name,text,type){ const b=new Blob([text],{type}); const u=URL.createObjectURL(b); const x=document.createElement("a"); x.href=u; x.download=name; document.body.appendChild(x); x.click(); x.remove(); setTimeout(()=>URL.revokeObjectURL(u),1000); }
+const fname = ext => `Conference_${(S.student.id||S.student.name||"student").replace(/[^\w฀-๿-]+/g,"_")}.${ext}`;
+
+/* ---------- Render root ---------- */
+function render(keepScroll){
+  const y=window.scrollY;
+  document.documentElement.lang=S.lang; document.body.classList.remove("lang-th","lang-en"); document.body.classList.add("lang-"+S.lang);
+  document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("on",b.dataset.lang===S.lang));
+  document.querySelectorAll(".tabs [data-tab]").forEach(b=>b.classList.toggle("on",b.dataset.tab===S.tab));
+  $("#tabGuide").textContent=UI.tabGuide[S.lang]; $("#tabAsg").textContent=UI.tabAsg[S.lang];
+  $("#brandTitle").textContent=UI.brandTitle[S.lang]; $("#brandSub").textContent=S.conf.name?S.conf.name+(S.conf.start?" · "+fmtDate(new Date(S.conf.start+"T00:00:00")):""):UI.brandSub[S.lang];
+  S.tab==="asg" ? renderAsg() : renderGuide();
+  if(keepScroll) window.scrollTo(0,y);
+}
+function refreshLive(){
+  const po=$("#pitchOut"); if(po){ po.textContent=pitchText(); const w=pitchText().split(/\s+/).length; const pl=$("#pitchLen"); if(pl) pl.textContent = S.lang==="en" ? `${w} words ≈ ${Math.round(w/2.3)} s` : `${pitchText().length} ${T("ตัวอักษร","chars")}`; }
+  const fo=$("#fuOut"); if(fo) fo.textContent=fuText();
+  refreshAbs();
+  const bt=$("#budTot"); if(bt) bt.textContent=budTotal().toLocaleString();
+  const tl=$("#tLink"); if(tl) tl.textContent=teacherLink();
+  if(S.tab==="asg"){
+    ASSIGN.forEach(d=>{ const s=asgStats(d); const set=(id,fn)=>{const e=$(id); if(e) fn(e);};
+      set("#pc-"+d.id,e=>e.textContent=s.pct+"%"); set("#pb-"+d.id,e=>e.style.width=s.pct+"%"); set("#tb-"+d.id,e=>e.style.width=s.pct+"%"); set("#sp-"+d.id,e=>e.textContent=s.pct+"%"); });
+    const ov=overall(); ["#ovTxt","#ovStat"].forEach(id=>{const e=$(id); if(e) e.textContent=ov+"%";}); const ob=$("#ovBar"); if(ob) ob.style.width=ov+"%";
+  }
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("input",e=>{
+  const el=e.target; if(!el.dataset.bind) return;
+  const v = el.type==="checkbox" ? el.checked : el.value;
+  setPath(el.dataset.bind, v); save(); if(el.dataset.rerender) return; refreshLive();
+  if(el.type==="checkbox"){ const li=el.closest("li"); if(li) li.classList.toggle("done",v); }
+});
+document.addEventListener("change",e=>{
+  const el=e.target;
+  if(el.dataset.ck){ S.ck[el.dataset.ck]=el.checked; save(); render(true); return; }
+  if(el.dataset.rerender){ render(true); return; }
+  if(el.dataset.act==="fillFu" && el.value!==""){ const c=A("A6").r[+el.value]; Object.assign(S.fu,{to:c.name||"",topic:c.topic||"",where:c.where||"",next:c.next||""}); save(); render(true); return; }
+  if(el.id==="restoreFile" && el.files[0]){ const r=new FileReader(); r.onload=()=>{ try{ const d=JSON.parse(r.result); if(!d||typeof d!=="object"||!d.a) throw 0; S=Object.assign(S,d); save(); render(); toast(T("กู้คืนข้อมูลแล้ว","Data restored")); }catch(err){ toast(T("ไฟล์ไม่ถูกต้อง","Invalid file")); } }; r.readAsText(el.files[0]); }
+});
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button,a[data-nav]"); if(!b) return;
+  if(b.dataset.lang){ S.lang=b.dataset.lang; save(); render(true); return; }
+  if(b.dataset.tab){ S.tab=b.dataset.tab; save(); try{history.replaceState(null,"",S.tab==="asg"?"#assignments":"#guide");}catch(_){} render(); window.scrollTo(0,0); return; }
+  if(b.dataset.set){ const cur=getPath(b.dataset.set); const v= b.dataset.sv!==undefined ? b.dataset.sv : +b.dataset.val; setPath(b.dataset.set, cur===v?(typeof v==="string"?"":0):v); save(); render(true); return; }
+  if(b.dataset.copy){ const t=$("#"+b.dataset.copy).textContent; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(UI.copied[S.lang])).catch(()=>{ const ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy"); toast(UI.copied[S.lang]);}catch(_){} ta.remove(); }); return; }
+  const act=b.dataset.act; if(!act) return;
+  if(act==="addTalk"){ const title=$("#mt-title").value.trim(); if(!title){ toast(T("กรุณาใส่ชื่อเรื่อง","Please enter a title")); return; }
+    const st=$("#mt-start").value.trim(), en=$("#mt-end").value.trim();
+    if((st && toMin(st)===null) || (en && toMin(en)===null)){ toast(T("รูปแบบเวลา HH:MM เช่น 09:15","Use HH:MM, e.g. 09:15")); return; }
+    S.lastDay=$("#mt-day").value; S.myTalks.push({day:$("#mt-day").value,start:st,end:en,room:$("#mt-room").value.trim(),type:$("#mt-type").value,title,pri:$("#mt-pri").value}); save(); render(true); return; }
+  if(act==="delTalk"){ S.myTalks.splice(+b.dataset.i,1); save(); render(true); return; }
+  if(act==="ccClear"){ S.cc={}; save(); render(true); return; }
+  if(act==="cfpClear"){ S.cfp={}; save(); render(true); return; }
+  if(act==="cfpCopy"){ const t=CFP_ROWS.map(([k,l])=>`${L(l)}: ${(S.cfp&&S.cfp[k])||"-"}`).join("\n"); (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(UI.copied[S.lang])).catch(()=>{}); return; }
+  if(act==="absEx"){ S.abs=Object.assign({limit:250},EX_ABS); save(); render(true); return; }
+  if(act==="absClear"){ S.abs={limit:250}; save(); render(true); return; }
+  if(act==="clearRub"){ S.rub={}; save(); render(true); return; }
+  if(act==="addItem"){ A(b.dataset.id).r.push({}); save(); render(true); return; }
+  if(act==="delItem"){ if(confirmDel()) { A(b.dataset.id).r.splice(+b.dataset.i,1); save(); render(true);} return; }
+  if(act==="pitchToA1"){ setPath("a.A1.f.pitch", ((getPath("a.A1.f.pitch")||"")+(getPath("a.A1.f.pitch")?"\n\n":"")+pitchText())); save(); toast(T("ใส่ในงาน A1 แล้ว","Added to A1")); return; }
+  if(act==="goPlanner"){ S.tab="guide"; render(); setTimeout(()=>{ const el=$("#program"); if(el) el.scrollIntoView(); },50); return; }
+  if(act==="dlMd"){ download(fname("md"), report(), "text/markdown;charset=utf-8"); return; }
+  if(act==="print"){ $("#printReport").textContent=report(); document.body.classList.add("pr"); setTimeout(()=>window.print(),50); return; }
+  if(act==="backup"){ download(fname("json"), JSON.stringify(S,null,1), "application/json"); return; }
+  if(act==="reset"){ if(prompt(T("พิมพ์ RESET เพื่อยืนยันการล้างข้อมูลทั้งหมด","Type RESET to confirm clearing all data"))==="RESET"){ const l=S.lang, c=S.conf; S={lang:l,tab:"asg",ck:{},myTalks:[],rub:{},pitch:{th:{},en:{}},fu:{},student:{},a:{},conf:c}; save(); render(); toast(T("ล้างข้อมูลแล้ว","Cleared")); } return; }
+});
+// in-page delete of a filled item: avoid native dialogs being blocked in some contexts
+function confirmDel(){ try{ return window.confirm(T("ลบรายการนี้?","Remove this entry?")); }catch(e){ return true; } }
+window.addEventListener("afterprint",()=>{ document.body.classList.remove("pr"); });
+
+render();
+refreshLive();
+
+//<p class="muted">
+
+</script>
+</body>
+</html>
